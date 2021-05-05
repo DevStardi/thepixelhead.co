@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="44px" viewBox="0 0 42 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>package</title>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="product" transform="translate(-909.000000, -652.000000)" stroke="#000000" stroke-width="2">
+            <g id="package" transform="translate(910.000000, 653.000000)">
+                <polygon id="Path-6" points="20 41.052832 20 14.4781232 40 7.35913829 40 33.9399325"></polygon>
+                <polygon id="Path-6" transform="translate(10.000000, 24.205985) scale(-1, 1) translate(-10.000000, -24.205985) " points="-6.41847686e-16 41.052832 0 14.4781232 20 7.35913829 20 33.9399325"></polygon>
+                <polygon id="Path-7" points="0 7.35913829 20 0 40 7.35913829 20 14.4781232"></polygon>
+                <polyline id="Path-8" stroke-linecap="round" points="30.78749 4.18136362 11.4160981 11.4476649 11.4160981 20.5122914 6.78400493 18.7779684 6.78400493 9.81389892 26.3465531 2.38303834"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
