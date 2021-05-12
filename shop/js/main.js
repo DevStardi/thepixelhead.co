@@ -28,7 +28,6 @@ $(document).ready(function() {
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    asNavFor: '.product_nav'
   });
   $('.product_nav').slick({
     slidesToShow: 3,
