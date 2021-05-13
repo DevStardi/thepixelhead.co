@@ -332,17 +332,44 @@ h2 + p {
   display: none !important;
 }
 
-@media screen and (max-width: 1020px) {
+.teaser .slide_item img.mobile,
+.teaser .slide_item img.tablet {
+  display: none;
+}
+
+@media screen and (max-width: 1080px) {
 
   .bighead {
     width: 100px;
     right: 40px;
     bottom: 40px;
   }
+  .teaser .slide_item img.tablet {
+    display: block;
+  }
 
+  .teaser .slide_item img.desktop {
+    display: none;
+  }
 
 }
 
+@media screen and (max-width: 500px) {
+
+  .bighead {
+    width: 100px;
+    right: 40px;
+    bottom: 40px;
+  }
+  .teaser .slide_item img.mobile {
+    display: block;
+  }
+
+  .teaser .slide_item img.tablet {
+    display: none;
+  }
+
+}
 
 /*============ product teaser ============*/
 
@@ -409,17 +436,26 @@ a.button:hover:after {
 
 /*============ shop page ============*/
 
-.shop .product {
+div.shop a.product {
   width: calc((100% - 120px) / 4);
   margin: 20px;
 }
 
-.shop .product:nth-of-type(4n) {
+div.shop a.product img {
+  transition: opacity ease-out .2s;
+}
+
+div.shop a.product:hover img {
+  opacity: .8;
+}
+
+
+div.shop a.product:nth-of-type(4n) {
   margin-right: 0;
 }
 
-.shop .product:nth-of-type(1),
-.shop .product:nth-of-type(4n+1) {
+div.shop a.product:nth-of-type(1),
+div.shop a.product:nth-of-type(4n+1) {
   margin-left: 0;
 }
 
@@ -434,31 +470,31 @@ a.button:hover:after {
 
 @media screen and (max-width: 960px) {
 
-  .shop .product {
+  div.shop a.product {
     width: calc((100% - 80px) / 3);
     margin: 20px;
   }
 
-  .shop .product:nth-of-type(4n) {
+  div.shop a.product:nth-of-type(4n) {
     margin-right: 20px;
   }
 
   /* set all margins again */
 
-  .shop .product:nth-of-type(1),
-  .shop .product:nth-of-type(4n+1) {
+  div.shop a.product:nth-of-type(1),
+  div.shop a.product:nth-of-type(4n+1) {
     margin-left: 20px;
   }
 
   /* remove all side margins */
 
 
-  .shop .product:nth-of-type(3n) {
+  div.shop a.product:nth-of-type(3n) {
     margin-right: 0;
   }
 
-  .shop .product:nth-of-type(1),
-  .shop .product:nth-of-type(3n+1) {
+  div.shop a.product:nth-of-type(1),
+  div.shop a.product:nth-of-type(3n+1) {
     margin-left: 0;
   }
 
@@ -467,40 +503,40 @@ a.button:hover:after {
 
 @media screen and (max-width: 700px) {
 
-  .shop .product {
+  div.shop a.product {
     width: calc((100% - 28px) / 2);
     margin: 14px;
   }
 
-  .shop .product:nth-of-type(4n) {
+  div.shop a.product:nth-of-type(4n) {
     margin-right: 14px;
   }
 
   /* we need this rules to minimize all 
   margins from 20px to 14px */
 
-  .shop .product:nth-of-type(1),
-  .shop .product:nth-of-type(4n+1) {
+  div.shop a.product:nth-of-type(1),
+  div.shop a.product:nth-of-type(4n+1) {
     margin-left: 14px;
   }
 
-  .shop .product:nth-of-type(3n) {
+  div.shop a.product:nth-of-type(3n) {
     margin-right: 14px;
   }
 
-  .shop .product:nth-of-type(1),
-  .shop .product:nth-of-type(3n+1) {
+  div.shop a.product:nth-of-type(1),
+  div.shop a.product:nth-of-type(3n+1) {
     margin-left: 14px;
   }
 
   /* remove all side margins */
 
-  .shop .product:nth-of-type(2n) {
+  div.shop a.product:nth-of-type(2n) {
     margin-right: 0;
   }
 
-  .shop .product:nth-of-type(1),
-  .shop .product:nth-of-type(2n+1) {
+  div.shop a.product:nth-of-type(1),
+  div.shop a.product:nth-of-type(2n+1) {
     margin-left: 0;
   }
 
@@ -509,42 +545,42 @@ a.button:hover:after {
 
 @media screen and (max-width: 380px) {
 
-  .shop .product {
+  div.shop a.product {
     width: 100%;
     margin: 0;
   }
 
   /* remove all margins */
 
-  .shop .product:nth-of-type(4n) {
+  div.shop a.product:nth-of-type(4n) {
     margin-right: 14px;
   }
 
-  .shop .product:nth-of-type(1),
-  .shop .product:nth-of-type(4n+1) {
+  div.shop a.product:nth-of-type(1),
+  div.shop a.product:nth-of-type(4n+1) {
     margin-left: 0;
   }
 
-  .shop .product:nth-of-type(3n) {
+  div.shop a.product:nth-of-type(3n) {
     margin-right: 0;
   }
 
-  .shop .product:nth-of-type(1),
-  .shop .product:nth-of-type(3n+1) {
+  div.shop a.product:nth-of-type(1),
+  div.shop a.product:nth-of-type(3n+1) {
     margin-left: 0;
   }
 
 
-  .shop .product:nth-of-type(2n) {
+  div.shop a.product:nth-of-type(2n) {
     margin-right: 0;
   }
 
-  .shop .product:nth-of-type(1),
-  .shop .product:nth-of-type(2n+1) {
+  div.shop a.product:nth-of-type(1),
+  div.shop a.product:nth-of-type(2n+1) {
     margin-left: 0;
   }
 
-  .shop .product:nth-of-type(1) {
+  div.shop a.product:nth-of-type(1) {
     margin-top: 14px;
   }
 
@@ -677,13 +713,25 @@ label a:visited {
 /* ===== preview section ===== */
 
 div.preview {
-  width: 40%;
+  width: 38.2%;
   max-width: 614px;
 }
 
 div.preview img {
   width: 100%;
 }
+
+div.preview nav.product_nav img {
+  box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+@media screen and (max-width: 1080px) {
+  div.preview {
+    width: 50%;
+  }
+}
+
 
 /* ===== content section ===== */
 

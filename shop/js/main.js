@@ -38,6 +38,8 @@ $(document).ready(function() {
     focusOnSelect: true
   });
 
+
+  /*
   // Teaser Homepage //
 
   $('.teaser').slick({
@@ -45,7 +47,8 @@ $(document).ready(function() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-  });
+  }); 
+  */
 
   // Homepage Products Preview //
 
@@ -110,12 +113,15 @@ $(document).ready(function() {
 
   });
 
+
+  /*
+
   // ======== //
   // fancybox //
   // ======== //
 
   $('[data-fancybox="gallery"]').fancybox({
-  });
+  }); */
 
 });
 
