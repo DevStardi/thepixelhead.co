@@ -23,9 +23,15 @@
     color: transparent;
     border: none;
     outline: none;
-    background-color: #eee;
+    background-color: #151515;
 
     z-index: 1;
+    transition: background-color ease-out .2s;
+}
+.slick-prev:hover,
+.slick-next:hover
+{
+    background-color: #444444;
 }
 
 @media screen and (max-width: 460px) {
@@ -58,21 +64,6 @@
 {
     opacity: .25;
 }
-
-.slick-prev:before,
-.slick-next:before
-{
-    font-family: 'slick';
-    font-size: 20px;
-    line-height: 1;
-
-    opacity: .75;
-    color: white;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 .slick-prev
 {
     left: -15px;

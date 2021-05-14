@@ -9,6 +9,7 @@ $(document).ready(function() {
     e.preventDefault();
 
     // add canvas
+    $('body').toggleClass('canvas');
     $('.menu').toggleClass('canvas');
     $('.content').toggleClass('canvas');
     $('.siteheader').toggleClass('canvas');

@@ -87,41 +87,6 @@ section.sitecontent {
   margin-top: 60px;
 }
 
-.doku p {
-  padding-top: 20px;
-}
-
-.doku {
-  margin: 0 auto;
-  width: 60%;
-}
-
-.doku img {
-  display: block;
-  margin-top: 20px;
-  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
-}
-
-.doku .description {
-  display: block;
-  margin-top: 8px;
-  margin-bottom: 30px;
-  text-align: right;
-}
-
-.doku span {
-  font-family: 'Roboto Mono', monospace;
-}
-
-
-.about p {
-  margin: 20px 0;
-}
-
-.siteheading {
-  margin-bottom: 40px;
-}
-
 /*============ font-styling ============*/
 
 .logo {
@@ -159,7 +124,6 @@ h2 + p {
   }
 
 }
-
 
 
 /*============ header ============*/
@@ -273,6 +237,10 @@ h2 + p {
     transform: translateX(-300px);
   }
 
+  body.canvas {
+    overflow: hidden;
+  }
+
   header.siteheader {
     height: 90px;
     padding: 0;
@@ -285,7 +253,8 @@ h2 + p {
 
   header.siteheader,
   nav.menu,
-  section.sitecontent {
+  section.sitecontent,
+  footer.sitefooter {
     -webkit-transition: all 0.3s linear;
     -moz-transition: all 0.3s linear;
     -ms-transition: all 0.3s linear;
@@ -379,6 +348,14 @@ h2 + p {
 
 .product {
   margin: 15px;
+}
+
+.product img {
+  transition: opacity ease-out .2s
+}
+
+.product:hover img {
+  opacity: .8;
 }
 
 .product h3 {
@@ -749,7 +726,7 @@ article.product_content h1 {
 }
 
 article.product_content > p {
-  padding-bottom: 3.75rem;
+  padding-bottom: 40px;
 }
 
 article.product_content h6 {
@@ -854,9 +831,7 @@ article.product_content a.button {
 
 }
 
-/* ===== */
-/* POPUP */
-/* ===== */
+/* popup */
 
 article.popup {
   padding: 40px;
@@ -864,13 +839,16 @@ article.popup {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  top: 20%;
+  top: 14%;
   z-index: 100;
   box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.2);
   width: 80%;
   max-width: 560px;
   box-sizing: border-box;
-  max-height: calc(100vh - 30%);
+}
+
+body.popup_active {
+  overflow: hidden;
 }
 
 body.popup_active:before {
@@ -885,6 +863,11 @@ body.popup_active:before {
   background-color: rgba(0,0,0,0.6);
 }
 
+
+article.popup div.text {
+  overflow-y: auto;
+  max-height: 60vh;
+}
 
 article.popup a.close {
   position: absolute;
@@ -909,7 +892,31 @@ article.popup a.close img {
 
 article.popup h2 {
   padding: 0;
+  margin-bottom: 20px;
 }
+
+@media screen and (max-width: 440px) {
+
+  article.popup {
+    padding: 30px;
+  }
+
+}
+
+@media screen and (max-width: 370px) {
+
+  article.popup {
+    width: 86%;
+    padding: 20px;
+  }
+
+  article.popup h2 {
+    font-size: 28px;
+  }
+
+
+}
+
 
 /* ======= */
 /* IMPRINT */
