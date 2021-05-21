@@ -2,6 +2,9 @@ RewriteEngine On
 RewriteCond %{SERVER_PORT} !=443
 RewriteRule ^(.*)$ https://shop.thepixelhead.co/$1 [R=301,L]
 
+RewriteRule ^/$ https://shop.thepixelhead.co/overview [L,R=301]
+RewriteRule ^products/$ https://shop.thepixelhead.co/overview [L,R=301]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
