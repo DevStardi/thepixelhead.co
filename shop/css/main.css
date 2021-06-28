@@ -100,7 +100,8 @@ a.button {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
   padding: 8px 24px;
-  border: 1px solid #000;
+  border: 2px solid #000;
+  border-radius: 25px;
   display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -859,6 +860,36 @@ article.popup h2 {
     font-size: 28px;
   }
 
+
+}
+
+/* ==== */
+/* WASH */
+/* ==== */
+
+
+body.wash h1 {
+  margin-bottom: 30px;
+}
+
+body.wash h2 {
+  padding-top: 0;
+  text-transform: none;
+}
+
+body.wash section.product_section {
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 860px) {
+
+  section.product_section.flex {
+    flex-wrap: wrap;
+  }
+
+  body.wash article.product_content {
+    order: 2;
+  }
 
 }
 
