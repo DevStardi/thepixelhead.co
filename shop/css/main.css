@@ -101,7 +101,7 @@ a.button {
   font-size: 18px;
   padding: 8px 24px;
   border: 2px solid #000;
-  border-radius: 25px;
+  border-radius: 30px;
   display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -125,10 +125,10 @@ a.button:hover {
 a.button:after {
   content: '';
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: -2px;
+  left: -2px;
   z-index: -1;
   background-color: #000;
   -webkit-transform: scaleX(0);
@@ -879,6 +879,28 @@ body.wash h2 {
 
 body.wash section.product_section {
   margin-bottom: 50px;
+  padding-top: 130px;
+  margin-top: -130px;
+}
+
+body.wash nav.subnav {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+body.wash nav.subnav a.button {
+  margin: 0 12px 12px 0;
+}
+
+
+@media screen and (max-width: 1020px) {
+
+  body.wash section.product_section {
+    padding-top: 90px;
+    margin-top: -90px;
+  }
+
 }
 
 @media screen and (max-width: 860px) {
