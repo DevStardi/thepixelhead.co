@@ -15,7 +15,8 @@ ul{padding: 0;}
 li{list-style:none;}
 
 img{width: 100%;display: block;}
-
+in den Troc
+In den Troc
 html{line-height:1.3333;}
 
 /* ================================== */
@@ -881,6 +882,11 @@ body.wash section.product_section {
   margin-bottom: 50px;
   padding-top: 130px;
   margin-top: -130px;
+}
+
+body.wash section.product_section.left article.product_content {
+  margin-left: 0;
+  margin-right: 30px;
 }
 
 body.wash nav.subnav {
