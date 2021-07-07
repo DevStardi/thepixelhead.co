@@ -113,6 +113,7 @@ a.button {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  cursor: pointer;
   -webkit-transition: all .6s cubic-bezier(.165,.84,.44,1);
   -o-transition: all .6s cubic-bezier(.165,.84,.44,1);
   transition: all .6s cubic-bezier(.165,.84,.44,1);
@@ -163,7 +164,6 @@ a.button:hover:after {
 h1,h2 {
   font-size: 32px;
   text-transform: uppercase;
-  padding-top: 40px;
 }
 
 .siteheading {
@@ -625,17 +625,43 @@ div.shop a.product:nth-of-type(4n+1) {
 /* preview section */
 
 div.preview {
-  width: 38.2%;
-  max-width: 614px;
+  max-width: 70%;
+  width: fit-content;
+  height: calc(100vh - 130px);
+  width: calc((100vh - 130px) * .8);
+  position: relative;
 }
 
-div.preview img {
+div.preview div.product_big {
+  width: auto;
+  height: calc(100vh - 130px);  
+}
+
+div.preview div.product_big img {
+  width: auto;
+  height: calc(100vh - 130px);
+  display: block;
+}
+
+
+div.preview nav.product_nav {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
   width: 100%;
 }
 
+div.preview nav.product_nav div {
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  background-size: cover;
+}
+
+
 div.preview nav.product_nav img {
   -webkit-box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -649,8 +675,8 @@ div.preview nav.product_nav img {
 /* content section */
 
 article.product_content {
-  margin-left: 30px;
-  width: 44%;  
+  margin-left: 60px;
+  width: calc(30% - 60px);  
 }
 
 article.product_content h1 {
@@ -659,62 +685,54 @@ article.product_content h1 {
   text-transform: none;
   font-size: 42px;
   font-weight: 700;
+  line-height: 1;
 }
 
-article.product_content > p {
-  padding-bottom: 40px;
-}
-
-article.product_content h6 {
-  font-size: 1.375rem;
-  font-weight: 400;
-  padding-bottom: 0.875rem;
-}
-
-article.product_content p span {
-  font-size: 1.75rem;
+article.product_content h1 span {
   font-weight: 500;
-  margin-right: 1.25rem;
+  font-size: 30px;
+  margin-top: -10px;
 }
 
-div.price_shipping {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
 
-div.price_shipping h2 {
+article.product_content p.text {
+  margin-bottom: 40px;
   padding: 0;
-  font-size: 2.625rem;
+}
+
+article.product_content ul {
+  margin-bottom: 40px;
+}
+
+article.product_content ul li {
+  list-style-type: disc;
+  font-size: 20px;
   font-weight: 700;
+  list-style-position: inside;
+  margin-bottom: 6px;
 }
 
-div.price_shipping a.shipping {
-  margin-left: 2.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: help;
+article.product_content .flex {
+  align-items: center;
 }
 
-div.price_shipping a.shipping img {
-  max-width: 2.5rem;
-  margin-right: 10px;
-  -webkit-animation: shake-jump 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
-          animation: shake-jump 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+article.product_content h2.price {
+  padding: 0;
+  font-size: 44px;
+  font-weight: 500;
 }
 
-div.price_shipping a.shipping p {
-  font-size: 1rem;
-  max-width: 8.75rem;
-  line-height: 1.3;
+article.product_content span.shipping {
+  margin-top: 6px;
+  margin-bottom: 30px;
+  display: inline-block;
+  padding-left: 30px;
 }
 
 article.product_content a.button {
   margin: 0;
-  margin-top: 40px;
   font-size: 22px;
-  padding: 10px 40px;
+  padding: 10px 24px;
 }
 
 
@@ -772,24 +790,28 @@ article.product_content a.button {
 
 }
 
-/* popup */
+/* ====== */
+/* POP-UP */
+/* ====== */
 
 article.popup {
   padding: 40px;
   background-color: #fff;
   position: fixed;
   left: 50%;
+  text-align: center;
   -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  top: 14%;
+    -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+  top: 10%;
+  max-height: calc(100vh - 10% - 20px);
   z-index: 100;
   -webkit-box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.2);
-          box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.2);
   width: 80%;
   max-width: 560px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body.popup_active {
@@ -808,10 +830,100 @@ body.popup_active:before {
   background-color: rgba(0,0,0,0.6);
 }
 
-
 article.popup div.text {
   overflow-y: auto;
   max-height: 60vh;
+  margin-top: 20px;
+}
+
+article.popup div.text p.size_selector {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+article.popup div.text p.size_selector span {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 6px;
+  cursor: pointer;
+  padding: 5px 2px;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-transition: all .6s cubic-bezier(.165,.84,.44,1);
+  -o-transition: all .6s cubic-bezier(.165,.84,.44,1);
+  transition: all .6s cubic-bezier(.165,.84,.44,1);
+}
+
+article.popup div.text p.size_selector span:after {
+  content: '';
+  position: absolute;
+  width: calc(100% + 4px);
+  height: 2px;
+  top: calc(50% - 2px);
+  left: -2px;
+  z-index: -1;
+  background-color: #000;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+      -ms-transform-origin: right;
+          transform-origin: right;
+  transition: transform .4s cubic-bezier(.165,.84,.44,1),-webkit-transform .4s cubic-bezier(.165,.84,.44,1);
+}
+
+article.popup div.text p.size_selector span:hover:after,
+article.popup div.text p.size_selector span.selected:after {
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+}
+
+article.popup div.text a.button.order.no_click {
+  border: 2px solid rgba(0, 0, 0, .5);
+  color: rgba(0, 0, 0, .5);
+}
+
+article.popup div.text a.button.order {
+  font-size: 22px;
+  padding: 10px 24px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+article.popup div.text a.button.order span.hover {
+  display: none;
+}
+
+article.popup div.text a.button.order.no_click:hover span.hover {
+  display: block;
+  position: absolute;
+  padding: 6px 4px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  width: 90%;
+}
+
+article.popup div.text a.button.order.no_click:hover:after {
+  display: none;
 }
 
 article.popup a.close {
@@ -822,8 +934,8 @@ article.popup a.close {
   border-radius: 19px;
   padding: 6px;
   cursor: pointer;
-  -webkit-box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.2);
-          box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.2);
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(255,255,255,.08);
+          box-shadow: 0px 0px 20px 0px rgba(255,255,255,.08);
 }
 
 article.popup a.close:hover {  
@@ -831,15 +943,48 @@ article.popup a.close:hover {
           animation: shake-side 3s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
 }
 
-
 article.popup a.close img {
   height: 26px;
   width: 26px;
 }
 
-article.popup h2 {
+article.popup h2.price {
   padding: 0;
-  margin-bottom: 20px;
+  font-size: 44px;
+  font-weight: 500;
+}
+
+div.price_shipping {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.price_shipping h2 {
+  padding: 0;
+  font-size: 2.625rem;
+  font-weight: 700;
+}
+
+div.price_shipping a.shipping {
+  margin-left: 2.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: help;
+}
+
+div.price_shipping a.shipping img {
+  max-width: 2.5rem;
+  margin-right: 10px;
+  -webkit-animation: shake-jump 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+          animation: shake-jump 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+}
+
+div.price_shipping a.shipping p {
+  font-size: 1rem;
+  max-width: 8.75rem;
+  line-height: 1.3;
 }
 
 @media screen and (max-width: 440px) {
