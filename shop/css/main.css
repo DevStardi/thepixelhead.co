@@ -808,7 +808,7 @@ article.popup {
   z-index: 100;
   -webkit-box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.2);
     box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.2);
-  width: 80%;
+  width: 90%;
   max-width: 560px;
   -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -832,7 +832,6 @@ body.popup_active:before {
 
 article.popup div.text {
   overflow-y: auto;
-  max-height: 60vh;
   margin-top: 20px;
 }
 
@@ -990,6 +989,7 @@ div.price_shipping a.shipping p {
 @media screen and (max-width: 440px) {
 
   article.popup {
+    top: 5%;
     padding: 30px;
   }
 
@@ -1066,6 +1066,18 @@ body.wash nav.subnav a.button {
 
 }
 
+
+/* ========= */
+/* THANK YOU */
+/* ========= */
+
+article.thank_you {
+  padding: 0 20px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 160px;
+  margin-bottom: 200px;
+}
 
 /* ======= */
 /* IMPRINT */

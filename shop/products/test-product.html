@@ -41,16 +41,31 @@
             </a>
             <h2>Bestell&shy;ung</h2>
             <div class="text">
-                <p>Du bestellst einfach das ganze über den 'via Email bestellen' Button, gibst in der vorausgefüllten Mail noch deine gewünschte Größe an und wir antworten Dir schnellstmöglich. Solltest du mehrere Sachen bestellen, mach einfach eine kleine Bemerkung mit dazu in die Mail und füge bei allen gewünschten Produkten in der Mail die Größe hinzu. <br> Die Bezahlung läuft ganz einfach per PayPal ab oder per Überweisung, falls du kein PayPay haben solltest</p>
+                <p>Du bestellst einfach das ganze über den 'via E-mail bestellen' Button, und wir antworten Dir schnellstmöglich.<br> Solltest du mehrere Sachen bestellen, mach einfach eine kleine Bemerkung mit dazu in die E-mail.<br><br> Die Bezahlung läuft ganz einfach per PayPal ab oder per Überweisung, falls du kein PayPal haben solltest</p>
                 <p class="size_selector">
-                    <span class="size_xs">XS</span>
-                    <span class="size_s">S</span>
-                    <span class="size_m">M</span>
-                    <span class="size_l">L</span>
-                    <span class="size_xl">XL</span>
-                    <span class="size_xxl">XXL</span></p>
+                    <span size="XS" class="size">XS</span>
+                    <span size="S" class="size">S</span>
+                    <span size="M" class="size">M</span>
+                    <span size="L" class="size">L</span>
+                    <span size="XL" class="size">XL</span>
+                    <span size="XXL" class="size">XXL</span></p>
                 <h2 class="price">25,00 €</h2>
-                <a href="#" class="button order no_click">via Email bestellen<span class="hover">Bitte wähle zuerst eine Größe aus</span></a>           
+                <a href="#" class="button order no_click">via E-mail bestellen<span class="hover">Bitte wähle zuerst eine Größe aus</span></a>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_xclick">
+                    <input type="hidden" name="business" value="shop@thepixelhead.co">
+                    <input type="hidden" name="lc" value="DE">
+                    <input type="hidden" name="item_name" value="Holo Shirt - white / blue">
+                    <input type="hidden" name="amount" value="25.00">
+                    <input type="hidden" name="currency_code" value="EUR">
+                    <input type="hidden" name="button_subtype" value="services">
+                    <input type="hidden" name="no_note" value="0">
+                    <input type="hidden" name="shipping" value="5.00">
+                    <input type="hidden" name="bn" value="PP-BuyNowBF:pay:NonHostedGuest">
+                    <input type="image" src="https://shop.thepixelhead.co/products/holo-shirt-white-blue/pay" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+                </form>
+                           
                 
             </div>
         </article>
@@ -119,50 +134,6 @@
         <script src="../js/jquery-3.4.1.min.js"></script>
         <script src="../js/plugins.js"></script>
         <script src="../js/main.js"></script>
-
-        <script>
-              $('p.size_selector span.size_xs').on('click', function() {
-                $('p.size_selector span').removeClass('selected')
-                $(this).addClass('selected')
-                $('a.button.order').attr('href', 'mailto:shop@thepixelhead.co?subject=Holo%20Shirt%20%20white%20%20blue&body=Hallo,%0D%0Aich%20würde%20gerne%20das%20Shirt%20in%20Größe%20XS%20bestellen');
-                $('a.button.order').removeClass('no_click')
-              });
-
-               $('p.size_selector span.size_s').on('click', function() {
-                $('p.size_selector span').removeClass('selected')
-                $(this).addClass('selected')
-                $('a.button.order').attr('href', 'mailto:shop@thepixelhead.co?subject=Holo%20Shirt%20%20white%20%20blue&body=Hallo,%0D%0Aich%20würde%20gerne%20das%20Shirt%20in%20Größe%20S%20bestellen');
-                $('a.button.order').removeClass('no_click')
-              }); 
-
-              $('p.size_selector span.size_m').on('click', function() {
-                $('p.size_selector span').removeClass('selected')
-                $(this).addClass('selected')
-                $('a.button.order').attr('href', 'mailto:shop@thepixelhead.co?subject=Holo%20Shirt%20%20white%20%20blue&body=Hallo,%0D%0Aich%20würde%20gerne%20das%20Shirt%20in%20Größe%20M%20bestellen');
-                $('a.button.order').removeClass('no_click')
-              });
-
-              $('p.size_selector span.size_l').on('click', function() {
-                $('p.size_selector span').removeClass('selected')
-                $(this).addClass('selected')
-                $('a.button.order').attr('href', 'mailto:shop@thepixelhead.co?subject=Holo%20Shirt%20%20white%20%20blue&body=Hallo,%0D%0Aich%20würde%20gerne%20das%20Shirt%20in%20Größe%20L%20bestellen');
-                $('a.button.order').removeClass('no_click')
-              });
-
-              $('p.size_selector span.size_xl').on('click', function() {
-                $('p.size_selector span').removeClass('selected')
-                $(this).addClass('selected')
-                $('a.button.order').attr('href', 'mailto:shop@thepixelhead.co?subject=Holo%20Shirt%20%20white%20%20blue&body=Hallo,%0D%0Aich%20würde%20gerne%20das%20Shirt%20in%20Größe%20XL%20bestellen');
-                $('a.button.order').removeClass('no_click')
-              });
-
-              $('p.size_selector span.size_xxl').on('click', function() {
-                $('p.size_selector span').removeClass('selected')
-                $(this).addClass('selected')
-                $('a.button.order').attr('href', 'mailto:shop@thepixelhead.co?subject=Holo%20Shirt%20%20white%20%20blue&body=Hallo,%0D%0Aich%20würde%20gerne%20das%20Shirt%20in%20Größe%20XXL%20bestellen');
-                $('a.button.order').removeClass('no_click')
-              });
-        </script>   
 
     </body>
 </html>
