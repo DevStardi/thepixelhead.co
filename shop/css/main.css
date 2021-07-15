@@ -97,7 +97,8 @@ section.sitecontent {
 
 /* ===button === */
 
-a.button {
+a.button,
+input.button {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
   padding: 8px 24px;
@@ -117,6 +118,12 @@ a.button {
   -webkit-transition: all .6s cubic-bezier(.165,.84,.44,1);
   -o-transition: all .6s cubic-bezier(.165,.84,.44,1);
   transition: all .6s cubic-bezier(.165,.84,.44,1);
+}
+
+input.button {
+  height: 26px;
+  width: auto;
+  max-width: 80%;
 }
 
 
@@ -804,7 +811,7 @@ article.popup {
     -ms-transform: translateX(-50%);
       transform: translateX(-50%);
   top: 10%;
-  max-height: calc(100vh - 10% - 20px);
+  max-height: calc(100vh - 10%);
   z-index: 100;
   -webkit-box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.2);
     box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.2);
@@ -833,6 +840,7 @@ body.popup_active:before {
 article.popup div.text {
   overflow-y: auto;
   margin-top: 20px;
+  max-height: calc(100vh - 14%);
 }
 
 article.popup div.text p.size_selector {
