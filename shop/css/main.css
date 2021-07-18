@@ -644,6 +644,11 @@ div.preview div.product_big {
   height: calc(100vh - 130px);  
 }
 
+div.preview div.product_big a {
+  cursor: zoom-in;
+}
+
+
 div.preview div.product_big img {
   width: auto;
   height: calc(100vh - 130px);
@@ -663,6 +668,7 @@ div.preview nav.product_nav div {
   height: 100%;
   min-height: 160px;
   background-size: cover;
+  cursor: pointer;
 }
 
 

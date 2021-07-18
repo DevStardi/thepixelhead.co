@@ -24,23 +24,6 @@ $(document).ready(function() {
   // sliders //
   // ======= //
 
-  // product page
-
-   $('.product_big').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-  });
-  $('.product_nav').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: '.product_big',
-    dots: false,
-    focusOnSelect: true
-  });
-
-
   /*
   // Teaser Homepage //
 
@@ -85,6 +68,27 @@ $(document).ready(function() {
       }
     ]
   });
+
+  // product page
+
+   $('.product_big').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+  });
+  $('.product_nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.product_big',
+    dots: false,
+    focusOnSelect: true
+  });
+
+
+  /* FANCYBOX */
+
+  $('.product_big a').fancybox();
 
 
   // ====== //
