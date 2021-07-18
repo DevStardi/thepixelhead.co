@@ -100,12 +100,24 @@ $(document).ready(function() {
     $('body').addClass('popup_active');    
   });
 
-
   $('a.close').on('click',function() {
     $('article.popup').hide();
     $('body').removeClass('popup_active');
   });
 
+  // remove popup clicking outside of div
+  $(document).mouseup(function(e) {
+    var $popup = $('article.popup');
+
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!$popup.is(e.target) && $popup.has(e.target).length === 0) 
+    {
+      $popup.hide();
+      $('body').removeClass('popup_active');
+    }
+  });
+
+  // Size selector //
 
   $('span.size').on('click', function(){
     var $size = this.getAttribute('size');
