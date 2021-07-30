@@ -315,6 +315,21 @@
     margin: 0 26px;
 }
 
+@media screen and (max-width: 580px) {
+
+    .product_nav .slick-slide {
+        margin: 0 16px;
+    }
+    .slick-prev {
+        left: 0;
+    }
+    .slick-next {
+        right: 0;
+    }
+
+}
+
+
 @media screen and (max-width: 460px) {
     
     .product_nav .slick-slide {

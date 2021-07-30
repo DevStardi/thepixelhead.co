@@ -71,24 +71,37 @@ $(document).ready(function() {
 
   // product page
 
-   $('.product_big').slick({
+  $('.product_big').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     fade: true,
+    asNavFor: '.product_nav',
   });
   $('.product_nav').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     asNavFor: '.product_big',
+    arrows: true,
     dots: false,
-    focusOnSelect: true
+    focusOnSelect: true,
   });
 
 
   /* FANCYBOX */
 
-  $('.product_big a').fancybox();
+  $('.product_big a').fancybox({
+    loop : true,
+    buttons: [
+      // "share",
+      "zoom",
+      //"slideShow",
+      //"fullScreen",
+      "download",
+      "close",
+      //"thumbs",
+    ],
+  });
 
 
   // ====== //
