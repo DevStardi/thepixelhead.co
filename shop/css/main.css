@@ -11,110 +11,10 @@ html,button,input,select,textarea{font-family:'Roboto',sans-serif;color: #000;}
 
 a,a:link,a:visited{color:#000;text-decoration: none;}
 a:hover{color:#000;}
-ul{padding: 0;}/*============ footer ============*/
-
-footer.sitefooter {
-  background-color: #000;
-  width: 100%;
-  height: 300px;
-  position: relative;
-}
-
-section.rounded_logo {
-  width: 176px;
-  height: 176px;
-  position: absolute;
-  right: 80px;
-  top: -130px;
-  z-index: 10;
-  background-color: #fff;
-  border-radius: 50%;
-}
-
-section.rounded_logo img.font {
-  width: calc(100% - 16px);
-  padding: 8px;
-  animation: circle 80s linear infinite;
-}
-
-section.rounded_logo img.ghost {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 88px;
-  height: auto;
-}
-
-
-
-
-
-
-
-/*
- * ----------------------------------------
- *  shake animations
- * ----------------------------------------
- */
-
-@-webkit-keyframes shake-side {
-  0%,25% {-webkit-transform: rotate(0deg);transform: rotate(0deg);-webkit-transform-origin: 50% 100%;transform-origin: 50% 100%;}
-  2.5% {-webkit-transform: rotate(1deg);transform: rotate(1deg);}
-  5%,10%,15% {-webkit-transform: rotate(-1deg);transform: rotate(-1deg);}
-  7.5%,12.5%,17.5% {-webkit-transform: rotate(3deg);transform: rotate(3deg);}
-  20% {-webkit-transform: rotate(-1deg);transform: rotate(-1deg);}
-  22.5% {-webkit-transform: rotate(1deg);transform: rotate(1deg);}
-}
-
-@keyframes shake-side {
-  0%,25% {-webkit-transform: rotate(0deg);transform: rotate(0deg);-webkit-transform-origin: 50% 100%;transform-origin: 50% 100%;}
-  2.5% {-webkit-transform: rotate(1deg);transform: rotate(1deg);}
-  5%,10%,15% {-webkit-transform: rotate(-1deg);transform: rotate(-1deg);}
-  7.5%,12.5%,17.5% {-webkit-transform: rotate(3deg);transform: rotate(3deg);}
-  20% {-webkit-transform: rotate(-1deg);transform: rotate(-1deg);}
-  22.5% {-webkit-transform: rotate(1deg);transform: rotate(1deg);}
-}
-
-@-webkit-keyframes shake-jump {
-    0% {-webkit-transform: translateY(0);transform: translateY(0);}
-    4% {-webkit-transform: translateY(-0.625rem);transform: translateY(-0.625rem);}
-    8% {-webkit-transform: translateY(0);transform: translateY(0);}
-    12% {-webkit-transform: translateY(-0.875rem);transform: translateY(-0.875rem);}
-    16% {-webkit-transform: translateY(0);transform: translateY(0);}
-}
-
-@keyframes shake-jump {
-    0% {-webkit-transform: translateY(0);transform: translateY(0);}
-    4% {-webkit-transform: translateY(-0.625rem);transform: translateY(-0.625rem);}
-    8% {-webkit-transform: translateY(0);transform: translateY(0);}
-    12% {-webkit-transform: translateY(-0.875rem);transform: translateY(-0.875rem);}
-    16% {-webkit-transform: translateY(0);transform: translateY(0);}
-}
-
-
-@keyframes shake-jump {
-    20% {-webkit-transform: translateY(0);transform: translateY(0);}
-    24% {-webkit-transform: translateY(-0.625rem);transform: translateY(-0.625rem);}
-    28% {-webkit-transform: translateY(0);transform: translateY(0);}
-    32% {-webkit-transform: translateY(-0.875rem);transform: translateY(-0.875rem);}
-    36% {-webkit-transform: translateY(0);transform: translateY(0);}
-}
-
-@keyframes circle{
-  0%{
-    transform:rotate(0deg);
-  
-  }
-  100%{
-    transform:rotate(360deg);
-  }
-}
+ul{padding: 0;}
 li{list-style:none;}
 
 img{width: 100%;display: block;}
-in den Troc
-In den Troc
 html{line-height:1.3333;}
 
 /* ================================== */
@@ -165,9 +65,9 @@ html{line-height:1.3333;}
 
 .wrapper {
   max-width: 1258px;
-  width: 90%;
-  padding-right: 5%;
-  padding-left: 5%;
+  width: calc(100% - 120px);
+  padding-right: 60px;
+  padding-left: 60px;
   margin: 0 auto;
 }
 
@@ -794,6 +694,11 @@ div.preview nav.product_nav img {
   div.preview div.product_big {
     height: auto;
   }
+
+  .wrapper.product {
+    width: 100%;
+    padding: 0;
+  }
   
 }
 
@@ -901,7 +806,9 @@ article.product_content a.button {
   }
 
   article.product_content {
-    width: 100%;
+    width: calc(100% - 80px);
+    width: 90%;
+    padding: 0 40px;
     margin-left: 0;
   }
 
@@ -936,7 +843,7 @@ article.popup {
   -webkit-box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.2);
     box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.2);
   width: 90%;
-  max-width: 560px;
+  max-width: 460px;
   -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -1081,6 +988,42 @@ article.popup h2.price {
   font-weight: 500;
 }
 
+article.popup form.pp_select {
+  text-align: center;
+  margin-top: 30px;
+}
+
+article.popup form.pp_select p {
+  margin-top: 10px;
+  font-weight: 500;
+  padding-bottom: 3px;
+}
+
+article.popup form.pp_select select {
+  text-align: center;
+  text-align-last:center;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 4px;
+  border: 2px solid #000;
+  border-radius: 16px;
+  background-color: #fff;
+  font-size: 18px;
+}
+
+article.popup form.pp_select select.size {
+  font-size: 28px;
+  font-weight: 600;
+  border-radius: 22px;
+  margin-bottom: 8px;
+}
+
+article.popup form.pp_select input.button.pp_submit {
+  background-color: #000;
+}
+
 div.price_shipping {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1113,6 +1056,7 @@ div.price_shipping a.shipping p {
   max-width: 8.75rem;
   line-height: 1.3;
 }
+
 
 @media screen and (max-width: 440px) {
 
@@ -1232,11 +1176,11 @@ article.imprint h3 +p {
 footer.sitefooter {
   background-color: #000;
   width: 100%;
-  height: 300px;498
+  height: 300px;
   position: relative;
 }
 
-section.rounded_logo {
+a.rounded_logo {
   width: 176px;
   height: 176px;
   position: absolute;
@@ -1247,13 +1191,13 @@ section.rounded_logo {
   border-radius: 50%;
 }
 
-section.rounded_logo img.font {
+a.rounded_logo img.font {
   width: calc(100% - 16px);
   padding: 8px;
   animation: circle 100s linear infinite;
 }
 
-section.rounded_logo img.ghost {
+a.rounded_logo img.ghost {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -1264,13 +1208,13 @@ section.rounded_logo img.ghost {
 
 @media screen and (max-width: 580px) {
 
-  section.rounded_logo {
+  a.rounded_logo {
     width: 140px;
     height: 140px;
     top: -106px;
   }
 
-  section.rounded_logo img.ghost {
+  a.rounded_logo img.ghost {
     width: 72px;
   }
 
@@ -1278,7 +1222,7 @@ section.rounded_logo img.ghost {
     overflow-x: hidden;
   }
 
-  section.rounded_logo {
+  a.rounded_logo {
     right: -10px;
   }
 
