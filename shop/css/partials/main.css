@@ -1171,6 +1171,77 @@ article.imprint h3 +p {
 
 
 
+/*============ footer ============*/
+
+footer.sitefooter {
+  background-color: #000;
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+a.rounded_logo {
+  width: 176px;
+  height: 176px;
+  position: absolute;
+  right: 80px;
+  top: -132px;
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+a.rounded_logo img.font {
+  width: calc(100% - 16px);
+  padding: 8px;
+  animation: circle 100s linear infinite;
+}
+
+a.rounded_logo img.ghost {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 88px;
+  height: auto;
+}
+
+@media screen and (max-width: 580px) {
+
+  a.rounded_logo {
+    width: 140px;
+    height: 140px;
+    top: -106px;
+  }
+
+  a.rounded_logo img.ghost {
+    width: 72px;
+  }
+
+  section.cutter {
+    overflow-x: hidden;
+  }
+
+  a.rounded_logo {
+    right: -10px;
+  }
+
+}
+
+@media screen and (max-width: 360px) {
+
+  footer.sitefooter {
+    margin-top: 100px;
+  }
+
+}
+
+
+
+
+
+
+
 /*
  * ----------------------------------------
  *  shake animations
