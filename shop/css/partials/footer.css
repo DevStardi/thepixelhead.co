@@ -87,7 +87,7 @@ footer.sitefooter nav.links a {
 }
 
 footer.sitefooter nav.links:first-of-type {
-  margin-left: 390px;
+  margin-left: 30%;
 }
 
 /* Hover animation */
@@ -123,10 +123,31 @@ footer.sitefooter a:hover:after {
           transform-origin: left;
 }
 
+
+body.overview footer.sitefooter {
+  margin-top: 80px;
+}
+
+body.home footer.sitefooter {
+  margin-top: 160px;
+}
+
 /* ------ */
 
 
 /* RESPONSIVE */
+
+@media screen and (max-width: 1000px) {
+
+  footer.sitefooter nav.links {
+    margin-left: 50px;
+  }
+
+  footer.sitefooter nav.links:first-of-type {
+    margin-left: auto;
+  }
+
+}
 
 @media screen and (max-width: 580px) {
 

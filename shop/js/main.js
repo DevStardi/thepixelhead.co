@@ -49,7 +49,6 @@ $(document).ready(function() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          infinite: true,
         }
       },
       {
@@ -70,22 +69,39 @@ $(document).ready(function() {
   });
 
   // product page
+  
 
   $('.product_big').slick({
+    infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    fade: true,
-    asNavFor: '.product_nav',
+    speed: 500,
+
+    onInit: function () {
+      $('.slick-current').prev().addClass('prev');
+      $('.slick-current').next().addClass('next');
+    },
+
+    onBeforeChange: function () {
+        $('.slick-slide').removeClass('prev next');
+    },
+
+    onAfterChange: function () {
+        $('.slick-current').prev().addClass('prev');
+        $('.slick-current').next().addClass('next');
+    }
+
   });
   $('.product_nav').slick({
-    slidesToShow: 3,
+    infinite: false,
+    slidesToShow: 4,
     slidesToScroll: 1,
     asNavFor: '.product_big',
-    arrows: true,
     dots: false,
     focusOnSelect: true,
   });
+
 
 
   /* FANCYBOX */

@@ -129,7 +129,7 @@
 .slick-dots li button
 {
     font-size: 0;
-    line-height: 0;
+    line-height: 0;slick-arrow slick-disabled
 
     display: block;
 
@@ -201,8 +201,7 @@
             user-select: none;
 
     -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    -ms-touch-action: pan-y;
+    -khtml-user-selecslick-arrow slick-disabled: pan-y;
         touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
 }
@@ -312,7 +311,7 @@
 }
 
 .product_nav .slick-slide {
-    margin: 0 26px;
+    margin: 0 10px;
 }
 
 @media screen and (max-width: 580px) {
@@ -345,5 +344,15 @@
 
 .product_nav .slick-slide.slick-current img {
     opacity: 1;
+}
+
+.slick-arrow{
+    transition: all .5s ease-out;
+
+}
+.slick-arrow.slick-disabled {
+    height: 0;
+    width: 0;
+    opacity: 0;
 }
 
