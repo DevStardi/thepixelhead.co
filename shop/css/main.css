@@ -213,6 +213,7 @@ h2 + p {
   height: 88px;
   background-color: #fff;
   z-index: 10;
+  box-shadow: 0 1px 16px rgb(0 0 0 / 7%);
 }
 
 .siteheader .wrapper.flex {
