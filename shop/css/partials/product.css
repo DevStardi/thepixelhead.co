@@ -1,0 +1,39 @@
+/* ======= */
+/* PRODUCT */
+/* ======= */
+
+.product .preview_slide {
+  position: relative;
+}
+
+.product .preview_slide a.mag {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  transition: all .3s ease-out;
+}
+
+.product .preview_slide:hover a.mag {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 1020px) {
+
+  .product .preview_slide a.mag,
+  .product .preview_slide:hover a.mag {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: inherit;
+  }
+
+}
+
+
+

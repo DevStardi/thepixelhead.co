@@ -78,20 +78,6 @@ $(document).ready(function() {
     arrows: false,
     speed: 500,
 
-    onInit: function () {
-      $('.slick-current').prev().addClass('prev');
-      $('.slick-current').next().addClass('next');
-    },
-
-    onBeforeChange: function () {
-        $('.slick-slide').removeClass('prev next');
-    },
-
-    onAfterChange: function () {
-        $('.slick-current').prev().addClass('prev');
-        $('.slick-current').next().addClass('next');
-    }
-
   });
   $('.product_nav').slick({
     infinite: false,
@@ -99,6 +85,7 @@ $(document).ready(function() {
     slidesToScroll: 1,
     asNavFor: '.product_big',
     dots: false,
+    centerMode: true,
     focusOnSelect: true,
   });
 
@@ -107,7 +94,6 @@ $(document).ready(function() {
   /* FANCYBOX */
 
   $('.product_big a').fancybox({
-    loop : true,
     buttons: [
       // "share",
       "zoom",

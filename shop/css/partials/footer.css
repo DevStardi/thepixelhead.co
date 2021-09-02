@@ -13,7 +13,7 @@ footer.sitefooter {
 
 /* rounded Logo */
 
-section.container {
+footer.sitefooter section.container {
   position: relative;
   width: 100%;
   max-width: 1258px;
@@ -139,6 +139,10 @@ body.home footer.sitefooter {
 
 @media screen and (max-width: 1000px) {
 
+  footer.sitefooter {
+    margin-top: 100px;
+  }
+
   footer.sitefooter nav.links {
     margin-left: 50px;
   }
@@ -149,12 +153,29 @@ body.home footer.sitefooter {
 
 }
 
+@media screen and (max-width: 740px) {
+
+  footer.sitefooter section.container {
+    display: block;
+  }
+
+  footer.sitefooter nav.links {
+    margin-left: 0;
+  }
+
+}
+
+
 @media screen and (max-width: 580px) {
+
+  footer.sitefooter {
+    padding-top: 110px;
+  }
 
   footer.sitefooter a.rounded_logo {
     width: 140px;
     height: 140px;
-    top: -106px;
+    top: -160px;
   }
 
   footer.sitefooter a.rounded_logo img.ghost {
@@ -170,6 +191,7 @@ body.home footer.sitefooter {
   }
 
 }
+
 
 @media screen and (max-width: 360px) {
 

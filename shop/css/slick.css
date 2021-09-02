@@ -339,7 +339,11 @@
 
 
 .product_nav .slick-slide img {
-    opacity: .6;
+    opacity: .7;
+}
+
+.product_nav .slick-track {
+    width: fit-content !important;
 }
 
 .product_nav .slick-slide.slick-current img {
