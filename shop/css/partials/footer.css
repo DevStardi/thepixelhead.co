@@ -2,13 +2,24 @@
 /* FOOTER */
 /* ====== */
 
+.cutter {
+  margin-bottom: 400px;
+  background-color: #fff;
+  position: relative;
+}
+
 footer.sitefooter {
-  background-color: #000;
+  background-color: #171717;
   width: 100%;
   box-sizing: border-box;
   color: #fff;
   padding: 60px;
   padding-bottom: 92px;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
 
 /* rounded Logo */
@@ -20,28 +31,29 @@ footer.sitefooter section.container {
   margin: 0 auto;
 }
 
-footer.sitefooter a.rounded_logo {
+a.rounded_logo {
+  overflow: hidden;
   width: 176px;
   height: 176px;
   position: absolute;
-  right: 0;
-  top: -192px;
+  right: 30px;
+  bottom: -46px;
   z-index: 10;
   background-color: #fff;
   border-radius: 50%;
 }
 
-footer.sitefooter a.rounded_logo:after {
+a.rounded_logo:after {
   display: none;
 }
 
-footer.sitefooter a.rounded_logo img.font {
+a.rounded_logo img.font {
   width: calc(100% - 16px);
   padding: 8px;
   animation: circle 100s linear infinite;
 }
 
-footer.sitefooter a.rounded_logo img.ghost {
+a.rounded_logo img.ghost {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -53,8 +65,9 @@ footer.sitefooter a.rounded_logo img.ghost {
 /* ------ */
 
 footer.sitefooter h5 {
+  font-family: 'Poppins', sans-serif;  
   font-size: 34px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 28px;
   margin-bottom: 20px;
 }
@@ -172,13 +185,13 @@ body.home footer.sitefooter {
     padding-top: 110px;
   }
 
-  footer.sitefooter a.rounded_logo {
+  a.rounded_logo {
     width: 140px;
     height: 140px;
     top: -160px;
   }
 
-  footer.sitefooter a.rounded_logo img.ghost {
+  a.rounded_logo img.ghost {
     width: 72px;
   }
 
@@ -186,7 +199,7 @@ body.home footer.sitefooter {
     overflow-x: hidden;
   }
 
-  footer.sitefooter a.rounded_logo {
+  a.rounded_logo {
     right: -10px;
   }
 
