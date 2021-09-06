@@ -2,11 +2,21 @@
 /* FOOTER */
 /* ====== */
 
-.cutter {
+.cutter,
+.sitecontent {
   margin-bottom: 400px;
   background-color: #fff;
   position: relative;
 }
+
+body.home article.text {
+  padding-bottom: 160px;
+}
+
+body.overview section.sitecontent {
+  padding-bottom: 80px;
+}
+
 
 footer.sitefooter {
   background-color: #171717;
@@ -136,14 +146,6 @@ footer.sitefooter a:hover:after {
           transform-origin: left;
 }
 
-
-body.overview footer.sitefooter {
-  margin-top: 80px;
-}
-
-body.home footer.sitefooter {
-  margin-top: 160px;
-}
 
 /* ------ */
 
