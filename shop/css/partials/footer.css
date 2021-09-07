@@ -2,7 +2,7 @@
 /* FOOTER */
 /* ====== */
 
-body.product .sitecontent,
+body.product .cutter,
 body.home .sitecontent {
   margin-bottom: 400px;
   background-color: #fff;
@@ -50,7 +50,7 @@ a.rounded_logo {
   position: absolute;
   right: 30px;
   bottom: -46px;
-  z-index: 10;
+  z-index: 9;
   background-color: #fff;
   border-radius: 50%;
 }
@@ -192,7 +192,6 @@ footer.sitefooter a:hover:after {
   a.rounded_logo {
     width: 140px;
     height: 140px;
-    top: -160px;
   }
 
   a.rounded_logo img.ghost {
@@ -204,7 +203,12 @@ footer.sitefooter a:hover:after {
   }
 
   a.rounded_logo {
-    right: -10px;
+    right: 0;
+  }
+
+  body.product .cutter,
+  body.home .sitecontent {
+    margin-bottom: 800px;
   }
 
 }
