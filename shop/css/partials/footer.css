@@ -2,12 +2,14 @@
 /* FOOTER */
 /* ====== */
 
-.cutter,
-.sitecontent {
+body.product .sitecontent,
+body.home .sitecontent {
   margin-bottom: 400px;
   background-color: #fff;
   position: relative;
 }
+
+body.product
 
 body.home article.text {
   padding-bottom: 160px;
@@ -196,7 +198,7 @@ footer.sitefooter a:hover:after {
   a.rounded_logo img.ghost {
     width: 72px;
   }
-
+  product
   section.cutter {
     overflow-x: hidden;
   }

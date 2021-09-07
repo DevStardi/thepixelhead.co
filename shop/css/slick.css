@@ -316,9 +316,6 @@
 
 @media screen and (max-width: 580px) {
 
-    .product_nav .slick-slide {
-        margin: 0 16px;
-    }
     .slick-prev {
         left: 0;
     }
@@ -358,5 +355,10 @@
     height: 0;
     width: 0;
     opacity: 0;
+}
+
+
+.slick-list.draggable {
+    padding: 0 !important;
 }
 

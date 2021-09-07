@@ -202,10 +202,10 @@ h2 + p {
 a.logo {
   font-size: 30px;
   margin-left: 20px;
-  font-weight: 500;
-  /*text-transform: uppercase;*/
+  font-weight: 600;
+  text-transform: uppercase;
   display: inline-block;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 .siteheader {
@@ -241,26 +241,21 @@ a.logo {
   height: 80px;
 }
 
-.siteheader ul.banner {
+.siteheader div.banner {
   width: 100%;
+  padding: 15px 30px;
+  box-sizing: border-box;
   background-color: #171717;
-  height: 50px;
   align-items: center;
   justify-content: center;
   color: #fff;
 }
 
-.siteheader ul.banner li {
-  list-style-type:  '-  ';
-  margin-left: 32px;
+.siteheader div.banner span {
+  font-size: 16px;
+  max-height: 20px;
   font-family: 'Poppins', sans-serif;
 }
-
-.siteheader ul.banner li:first-of-type {
-  list-style-type: none;
-  margin-left: 0;
-}
-
 
 /*=============== */
 /* HAMBURGER MENU */
@@ -374,6 +369,14 @@ a.logo {
   }
 
 }
+@media screen and (max-width: 680px) {
+
+  .siteheader div.banner span {
+    max-height: inherit;
+  }
+}
+
+
 
 @media screen and (max-width: 600px) {
 
@@ -701,15 +704,13 @@ div.preview {
   height: calc(100vh - 130px);
   width: calc((100vh - 130px) * .8);
   position: relative;
+  position: sticky;
+  top: 130px;
 }
 
 div.preview div.product_big {
   width: auto;
   height: calc(100vh - 130px);  
-}
-
-div.preview div.product_big a {
-  cursor: zoom-in;
 }
 
 .preview_slide a {
@@ -728,7 +729,6 @@ div.preview div.product_big img {
 div.preview nav.product_nav {
   position: absolute;
   bottom: 20px;
-  left: 10px;
   width: 100%;
 }
 
@@ -768,13 +768,14 @@ div.preview nav.product_nav img:hover {
   
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 400px) {
 
-  div.preview nav.product_nav div {
-    min-height: 120px;
+  div.preview nav.product_nav img {
+    max-width: 60px;
+    max-height: 60px;
   }
-
 }
+
 
 
 
@@ -831,9 +832,8 @@ article.product_content h2.price {
 }
 
 article.product_content a.shipping {
-  margin-bottom: 60px;
   text-align: right;
-      justify-content: flex-end;
+  justify-content: flex-end;
   width: 100%;
   margin-right: 10px;
 }
@@ -885,12 +885,15 @@ article.product_content a.button {
 
   div.preview {
     max-width: inherit;
+    position: relative;
+    top: 0;
   }
 
   article.product_content {
     width: calc(100% - 80px);
     padding: 0 40px;
     margin-left: 0;
+    padding-bottom: 60px;
   }
 
   article.product_content h6,
@@ -899,8 +902,13 @@ article.product_content a.button {
     text-align: center;
   }
 
-  div.price_shipping a.shipping {
-    margin-top: 12px;
+  article.product_content a.shipping {
+    justify-content: flex-start;
+    margin-left: 40px;
+  }
+
+  article.product_content a.button {
+    width: fit-content;
   }
 
 }
