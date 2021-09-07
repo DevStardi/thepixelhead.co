@@ -74,10 +74,6 @@ body {
   margin: 0 auto;
 }
 
-section.sitecontent {
-  margin-top: 130px;
-}
-
 .transition {
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
@@ -350,7 +346,6 @@ a.logo {
   }
 
   header.siteheader {
-    height: 90px;
     padding: 0;
   }
 
@@ -452,6 +447,10 @@ a.logo {
 .teaser .slide_item img.mobile,
 .teaser .slide_item img.tablet {
   display: none;
+}
+
+body.home article.text {
+  padding-bottom: 160px;
 }
 
 

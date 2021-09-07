@@ -19,6 +19,25 @@ $(document).ready(function() {
 
   });
 
+  
+  
+  var siteheader = document.querySelector('.siteheader');
+  var header_height = siteheader.offsetHeight;
+
+  window.addEventListener('resize', function(event) {
+
+    var header_height = siteheader.offsetHeight;
+    $('.sitecontent').css('margin-top',header_height + 'px');
+    
+  }, true);
+
+  $('.sitecontent').css('margin-top',header_height + 'px');
+
+  
+
+  
+
+
 
   // ======= //
   // sliders //
