@@ -202,10 +202,10 @@ h2 + p {
 a.logo {
   font-size: 30px;
   margin-left: 20px;
-  font-weight: 500;
-  /*text-transform: uppercase;*/
+  font-weight: 600;
+  text-transform: uppercase;
   display: inline-block;
-  font-family: 'Poppins', sans-serif;
+  /*font-family: 'Poppins', sans-serif;*/
 }
 
 .siteheader {
@@ -701,15 +701,13 @@ div.preview {
   height: calc(100vh - 130px);
   width: calc((100vh - 130px) * .8);
   position: relative;
+  position: sticky;
+  top: 130px;
 }
 
 div.preview div.product_big {
   width: auto;
   height: calc(100vh - 130px);  
-}
-
-div.preview div.product_big a {
-  cursor: zoom-in;
 }
 
 .preview_slide a {
@@ -831,7 +829,6 @@ article.product_content h2.price {
 }
 
 article.product_content a.shipping {
-  margin-bottom: 60px;
   text-align: right;
       justify-content: flex-end;
   width: 100%;
