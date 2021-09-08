@@ -1308,7 +1308,7 @@ article.imprint h3 +p {
 }
 
 
-@keyframes shake-jumpcutter {
+@keyframes shake-jump {
     20% {-webkit-transform: translateY(0);transform: translateY(0);}
     24% {-webkit-transform: translateY(-0.625rem);transform: translateY(-0.625rem);}
     28% {-webkit-transform: translateY(0);transform: translateY(0);}
@@ -1317,13 +1317,8 @@ article.imprint h3 +p {
 }
 
 @keyframes circle{
-  0%{cutter
-    transform:rotate(0deg);
-  
-  }
-  100%{
-    transform:rotate(360deg);
-  }
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
 }
 
 

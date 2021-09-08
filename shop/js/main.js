@@ -1,4 +1,4 @@
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function(event) { 
 
 
   // ============== //
@@ -19,41 +19,50 @@ $(document).ready(function() {
 
   });
 
-  
-  
+  // offcanvas menu vanilla JS
+
+  var hamburger = document.querySelector('.hamburger');
+  var body = document.querySelector('body');
+  var menu = document.querySelector('.menu');
+  var content = document.querySelector('.content');
+  var siteheader = document.querySelector('.siteheader');
+  var sitecontent = document.querySelector('.sitecontent');
+  var sitefooter = document.querySelector('.sitefooter');
+
+  function toggleClassCanvas(){
+    p.classList.toggle('canvas');
+  }
+
+  hamburger.addEventListener('click', event => {
+
+    toggleClassCanvas(hamburger);
+    toggleClassCanvas(body);
+    toggleClassCanvas(menu);
+    toggleClassCanvas(content);
+    toggleClassCanvas(siteheader);
+    toggleClassCanvas(sitecontent);
+    toggleClassCanvas(sitefooter);
+
+  });
+
+
+  // dynamic space top (header height)
+
   var siteheader = document.querySelector('.siteheader');
   var header_height = siteheader.offsetHeight;
 
   window.addEventListener('resize', function(event) {
 
     var header_height = siteheader.offsetHeight;
-    $('.sitecontent').css('margin-top',header_height + 'px');
-    
+    document.querySelector('.sitecontent').style.marginTop = header_height + 'px';
+ 
   }, true);
 
-  $('.sitecontent').css('margin-top',header_height + 'px');
-
-  
-
-  
-
-
+  document.querySelector('.sitecontent').style.marginTop = header_height + 'px';
 
   // ======= //
   // sliders //
   // ======= //
-
-  /*
-  // Teaser Homepage //
-
-  $('.teaser').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-  });
-
-  */
 
   // Homepage Products Preview //
 
@@ -88,7 +97,6 @@ $(document).ready(function() {
   });
 
   // product page
-  
 
   $('.product_big').slick({
     infinite: false,
@@ -109,18 +117,13 @@ $(document).ready(function() {
   });
 
 
-
   /* FANCYBOX */
 
   $('.product_big a').fancybox({
     buttons: [
-      // "share",
       "zoom",
-      //"slideShow",
-      //"fullScreen",
       "download",
       "close",
-      //"thumbs",
     ],
   });
 
