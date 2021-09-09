@@ -5,20 +5,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // offcanvas menu //
   // ============== //
 
-  $('.hamburger').click(function(e){
-    e.preventDefault();
-
-    // add canvas
-    $('body').toggleClass('canvas');
-    $('.menu').toggleClass('canvas');
-    $('.content').toggleClass('canvas');
-    $('.siteheader').toggleClass('canvas');
-    $('.sitecontent').toggleClass('canvas');
-    $('.sitefooter').toggleClass('canvas');
-    $('.hamburger').toggleClass('canvas');
-
-  });
-
   // offcanvas menu vanilla JS
 
   var hamburger = document.querySelector('.hamburger');
@@ -153,6 +139,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
       $('body').removeClass('popup_active');
     }
   });
+
+  // Vanilla JS
+
+  let PopUpButton = document.querySelector('a.button.order_popup');
+
+  PopUpButton.addEventListener('click', event => {
+
+    document.querySelector('article.popup')elem.style.display = 'block';
+    document.querySelector('body').classList.add('popup')
+
+  });
+
 
   // Size selector //
 
