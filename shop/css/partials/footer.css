@@ -179,10 +179,6 @@ footer.sitefooter a:hover:after {
 
 @media screen and (max-width: 580px) {
 
-  footer.sitefooter {
-    padding-top: 110px;
-  }
-
   a.rounded_logo {
     width: 140px;
     height: 140px;

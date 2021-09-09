@@ -1,57 +1,47 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
 
+  // offcanvas menu
 
-  // ============== //
-  // offcanvas menu //
-  // ============== //
+  let hamburger = document.querySelector('.hamburger');
+  let body = document.querySelector('body');
+  let menu = document.querySelector('.menu');
+  let siteheader = document.querySelector('.siteheader');
+  let sitecontent = document.querySelector('.sitecontent');
+  let sitefooter = document.querySelector('.sitefooter');
 
-  // offcanvas menu vanilla JS
-
-  var hamburger = document.querySelector('.hamburger');
-  var body = document.querySelector('body');
-  var menu = document.querySelector('.menu');
-  var content = document.querySelector('.content');
-  var siteheader = document.querySelector('.siteheader');
-  var sitecontent = document.querySelector('.sitecontent');
-  var sitefooter = document.querySelector('.sitefooter');
-
-  function toggleClassCanvas(){
-    p.classList.toggle('canvas');
-  }
+  // function toggleClassCanvas(p){
+  //   p.classList.toggle('canvas');
+  // }
 
   hamburger.addEventListener('click', event => {
 
-    toggleClassCanvas(hamburger);
-    toggleClassCanvas(body);
-    toggleClassCanvas(menu);
-    toggleClassCanvas(content);
-    toggleClassCanvas(siteheader);
-    toggleClassCanvas(sitecontent);
-    toggleClassCanvas(sitefooter);
+    hamburger.classList.toggle('canvas');
+    body.classList.toggle('canvas');
+    menu.classList.toggle('canvas');
+    siteheader.classList.toggle('canvas');
+    sitecontent.classList.toggle('canvas');
+    sitefooter.classList.toggle('canvas');
 
   });
 
 
   // dynamic space top (header height)
 
-  var siteheader = document.querySelector('.siteheader');
-  var header_height = siteheader.offsetHeight;
+  let header_height = siteheader.offsetHeight;
 
   window.addEventListener('resize', function(event) {
 
-    var header_height = siteheader.offsetHeight;
+    let header_height = siteheader.offsetHeight;
     document.querySelector('.sitecontent').style.marginTop = header_height + 'px';
  
   }, true);
 
   document.querySelector('.sitecontent').style.marginTop = header_height + 'px';
 
-  // ======= //
-  // sliders //
-  // ======= //
 
-  // Homepage Products Preview //
+  // SLIDERS
 
+  // Homepage Products Preview
   $('.products').slick({
     infinite: false,
     speed: 300,
@@ -83,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   // product page
-
   $('.product_big').slick({
     infinite: false,
     slidesToShow: 1,
@@ -114,60 +103,56 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
 
-  // ====== //
-  // pop up //
-  // ====== //
+  // PayPal Pop Up
 
-  $('a.button.order_popup').on('click',function() {
-    $('article.popup').show();
-    $('body').addClass('popup_active');    
+  let PopUpButton = document.querySelector('a.button.order_popup');
+  let PopUp = document.querySelector('article.popup');
+
+  PopUpButton.addEventListener('click', event => {
+    PopUp.classList.add('show');
+    body.classList.add('fade');
   });
 
-  $('a.close').on('click',function() {
-    $('article.popup').hide();
-    $('body').removeClass('popup_active');
+  // close button
+  document.querySelector('a.close').addEventListener('click', event => {
+    PopUp.classList.remove('show');
+    body.classList.remove('fade');
   });
 
   // remove popup clicking outside of div
-  $(document).mouseup(function(e) {
-    var $popup = $('article.popup');
+  document.addEventListener('mouseup', function(e) {
+
+    let $popup = $('article.popup');
 
     // if the target of the click isn't the container nor a descendant of the container
-    if (!$popup.is(e.target) && $popup.has(e.target).length === 0) 
-    {
-      $popup.hide();
-      $('body').removeClass('popup_active');
+    if (!$popup.is(e.target) && $popup.has(e.target).length === 0) {
+      PopUp.classList.remove('show');
+      body.classList.remove('fade');
     }
   });
 
-  // Vanilla JS
-
-  let PopUpButton = document.querySelector('a.button.order_popup');
-
-  PopUpButton.addEventListener('click', event => {
-
-    document.querySelector('article.popup')elem.style.display = 'block';
-    document.querySelector('body').classList.add('popup')
-
-  });
+  // PopUp.addEventListener('mousedown', function(){
+  //   console.log('haha');
+  // });
 
 
-  // Size selector //
+  // Size selector for Product request via mail
+  // html > test-product
 
+  /*
   $('span.size').on('click', function(){
-    var $size = this.getAttribute('size');
+    let $size = this.getAttribute('size');
 
     $('p.size_selector span').removeClass('selected')
     $(this).addClass('selected')
 
-    var email = 'shop@thepixelhead.co';
-    var subject = encodeURIComponent('Holo Shirt white blue');
-    var body = encodeURIComponent('Hallo,\nich würde gerne das Shirt in Größe '+$size+' bestellen');
+    let email = 'shop@thepixelhead.co';
+    let subject = encodeURIComponent('Holo Shirt white blue');
+    let body = encodeURIComponent('Hallo,\nich würde gerne das Shirt in Größe '+$size+' bestellen');
     $('a.button.order').attr('href', 'mailto:'+email+'?subject='+subject+'&body='+body);
     
     $('a.button.order').removeClass('no_click')
 
-  });
-
+  }); */
 
 });

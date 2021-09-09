@@ -916,47 +916,58 @@ article.product_content a.button {
 /* POP-UP */
 /* ====== */
 
+/* Fade */
+
+body.fade {
+  overflow: hidden;
+}
+
+body:before {
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  transition: all .4s ease-out;
+}
+
+body.fade:before {
+  z-index: 99;
+  background-color: rgba(255,255,255,.9);
+}
+
+
 article.popup {
   padding: 40px;
   background-color: #fff;
   position: fixed;
   left: 50%;
   text-align: center;
-  -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
-  top: 10%;
+  top: 0;
+  -webkit-transform: translate(-50%, -150%);
+    -ms-transform: translate(-50%, -150%);
+      transform: translate(-50%, -150%);
   max-height: calc(100vh - 10%);
   z-index: 100;
-  -webkit-box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.12);
-    box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.12);
-  width: 90%;
+  -webkit-box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.26);
+    box-shadow: 2px 2px 14px 0px rgba(124, 63, 63, 0.26);
+  width: calc(100% - 60px);
   max-width: 460px;
   -webkit-box-sizing: border-box;
     box-sizing: border-box;
-  transition: all .4s ease-out;
+  transition: all .6s ease-out;
 }
 
-body.popup_active {
-  overflow: hidden;
+
+article.popup.show {
+  top: 10%;
+  -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+      transform: translateX(-50%);  
 }
 
-body:before {
-  z-index: -10;
-  content: '';
-  position: fixed;
-  display: block;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  transition: all .4s ease-out;
-}
-
-body.popup_active:before {
-  z-index: 99;
-  background-color: rgba(255,255,255,.86);
-}
 
 article.popup div.text {
   overflow-y: auto;
