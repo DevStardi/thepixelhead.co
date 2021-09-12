@@ -123,7 +123,6 @@ input.button {
   max-width: 80%;
 }
 
-
 a.button:hover {
   color: #fff;
 }
@@ -364,14 +363,13 @@ a.logo {
   }
 
 }
+
 @media screen and (max-width: 680px) {
 
   .siteheader div.banner span {
     max-height: inherit;
   }
 }
-
-
 
 @media screen and (max-width: 600px) {
 
@@ -389,6 +387,7 @@ a.logo {
   }
 
 }
+
 @media screen and (max-width: 410px) {
 
   header.siteheader div.wrapper {
@@ -455,7 +454,6 @@ body.home article.text {
 
 
 @media screen and (max-width: 2000px) {
-
 
   .teaser .slide_item img.desktop {
     display: block;
@@ -604,7 +602,6 @@ div.shop a.product:nth-of-type(4n+1) {
 
 }
 
-
 @media screen and (max-width: 700px) {
 
   div.shop a.product {
@@ -716,14 +713,12 @@ div.preview div.product_big {
   position: absolute;
 }
 
-
 div.preview div.product_big img {
   width: auto;
   height: calc(100vh - 130px);
   min-height: 600px;
   display: block;
 }
-
 
 div.preview nav.product_nav {
   position: absolute;
@@ -776,8 +771,6 @@ div.preview nav.product_nav img:hover {
 }
 
 
-
-
 /* content section */
 
 article.product_content {
@@ -800,7 +793,6 @@ article.product_content h1 span {
   font-size: 30px;
   margin-top: -10px;
 }
-
 
 article.product_content p.text {
   margin-bottom: 30px;
@@ -845,7 +837,6 @@ article.product_content a.shipping img {
 article.product_content a.shipping:hover img {
   animation: truck-drive 3s;
 }
-
 
 article.product_content a.button {
   margin: 0;
@@ -938,7 +929,6 @@ body.fade:before {
   background-color: rgba(255,255,255,.9);
 }
 
-
 article.popup {
   padding: 40px;
   background-color: #fff;
@@ -960,14 +950,12 @@ article.popup {
   transition: all .6s ease-out;
 }
 
-
 article.popup.show {
   top: 10%;
   -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
       transform: translateX(-50%);  
 }
-
 
 article.popup div.text {
   overflow-y: auto;
@@ -1185,7 +1173,6 @@ div.price_shipping a.shipping p {
     font-size: 28px;
   }
 
-
 }
 
 /* ==== */
@@ -1277,12 +1264,9 @@ article.imprint h3 +p {
 }
 
 
-
-/*
- * ----------------------------------------
- *  shake animations
- * ----------------------------------------
- */
+/* ========== */
+/* animations */
+/* ========== */
 
 @-webkit-keyframes shake-side {
   0%,25% {-webkit-transform: rotate(0deg);transform: rotate(0deg);-webkit-transform-origin: 50% 100%;transform-origin: 50% 100%;}
@@ -1303,41 +1287,38 @@ article.imprint h3 +p {
 }
 
 @-webkit-keyframes shake-jump {
-    0% {-webkit-transform: translateY(0);transform: translateY(0);}
-    4% {-webkit-transform: translateY(-0.625rem);transform: translateY(-0.625rem);}
-    8% {-webkit-transform: translateY(0);transform: translateY(0);}
-    12% {-webkit-transform: translateY(-0.875rem);transform: translateY(-0.875rem);}
-    16% {-webkit-transform: translateY(0);transform: translateY(0);}
+  0% {-webkit-transform: translateY(0);transform: translateY(0);}
+  4% {-webkit-transform: translateY(-0.625rem);transform: translateY(-0.625rem);}
+  8% {-webkit-transform: translateY(0);transform: translateY(0);}
+  12% {-webkit-transform: translateY(-0.875rem);transform: translateY(-0.875rem);}
+  16% {-webkit-transform: translateY(0);transform: translateY(0);}
 }
 
 @keyframes shake-jump {
-    0% {-webkit-transform: translateY(0);transform: translateY(0);}
-    4% {-webkit-transform: translateY(-0.625rem);transform: translateY(-0.625rem);}
-    8% {-webkit-transform: translateY(0);transform: translateY(0);}
-    12% {-webkit-transform: translateY(-0.875rem);transform: translateY(-0.875rem);}
-    16% {-webkit-transform: translateY(0);transform: translateY(0);}
+  0% {-webkit-transform: translateY(0);transform: translateY(0);}
+  4% {-webkit-transform: translateY(-0.625rem);transform: translateY(-0.625rem);}
+  8% {-webkit-transform: translateY(0);transform: translateY(0);}
+  12% {-webkit-transform: translateY(-0.875rem);transform: translateY(-0.875rem);}
+  16% {-webkit-transform: translateY(0);transform: translateY(0);}
 }
 
-
 @keyframes shake-jump {
-    20% {-webkit-transform: translateY(0);transform: translateY(0);}
-    24% {-webkit-transform: translateY(-0.625rem);transform: translateY(-0.625rem);}
-    28% {-webkit-transform: translateY(0);transform: translateY(0);}
-    32% {-webkit-transform: translateY(-0.875rem);transform: translateY(-0.875rem);}
-    36% {-webkit-transform: translateY(0);transform: translateY(0);}
+  20% {-webkit-transform: translateY(0);transform: translateY(0);}
+  24% {-webkit-transform: translateY(-0.625rem);transform: translateY(-0.625rem);}
+  28% {-webkit-transform: translateY(0);transform: translateY(0);}
+  32% {-webkit-transform: translateY(-0.875rem);transform: translateY(-0.875rem);}
+  36% {-webkit-transform: translateY(0);transform: translateY(0);}
 }
 
 @keyframes circle{
-  0%{transform:rotate(0deg);}
-  100%{transform:rotate(360deg);}
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
 }
 
-
-
 @keyframes truck-drive {
-    0% {-webkit-transform: translateX(0);transform: translateX(0);}
-    4% {-webkit-transform: translateX(-0.625rem);transform: translateX(-0.625rem);}
-    8% {-webkit-transform: translateX(0);transform: translateX(0);}
-    12% {-webkit-transform: translateX(-0.875rem);transform: translateX(-0.875rem);}
-    16% {-webkit-transform: translateX(0);transform: translateX(0);}
+  0% {-webkit-transform: translateX(0);transform: translateX(0);}
+  4% {-webkit-transform: translateX(-0.625rem);transform: translateX(-0.625rem);}
+  8% {-webkit-transform: translateX(0);transform: translateX(0);}
+  12% {-webkit-transform: translateX(-0.875rem);transform: translateX(-0.875rem);}
+  16% {-webkit-transform: translateX(0);transform: translateX(0);}
 }
