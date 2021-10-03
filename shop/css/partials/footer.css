@@ -4,7 +4,7 @@
 
 body.product .cutter,
 body.home .sitecontent {
-  margin-bottom: 400px;
+  margin-bottom: var(--footer_height);
   background-color: #fff;
   position: relative;
 }
@@ -166,6 +166,11 @@ footer.sitefooter a:hover:after {
 
 @media screen and (max-width: 740px) {
 
+  footer.sitefooter {
+    top: var(--header_height);
+    margin-top: 0;
+  }
+
   footer.sitefooter section.container {
     display: block;
   }
@@ -196,13 +201,7 @@ footer.sitefooter a:hover:after {
     right: 0;
   }
 
-  body.product .cutter,
-  body.home .sitecontent {
-    margin-bottom: 800px;
-  }
-
 }
-
 
 @media screen and (max-width: 360px) {
 
@@ -211,6 +210,3 @@ footer.sitefooter a:hover:after {
   }
 
 }
-
-
-

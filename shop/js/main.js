@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
+document.addEventListener('DOMContentLoaded', function(event) { 
 
   // offcanvas menu
 
@@ -9,34 +9,44 @@ document.addEventListener("DOMContentLoaded", function(event) {
   let sitecontent = document.querySelector('.sitecontent');
   let sitefooter = document.querySelector('.sitefooter');
 
-  // function toggleClassCanvas(p){
-  //   p.classList.toggle('canvas');
-  // }
+  function toogleMenu() {
 
-  hamburger.addEventListener('click', event => {
+    function addClassCanvas(i) {
+      i.classList.toggle('canvas');
+    }
 
-    hamburger.classList.toggle('canvas');
-    body.classList.toggle('canvas');
-    menu.classList.toggle('canvas');
-    siteheader.classList.toggle('canvas');
-    sitecontent.classList.toggle('canvas');
-    sitefooter.classList.toggle('canvas');
+    addClassCanvas(hamburger);
+    addClassCanvas(body);
+    addClassCanvas(menu);
+    addClassCanvas(siteheader);
+    addClassCanvas(sitecontent);
+    addClassCanvas(sitefooter);
+  }
 
-  });
+  hamburger.addEventListener('click', toogleMenu);
 
 
-  // dynamic space top (header height)
-
-  let header_height = siteheader.offsetHeight;
-
-  window.addEventListener('resize', function(event) {
-
+  // dynamic space top (header height, footer responsive)
+  function updateVars() {
     let header_height = siteheader.offsetHeight;
-    document.querySelector('.sitecontent').style.marginTop = header_height + 'px';
- 
-  }, true);
+    let footer_height = sitefooter.offsetHeight;
 
-  document.querySelector('.sitecontent').style.marginTop = header_height + 'px';
+    document.querySelector('.sitecontent').style.marginTop = header_height + 'px';
+
+    document.documentElement.style.setProperty( '--header_height', header_height + 'px' );
+    document.documentElement.style.setProperty( '--footer_height', footer_height + 'px' );
+  }
+
+  window.addEventListener('resize', updateVars, true);
+  updateVars();
+  
+
+  // Get the H1 heading
+  var sitefooter_test = document.querySelector('.sitefooter');
+  // Get it's position in the viewport
+  var bounding = sitefooter_test.getBoundingClientRect();
+  // Log the results
+  console.log(bounding);
 
 
   // SLIDERS
@@ -90,6 +100,37 @@ document.addEventListener("DOMContentLoaded", function(event) {
     centerMode: true,
     focusOnSelect: true,
   });
+
+
+  // Create and mount the thumbnails slider.
+  // var nav_slider = new Splide( '#nav_slider', {
+  //   rewind      : true,
+  //   fixedWidth  : 100,
+  //   fixedHeight : 64,
+  //   isNavigation: true,
+  //   gap         : 10,
+  //   focus       : 'center',
+  //   pagination  : false,
+  //   cover       : true,
+  //   breakpoints : {
+  //     '600': {
+  //       fixedWidth  : 66,
+  //       fixedHeight : 40,
+  //     }
+  //   }
+  // } ).mount();
+
+  // // Create the main slider.
+  // var main_slider = new Splide( '#main_slider', {
+  //   type       : 'fade',
+  //   heightRatio: 0.5,
+  //   pagination : false,
+  //   arrows     : false,
+  //   cover      : true,
+  // } );
+
+  // // Set the thumbnails slider as a sync target and then call mount.
+  // main_slider.sync( nav_slider ).mount();
 
 
   /* FANCYBOX */
