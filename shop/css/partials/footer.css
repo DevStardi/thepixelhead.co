@@ -9,6 +9,23 @@ body.home .sitecontent {
   position: relative;
 }
 
+body.footer_scroll
+
+body.product.footer_scroll .cutter,
+body.home.footer_scroll .sitecontent {
+  margin-bottom: 0;
+}
+
+body.product.footer_scroll .cutter {
+  margin-bottom: 0;
+}
+
+.toggler {
+  margin-top: calc(var(--header_height) * -1) ;
+  padding-top: var(--header_height);
+}
+
+
 body.overview section.sitecontent {
   padding-bottom: 80px;
 }
@@ -28,8 +45,11 @@ footer.sitefooter {
   z-index: -1;
 }
 
-/* rounded Logo */
+body.footer_scroll footer.sitefooter {
+  position: static;
+}
 
+/* rounded Logo */
 footer.sitefooter section.container {
   position: relative;
   width: 100%;
@@ -148,6 +168,16 @@ footer.sitefooter a:hover:after {
 
 /* RESPONSIVE */
 
+
+
+@media screen and (max-height: var(--footer_height)) {
+
+  footer.sitefooter {
+    background: red;
+  }
+
+}
+
 @media screen and (max-width: 1000px) {
 
   footer.sitefooter {
@@ -166,6 +196,11 @@ footer.sitefooter a:hover:after {
 
 @media screen and (max-width: 740px) {
 
+  body.product .cutter, 
+  body.home .sitecontent {
+    margin-bottom: var(--content_height);
+  }
+
   footer.sitefooter {
     top: var(--header_height);
     margin-top: 0;
@@ -177,6 +212,15 @@ footer.sitefooter a:hover:after {
 
   footer.sitefooter nav.links {
     margin-left: 0;
+  }
+
+  body.footer_scroll .logo_scroll {
+    position: relative;
+  }
+
+  body.footer_scroll a.rounded_logo {
+    top: calc((var(--header_height) - 46px) * -1);
+    bottom: inherit;
   }
 
 }

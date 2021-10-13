@@ -9,45 +9,64 @@ document.addEventListener('DOMContentLoaded', function(event) {
   let sitecontent = document.querySelector('.sitecontent');
   let sitefooter = document.querySelector('.sitefooter');
 
-  function toogleMenu() {
+  // function toogleMenu() {
 
-    function addClassCanvas(i) {
-      i.classList.toggle('canvas');
-    }
+  //   function addClassCanvas(i) {
+  //     i.classList.toggle('canvas');
+  //   }
 
-    addClassCanvas(hamburger);
-    addClassCanvas(body);
-    addClassCanvas(menu);
-    addClassCanvas(siteheader);
-    addClassCanvas(sitecontent);
-    addClassCanvas(sitefooter);
+  //   addClassCanvas(hamburger);
+  //   addClassCanvas(body);
+  //   addClassCanvas(menu);
+  //   addClassCanvas(siteheader);
+  //   addClassCanvas(sitecontent);
+  //   addClassCanvas(sitefooter);
+  // }
+
+  hamburger.addEventListener('click', function() {
+    document.body.classList.add('menu');
+    hamburger.classList.add('menu')
+  });
+
+  function removeMenu() {
+    document.body.classList.remove('menu')
   }
 
-  hamburger.addEventListener('click', toogleMenu);
 
+  // dynamic space top (header height, footer responsive)  
+  let footer_height = sitefooter.offsetHeight;
+  let header_height = siteheader.offsetHeight;
+  let contentHeight = document.documentElement.clientHeight - header_height;
 
-  // dynamic space top (header height, footer responsive)
-  function updateVars() {
-    let header_height = siteheader.offsetHeight;
-    let footer_height = sitefooter.offsetHeight;
-
+  const updateCSSvars = function() {
     document.querySelector('.sitecontent').style.marginTop = header_height + 'px';
 
     document.documentElement.style.setProperty( '--header_height', header_height + 'px' );
     document.documentElement.style.setProperty( '--footer_height', footer_height + 'px' );
+    document.documentElement.style.setProperty( '--content_height', contentHeight + 'px' );
   }
 
-  window.addEventListener('resize', updateVars, true);
-  updateVars();
+  updateCSSvars();
+  window.addEventListener('resize', updateCSSvars, true);
+
+	// FOOTER RESPONSIVE
+	
+  const scrollFooter = function() {
+
+    let togglerTopPos = document.querySelector('.toggler').getBoundingClientRect().top;
+   
+    if (togglerTopPos <= 0) {
+      document.body.classList.add('footer_scroll');
+    }
+    else {
+      document.body.classList.remove('footer_scroll');
+    }
+  }
+
+  scrollFooter();
+	document.addEventListener('scroll', scrollFooter);
+	document.addEventListener('resize', scrollFooter);
   
-
-  // Get the H1 heading
-  var sitefooter_test = document.querySelector('.sitefooter');
-  // Get it's position in the viewport
-  var bounding = sitefooter_test.getBoundingClientRect();
-  // Log the results
-  console.log(bounding);
-
 
   // SLIDERS
 
@@ -102,39 +121,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   });
 
 
-  // Create and mount the thumbnails slider.
-  // var nav_slider = new Splide( '#nav_slider', {
-  //   rewind      : true,
-  //   fixedWidth  : 100,
-  //   fixedHeight : 64,
-  //   isNavigation: true,
-  //   gap         : 10,
-  //   focus       : 'center',
-  //   pagination  : false,
-  //   cover       : true,
-  //   breakpoints : {
-  //     '600': {
-  //       fixedWidth  : 66,
-  //       fixedHeight : 40,
-  //     }
-  //   }
-  // } ).mount();
-
-  // // Create the main slider.
-  // var main_slider = new Splide( '#main_slider', {
-  //   type       : 'fade',
-  //   heightRatio: 0.5,
-  //   pagination : false,
-  //   arrows     : false,
-  //   cover      : true,
-  // } );
-
-  // // Set the thumbnails slider as a sync target and then call mount.
-  // main_slider.sync( nav_slider ).mount();
-
-
   /* FANCYBOX */
-
   $('.product_big a').fancybox({
     buttons: [
       "zoom",
@@ -145,7 +132,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 
   // PayPal Pop Up
-
   let PopUpButton = document.querySelector('a.button.order_popup');
   let PopUp = document.querySelector('article.popup');
 
@@ -171,29 +157,5 @@ document.addEventListener('DOMContentLoaded', function(event) {
       body.classList.remove('fade');
     }
   });
-
-  // PopUp.addEventListener('mousedown', function(){
-  //   console.log('haha');
-  // });
-
-
-  // Size selector for Product request via mail
-  // html > test-product
-
-  /*
-  $('span.size').on('click', function(){
-    let $size = this.getAttribute('size');
-
-    $('p.size_selector span').removeClass('selected')
-    $(this).addClass('selected')
-
-    let email = 'shop@thepixelhead.co';
-    let subject = encodeURIComponent('Holo Shirt white blue');
-    let body = encodeURIComponent('Hallo,\nich würde gerne das Shirt in Größe '+$size+' bestellen');
-    $('a.button.order').attr('href', 'mailto:'+email+'?subject='+subject+'&body='+body);
-    
-    $('a.button.order').removeClass('no_click')
-
-  }); */
 
 });
