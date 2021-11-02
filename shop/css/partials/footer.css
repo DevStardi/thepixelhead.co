@@ -4,7 +4,6 @@
 
 .cutter,
 .sitecontent {
-  margin-bottom: var(--footer_height);
   background-color: #fff;
   position: relative;
 }
@@ -23,6 +22,7 @@ body.product.footer_scroll .cutter {
 .toggler {
   margin-top: calc(var(--header_height) * -1) ;
   padding-top: var(--header_height);
+  margin-bottom: var(--footer_height);
 }
 
 
