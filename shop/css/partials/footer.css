@@ -2,8 +2,8 @@
 /* FOOTER */
 /* ====== */
 
-body.product .cutter,
-body.home .sitecontent {
+.cutter,
+.sitecontent {
   margin-bottom: var(--footer_height);
   background-color: #fff;
   position: relative;

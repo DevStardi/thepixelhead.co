@@ -39,8 +39,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
   let contentHeight = document.documentElement.clientHeight - header_height;
 
   const updateCSSvars = function() {
-    document.querySelector('.sitecontent').style.marginTop = header_height + 'px';
-
     document.documentElement.style.setProperty( '--header_height', header_height + 'px' );
     document.documentElement.style.setProperty( '--footer_height', footer_height + 'px' );
     document.documentElement.style.setProperty( '--content_height', contentHeight + 'px' );

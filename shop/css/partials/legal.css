@@ -1,0 +1,38 @@
+/* =========== */
+/* LEGAL SITES */
+/* =========== */
+
+.legal .wrapper.legal_text {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  width: 80%;
+  max-width: 1000px;
+}
+
+.legal .legal_text h2  {
+  font-size: 24px;
+  padding-top: 30px;
+}
+
+.legal .legal_text h3 {
+  font-size: 22px;
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+.legal .legal_text h4 {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+}
+
+.legal .legal_text ul li {
+  font-size: 20px;
+  line-height: 1.5;
+  list-style-type: '– ';
+  list-style-position: inside;
+}
+
+
+.legal .legal_text p a  {
+  text-decoration: underline;
+}
