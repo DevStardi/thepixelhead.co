@@ -68,6 +68,21 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   // SLIDERS
 
+  // new Splide( '.preview_slide', {
+  //   autoWidth   : true,
+  //   cover       : true,
+  //   perPage     : 1,
+  // } ).mount();
+
+  let ProductPreview = new Splide( '.preview_slide',{
+    autoWidth :true,
+    height    :'calc(100vh - var(--header_height))',
+    direction :'ttb',
+    perPage   :1,
+  });
+
+  ProductPreview.mount();
+
   // Homepage Products Preview
   $('.products').slick({
     infinite: false,

@@ -6,21 +6,24 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="../css/fonts/fonts.css">
-        <link rel="stylesheet" href="../css/normalize.css">
-        <link rel="stylesheet" href="../css/slick.css">
-        <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
+        <link rel="stylesheet" href="/shop/css/helpers/splide-themes/splide-default.min.css">
 
-        <link rel="stylesheet" href="../css/partials/main.css">
-        <link rel="stylesheet" href="../css/partials/footer.css">
-        <link rel="stylesheet" href="../css/partials/product.css">
+        <link rel="stylesheet" href="/shop/css/fonts/fonts.css">
+        <link rel="stylesheet" href="/shop/css/normalize.css">
+        <link rel="stylesheet" href="/shop/css/slick.css">
+        <link rel="stylesheet" href="/shop/css/jquery.fancybox.min.css">
 
 
-        <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
-        <link rel="manifest" href="../favicon/site.webmanifest">
-        <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+        <link rel="stylesheet" href="/shop/css/partials/main.css">
+        <link rel="stylesheet" href="/shop/css/partials/footer.css">
+        <link rel="stylesheet" href="/shop/css/partials/product.css">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/shop/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/shop/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/shop/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/shop/favicon/site.webmanifest">
+        <link rel="mask-icon" href="/shop/favicon/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
     </head>
@@ -44,7 +47,7 @@
         </header>
         <article class="popup">
             <a class="close">
-                <img src="../images/icons/close.svg">
+                <img src="/shop/images/icons/close.svg">
             </a>
             <section class="">
                 <h2>Bestell&shy;ung</h2>
@@ -74,7 +77,7 @@
                         </select>
                         <input type="hidden" name="currency_code" value="EUR">
 
-                        <input class="button pp_submit" type="image" src="../images/icons/paypal.svg" border="0" name="submit" alt="via PayPal bezahlen">                        
+                        <input class="button pp_submit" type="image" src="/shop/images/icons/paypal.svg" border="0" name="submit" alt="via PayPal bezahlen">                        
                         
 
                         <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
@@ -86,37 +89,35 @@
 
         <section class="cutter">            
             <section class="sitecontent wrapper product flex">
-                <div class="preview">
-                    <div id="main_slider" class="product_big">
-                        <div class="preview_slide">
-                            <a class="mag" data-fancybox="gallery" href="../images/products/shirts/holo_blue_1.jpg">
-                            </a>
-                            <img src="../images/products/shirts/holo_blue_1.jpg" alt="Holo Shirt - white / blue Bild 1">
-                        </div>
-                        <div class="preview_slide">
-                            <a class="mag" data-fancybox="gallery" href="../images/products/shirts/holo_blue_2.jpg">
-                            </a>
-                            <img src="../images/products/shirts/holo_blue_2.jpg" alt="Holo Shirt - white / blue Bild 2">
-                        </div>
-                        <div class="preview_slide">
-                            <a class="mag" data-fancybox="gallery" href="../images/products/shirts/holo_blue_3.jpg">
-                            </a>
-                            <img src="../images/products/shirts/holo_blue_3.jpg" alt="Holo Shirt - white / blue Bild 3">
-                        </div>
-                        <div class="preview_slide">
-                            <a class="mag" data-fancybox="gallery" href="../images/products/colors/white.jpg">
-                            </a>
-                            <img src="../images/products/colors/white.jpg" alt="weiß Farbe">
-                        </div>
-                    </div>
-                    <nav id="nav_slider" class="product_nav">
 
-                        <img src="../images/products/shirts/holo_blue_1.jpg" alt="Holo Shirt - white / blue Bild 1">
-                        <img src="../images/products/shirts/holo_blue_2.jpg" alt="Holo Shirt - white / blue Bild 2">
-                        <img src="../images/products/shirts/holo_blue_3.jpg" alt="Holo Shirt - white / blue Bild 3">
-                        <img src="../images/products/colors/white.jpg" alt="weiß Farbe">
-                    </nav>
-                </div>
+                <div class="preview_slide">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                            <a class="mag" data-fancybox="gallery" href="/shop/images/products/shirts/holo_blue_1.jpg">
+                            </a>
+                            <img src="/shop/images/products/shirts/holo_blue_1.jpg" width="2000" height="2500" alt="Holo Shirt - white / blue Bild 1">
+                        </li>
+                        <li class="splide__slide">
+                            <a class="mag" data-fancybox="gallery" href="/shop/images/products/shirts/holo_blue_3.jpg">
+                            </a>
+                            <img src="/shop/images/products/shirts/holo_blue_3.jpg" alt="Holo Shirt - white / blue Bild 3">
+                        </li>
+                        <li class="splide__slide">
+                            <a class="mag" data-fancybox="gallery" href="/shop/images/products/colors/white.jpg">
+                            </a>
+                            <img src="/shop/images/products/colors/white.jpg" alt="weiß Farbe">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                <!-- <nav id="nav_slider" class="product_nav">
+
+                    <img src="/shop/images/products/shirts/holo_blue_1.jpg" alt="Holo Shirt - white / blue Bild 1">
+                    <img src="/shop/images/products/shirts/holo_blue_2.jpg" alt="Holo Shirt - white / blue Bild 2">
+                    <img src="/shop/images/products/shirts/holo_blue_3.jpg" alt="Holo Shirt - white / blue Bild 3">
+                    <img src="/shop/images/products/colors/white.jpg" alt="weiß Farbe">
+                </nav> -->
                 <article class="product_content">
                     <h1>Holo Shirt <br>
                     <span>white / blue</span></h1>
@@ -130,7 +131,7 @@
                     <h2 class="price">30,00 €</h2>
                     <a class="button order_popup">jetzt vorbestellen</a>
                     <a href="#" class="shipping flex">
-                        <img src="../images/icons/truck-left.svg" alt="truck icon">
+                        <img src="/shop/images/icons/truck-left.svg" alt="truck icon">
                         <span>Lieferzeit kann variieren *</span>
                     </a>
                 </article>
@@ -141,8 +142,8 @@
             <div class="logo_scroll">
 
                 <a href="/" class="rounded_logo">
-                    <img class="font" src="../images/tphc-rounded_logo.svg" alt="rounded Logo font">
-                    <img class="ghost" src="../images/tphc-pixel-ghost.svg" alt="rounded Logo pixel-ghost">                    
+                    <img class="font" src="/shop/images/tphc-rounded_logo.svg" alt="rounded Logo font">
+                    <img class="ghost" src="/shop/images/tphc-pixel-ghost.svg" alt="rounded Logo pixel-ghost">                    
                 </a>
             </div>
 
@@ -186,11 +187,10 @@
             </footer>
         </section>
 
-        <script src="../js/jquery-3.4.1.min.js"></script>
-        <script src="../js/plugins.js"></script>
-        <!-- <script src="../js/helpers/splide-core.min.js"></script> -->
-        <script src="../js/helpers/splide.min.js"></script>
-        <script src="../js/main.js"></script>
+        <script src="/shop/js/jquery-3.4.1.min.js"></script>
+        <script src="/shop/js/plugins.js"></script>
+        <script src="/shop/js/helpers/splide.min.js"></script>
+        <script src="/shop/js/main.js"></script>
 
     </body>
 </html>

@@ -4,6 +4,17 @@
 
 .product .preview_slide {
   position: relative;
+  height: calc(100vh - var(--header_height));
+  max-width: calc((100vh - var(--header_height)) * .8);
+}
+
+.product .preview_slide .splide__slide {
+  /* max-width: 70%; */
+  height: calc(100vh - 130px);
+}
+
+.product .preview_slide .splide__slide img {
+  height: calc(100vh - var(--header_height));
 }
 
 .product .preview_slide a.mag {
