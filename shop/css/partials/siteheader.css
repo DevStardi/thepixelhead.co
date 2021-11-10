@@ -1,0 +1,223 @@
+/*======= */
+/* HEADER */
+/*======= */
+
+a.logo {
+    font-size: 30px;
+    margin-left: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    /* font-family: 'Poppins', sans-serif; */
+  }
+  
+  .siteheader {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    z-index: 10;
+    /*box-shadow: 0 1px 16px rgb(0 0 0 / 7%);*/
+  }
+  
+  .siteheader .wrapper.flex {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .siteheader nav.menu a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 22px;
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 30px;
+    margin-top: 12px;
+  }
+  
+  .hamburger {
+    display: none;
+  }
+  
+  .siteheader .wrapper {
+    height: 80px;
+  }
+
+  .sitebanner {
+    margin-top: var(--header_height);
+    width: 100%;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    background-color: #222222;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  
+  .sitebanner span {
+    font-size: 16px;
+    max-height: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+/*=============== */
+/* HAMBURGER MENU */
+/*=============== */
+
+@media screen and (max-width: 1020px) {
+
+    .hamburger {
+      padding: 10px;
+      cursor: pointer;
+    }
+  
+    .hamburger span {
+      display: block;
+      height: 4px;
+      width: 38px;
+      margin-bottom: 6px;
+      background-color: #000;
+      -webkit-transition: all ease .2s;
+      -o-transition: all ease .2s;
+      transition: all ease .2s;
+    }
+  
+    .hamburger span:last-of-type {
+      margin-bottom: 0;
+    }
+  
+    .hamburger.canvas {
+      padding: 16px 10px;
+    }
+  
+    .hamburger.canvas span{
+      margin: 0;
+    }
+  
+    .hamburger.canvas span:nth-of-type(1) {
+      -webkit-transform: translateY(4px) rotate(135deg);
+          -ms-transform: translateY(4px) rotate(135deg);
+              transform: translateY(4px) rotate(135deg);
+    }
+  
+    .hamburger.canvas span:nth-of-type(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.canvas span:nth-of-type(3) {
+      -webkit-transform: translateY(-4px) rotate(-135deg);
+          -ms-transform: translateY(-4px) rotate(-135deg);
+              transform: translateY(-4px) rotate(-135deg);
+    }
+  
+    .menu {
+      width: 240px;
+      height: 100vh;
+      position: absolute;
+      right: -240px;
+      top: 0;
+      background-color: #F7F7F7;
+    }
+  
+    .siteheader nav.menu a {
+      display: block;
+      margin-top: 40px;
+      margin-left: 0;
+      text-align: center;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .siteheader.canvas {
+      -webkit-transform: translateX(-240px);
+          -ms-transform: translateX(-240px);
+              transform: translateX(-240px);
+    }
+  
+    .sitefooter.canvas {
+      -webkit-transform: translateX(-240px);
+          -ms-transform: translateX(-240px);
+              transform: translateX(-240px);
+    }
+  
+    section.sitecontent.canvas {
+      -webkit-transform: translateX(-240px);
+          -ms-transform: translateX(-240px);
+              transform: translateX(-240px);
+    }
+  
+    body.canvas {
+      overflow: hidden;
+    }
+  
+    header.siteheader {
+      padding: 0;
+    }  
+  
+    header.siteheader,
+    nav.menu,
+    section.sitecontent,
+    footer.sitefooter {
+      -webkit-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      transition: all 0.3s linear;
+    }
+  
+  }
+  
+  @media screen and (max-width: 680px) {
+  
+    .sitebanner span {
+      max-height: inherit;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+  
+    header.siteheader div.wrapper {
+      padding: 0;
+      width: calc(100% - 60px)
+    }
+  
+  }
+  
+  @media screen and (max-width: 440px) {
+  
+    header.siteheader a.logo {
+      font-size: 28px;
+    }
+  
+  }
+  
+  @media screen and (max-width: 410px) {
+  
+    header.siteheader div.wrapper {
+      width: calc(100% - 40px);
+    }
+  
+  }
+  
+  @media screen and (max-width: 380px) {
+  
+    header.siteheader a.logo {
+      font-size: 24px;
+    }
+  
+    header.siteheader div.wrapper {
+      width: calc(100% - 32px);
+    }  
+  
+  }
+  
+  @media screen and (max-width: 340px) {
+  
+    header.siteheader div.wrapper {
+      width: calc(100% - 18px);
+      margin-left: auto;
+      margin-right: 0;
+    }  
+  
+  }

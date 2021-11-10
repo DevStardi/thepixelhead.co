@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   let hamburger = document.querySelector('.hamburger');
   let body = document.querySelector('body');
   let siteheader = document.querySelector('.siteheader');
+  let sitebanner = document.querySelector('.sitebanner');
   let sitefooter = document.querySelector('.sitefooter');
 
   hamburger.addEventListener('click', function() {
@@ -20,10 +21,12 @@ document.addEventListener('DOMContentLoaded', function(event) {
   // dynamic space top (header height, footer responsive)  
   let footer_height = sitefooter.offsetHeight;
   let header_height = siteheader.offsetHeight;
+  let sitebanner_height = sitebanner.offsetHeight;
   let contentHeight = document.documentElement.clientHeight - header_height;
 
   const updateCSSvars = function() {
     document.documentElement.style.setProperty( '--header_height', header_height + 'px' );
+    document.documentElement.style.setProperty( '--headerandbanner_height', header_height + sitebanner_height + 'px' );
     document.documentElement.style.setProperty( '--footer_height', footer_height + 'px' );
     document.documentElement.style.setProperty( '--content_height', contentHeight + 'px' );
   }
@@ -56,6 +59,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
     height    :'calc(100vh - var(--header_height))',
     direction :'ttb',
     perPage   :1,
+    pagination:false,
+    breakpoints: {
+      1110: {
+        height    :'auto',
+        // direction :'ltr',
+      },
+    }
   });
   ProductPreviewSlide.mount();
 
