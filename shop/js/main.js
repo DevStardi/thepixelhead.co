@@ -4,24 +4,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   let hamburger = document.querySelector('.hamburger');
   let body = document.querySelector('body');
-  let menu = document.querySelector('.menu');
   let siteheader = document.querySelector('.siteheader');
-  let sitecontent = document.querySelector('.sitecontent');
   let sitefooter = document.querySelector('.sitefooter');
-
-  // function toogleMenu() {
-
-  //   function addClassCanvas(i) {
-  //     i.classList.toggle('canvas');
-  //   }
-
-  //   addClassCanvas(hamburger);
-  //   addClassCanvas(body);
-  //   addClassCanvas(menu);
-  //   addClassCanvas(siteheader);
-  //   addClassCanvas(sitecontent);
-  //   addClassCanvas(sitefooter);
-  // }
 
   hamburger.addEventListener('click', function() {
     document.body.classList.add('menu');
@@ -67,82 +51,35 @@ document.addEventListener('DOMContentLoaded', function(event) {
   
 
   // SLIDERS
-
-  // new Splide( '.preview_slide', {
-  //   autoWidth   : true,
-  //   cover       : true,
-  //   perPage     : 1,
-  // } ).mount();
-
-  let ProductPreview = new Splide( '.preview_slide',{
+  let ProductPreviewSlide = new Splide( '.product_preview_slide',{
     autoWidth :true,
     height    :'calc(100vh - var(--header_height))',
     direction :'ttb',
     perPage   :1,
   });
+  ProductPreviewSlide.mount();
 
-  ProductPreview.mount();
-
-  // Homepage Products Preview
-  $('.products').slick({
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-
-  // product page
-  $('.product_big').slick({
-    infinite: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    speed: 500,
-
-  });
-  $('.product_nav').slick({
-    infinite: false,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    asNavFor: '.product_big',
-    dots: false,
-    centerMode: true,
-    focusOnSelect: true,
-  });
+  // var splide = new Splide( '.product_preview_slide' );
+  // var bar    = splide.root.querySelector( '.my-slider-progress-bar' );
+  
+  // // Update the bar width:
+  // splide.on( 'mounted move', function () {
+  //   var end = splide.Components.Controller.getEnd() + 1;
+  //   bar.style.width = String( 100 * ( splide.index + 1 ) / end ) + '%';
+  // } );
 
 
   /* FANCYBOX */
-  $('.product_big a').fancybox({
-    buttons: [
-      "zoom",
-      "download",
-      "close",
-    ],
-  });
 
+  Fancybox.bind('[data-fancybox="ProductPreview"]', {
+    Toolbar: {
+      display: [
+        "zoom",
+        "download",
+        "close",
+      ],
+    },
+  });
 
   // PayPal Pop Up
   let PopUpButton = document.querySelector('a.button.order_popup');

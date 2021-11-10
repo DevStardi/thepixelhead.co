@@ -6,12 +6,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="/shop/css/helpers/splide-themes/splide-default.min.css">
+        <link rel="stylesheet" href="/shop/css/helpers/splide-default.min.css">
 
         <link rel="stylesheet" href="/shop/css/fonts/fonts.css">
         <link rel="stylesheet" href="/shop/css/normalize.css">
         <link rel="stylesheet" href="/shop/css/slick.css">
-        <link rel="stylesheet" href="/shop/css/jquery.fancybox.min.css">
+        <link rel="stylesheet" href="/shop/css/helpers/fancybox.css">
 
 
 
@@ -90,34 +90,28 @@
         <section class="cutter">            
             <section class="sitecontent wrapper product flex">
 
-                <div class="preview_slide">
+                <div class="product_preview_slide">
                     <div class="splide__track">
                       <ul class="splide__list">
                         <li class="splide__slide">
-                            <a class="mag" data-fancybox="gallery" href="/shop/images/products/shirts/holo_blue_1.jpg">
+                            <a class="mag" data-fancybox="ProductPreview" href="/shop/images/products/shirts/holo_blue_1.jpg">
+                                <img src="/shop/images/products/shirts/holo_blue_1.jpg" width="2000" height="2500" alt="Holo Shirt - white / blue Bild 1">
                             </a>
-                            <img src="/shop/images/products/shirts/holo_blue_1.jpg" width="2000" height="2500" alt="Holo Shirt - white / blue Bild 1">
                         </li>
                         <li class="splide__slide">
-                            <a class="mag" data-fancybox="gallery" href="/shop/images/products/shirts/holo_blue_3.jpg">
+                            <a class="mag" data-fancybox="ProductPreview" href="/shop/images/products/shirts/holo_blue_3.jpg">
                             </a>
                             <img src="/shop/images/products/shirts/holo_blue_3.jpg" alt="Holo Shirt - white / blue Bild 3">
                         </li>
                         <li class="splide__slide">
-                            <a class="mag" data-fancybox="gallery" href="/shop/images/products/colors/white.jpg">
+                            <a class="mag" data-fancybox="ProductPreview" href="/shop/images/products/colors/white.jpg">
                             </a>
                             <img src="/shop/images/products/colors/white.jpg" alt="weiß Farbe">
                         </li>
                       </ul>
                     </div>
-                  </div>
-                <!-- <nav id="nav_slider" class="product_nav">
-
-                    <img src="/shop/images/products/shirts/holo_blue_1.jpg" alt="Holo Shirt - white / blue Bild 1">
-                    <img src="/shop/images/products/shirts/holo_blue_2.jpg" alt="Holo Shirt - white / blue Bild 2">
-                    <img src="/shop/images/products/shirts/holo_blue_3.jpg" alt="Holo Shirt - white / blue Bild 3">
-                    <img src="/shop/images/products/colors/white.jpg" alt="weiß Farbe">
-                </nav> -->
+                </div>
+                <div class="product_preview_progress_bar"></div>
                 <article class="product_content">
                     <h1>Holo Shirt <br>
                     <span>white / blue</span></h1>
@@ -188,8 +182,9 @@
         </section>
 
         <script src="/shop/js/jquery-3.4.1.min.js"></script>
-        <script src="/shop/js/plugins.js"></script>
         <script src="/shop/js/helpers/splide.min.js"></script>
+        <script src="/shop/js/helpers/fancybox.umd.js"></script>
+        <!-- <script src="/shop/js/helpers/fancybox.esm.js"></script> -->
         <script src="/shop/js/main.js"></script>
 
     </body>
