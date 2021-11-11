@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   const updateCSSvars = function() {
     document.documentElement.style.setProperty( '--header_height', header_height + 'px' );
+    document.documentElement.style.setProperty( '--banner_height', sitebanner_height + 'px' );
     document.documentElement.style.setProperty( '--headerandbanner_height', header_height + sitebanner_height + 'px' );
     document.documentElement.style.setProperty( '--footer_height', footer_height + 'px' );
     document.documentElement.style.setProperty( '--content_height', contentHeight + 'px' );
@@ -56,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   // SLIDERS
   let ProductPreviewSlide = new Splide( '.product_preview_slide',{
     autoWidth :true,
-    height    :'calc(100vh - var(--headerandbanner_height))',
+    height    :'calc(100vh - var(--header_height))',
     // direction :'ttb',
     perPage   :1,
     pagination:false,

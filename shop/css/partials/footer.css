@@ -126,7 +126,7 @@ footer.sitefooter nav.links a {
 }
 
 footer.sitefooter nav.links:first-of-type {
-  margin-left: 30%;
+  margin-left: auto;
 }
 
 /* Hover animation */
@@ -163,12 +163,7 @@ footer.sitefooter a:hover:after {
 }
 
 
-/* ------ */
-
-
 /* RESPONSIVE */
-
-
 
 @media screen and (max-height: var(--footer_height)) {
 
@@ -190,6 +185,10 @@ footer.sitefooter a:hover:after {
 
   footer.sitefooter nav.links:first-of-type {
     margin-left: auto;
+  }
+
+  a.rounded_logo {
+    right: -12px;
   }
 
 }

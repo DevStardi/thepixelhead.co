@@ -53,6 +53,8 @@ a.logo {
     align-items: center;
     justify-content: center;
     color: #fff;
+    position: relative;
+    z-index: 1;
   }
   
   .sitebanner span {
