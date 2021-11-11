@@ -56,14 +56,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
   // SLIDERS
   let ProductPreviewSlide = new Splide( '.product_preview_slide',{
     autoWidth :true,
-    height    :'calc(100vh - var(--header_height))',
-    direction :'ttb',
+    height    :'calc(100vh - var(--headerandbanner_height))',
+    // direction :'ttb',
     perPage   :1,
     pagination:false,
     breakpoints: {
       1110: {
         height    :'auto',
-        // direction :'ltr',
       },
     }
   });

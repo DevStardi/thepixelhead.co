@@ -2,10 +2,6 @@
 /* PRODUCT */
 /* ======= */
 
-.product .wrapper {
-  padding-left: 0;
-  margin-left: 0;
-}
 .product .product_preview_slide {
   position: relative;
   height: calc(100vh - var(--headerandbanner_height));
@@ -55,6 +51,10 @@ article.product_content h2.price {
   .product .product_preview_slide .splide__slide {
     height: auto;
     width: 100%;
+  }
+  .product .wrapper {
+    padding-left: 0;
+    margin-left: 0;
   }
 
 }

@@ -162,10 +162,10 @@
     cursor: pointer;
 }
 .splide__arrow svg {
-    transform: rotate(90deg) translateX(2px);
+    transform: translateY(2px);
     width: 20px;
     height: 20px;
 }
 .splide__arrow--prev svg {
-    transform: rotate(-90deg);
+    transform: scaleX(-1) translateY(2px);
 }
