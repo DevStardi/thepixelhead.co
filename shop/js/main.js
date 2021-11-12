@@ -17,23 +17,81 @@ document.addEventListener('DOMContentLoaded', function(event) {
     document.body.classList.remove('menu')
   }
 
+  // SLIDERS
+  let ProductPreviewSlide = new Splide( '.product_preview_slide',{
+    autoWidth :true,
+    perPage   :1,
+    pagination:false,
+  });
+  ProductPreviewSlide.mount();
+
+  /* FANCYBOX */
+
+  Fancybox.bind('[data-fancybox="ProductPreview"]', {
+    Toolbar: {
+      display: [
+        "zoom",
+        "download",
+        "close",
+      ],
+    },
+  }); 
+
 
   // dynamic space top (header height, footer responsive)  
-  let footer_height = sitefooter.offsetHeight;
-  let header_height = siteheader.offsetHeight;
-  let sitebanner_height = sitebanner.offsetHeight;
-  let contentHeight = document.documentElement.clientHeight - header_height;
-
+  
   const updateCSSvars = function() {
+    let footer_height = sitefooter.offsetHeight;
+    let header_height = siteheader.offsetHeight;
+    let sitebanner_height = sitebanner.offsetHeight;
+    let contentHeight = document.documentElement.clientHeight - header_height;
+    let ButtonAndPriceHeight = document.querySelector('.ButtonAndPrice').clientHeight;
+
+    console.log(ButtonAndPriceHeight);
+
+    
+    // document.querySelector('.product_content').offsetWidth
+    let windowWidth = window.innerWidth;    
+    let ProductPreviewSliderWidth = (window.innerHeight - header_height) * .9;
+    let PopUpButtonWidth = document.querySelector('.button.order_popup').offsetWidth;
+    let roundedLogoWidth = document.querySelector('.rounded_logo').offsetWidth;
+
+
+    if (ProductPreviewSliderWidth + roundedLogoWidth + PopUpButtonWidth + 240 >= windowWidth) {
+      document.body.classList.add('removePadding');
+    }else {
+      document.body.classList.remove('removePadding');
+    }
+    
+    if(ProductPreviewSliderWidth + roundedLogoWidth + PopUpButtonWidth + 110 >= windowWidth) {
+      document.body.classList.add('replaceroundedLogo');
+    }else {
+      document.body.classList.remove('replaceroundedLogo');
+    }
+
+    if(ProductPreviewSliderWidth + roundedLogoWidth + PopUpButtonWidth + 30 >= windowWidth) {
+      document.body.classList.add('responsive');
+    }else {
+      document.body.classList.remove('responsive');
+    }
+    
+
+    // first breakpoint to remove the padding of the wrapper
+
+
+
     document.documentElement.style.setProperty( '--header_height', header_height + 'px' );
     document.documentElement.style.setProperty( '--banner_height', sitebanner_height + 'px' );
     document.documentElement.style.setProperty( '--headerandbanner_height', header_height + sitebanner_height + 'px' );
     document.documentElement.style.setProperty( '--footer_height', footer_height + 'px' );
     document.documentElement.style.setProperty( '--content_height', contentHeight + 'px' );
+    document.documentElement.style.setProperty( '--ButtonAndPriceHeight', ButtonAndPriceHeight + 'px' );
   }
-
+  
   updateCSSvars();
   window.addEventListener('resize', updateCSSvars, true);
+
+
 
 	// FOOTER RESPONSIVE
 	
@@ -52,44 +110,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   scrollFooter();
 	document.addEventListener('scroll', scrollFooter);
 	document.addEventListener('resize', scrollFooter);
-  
 
-  // SLIDERS
-  let ProductPreviewSlide = new Splide( '.product_preview_slide',{
-    autoWidth :true,
-    height    :'calc(100vh - var(--header_height))',
-    // direction :'ttb',
-    perPage   :1,
-    pagination:false,
-    breakpoints: {
-      1110: {
-        height    :'auto',
-      },
-    }
-  });
-  ProductPreviewSlide.mount();
-
-  // var splide = new Splide( '.product_preview_slide' );
-  // var bar    = splide.root.querySelector( '.my-slider-progress-bar' );
-  
-  // // Update the bar width:
-  // splide.on( 'mounted move', function () {
-  //   var end = splide.Components.Controller.getEnd() + 1;
-  //   bar.style.width = String( 100 * ( splide.index + 1 ) / end ) + '%';
-  // } );
-
-
-  /* FANCYBOX */
-
-  Fancybox.bind('[data-fancybox="ProductPreview"]', {
-    Toolbar: {
-      display: [
-        "zoom",
-        "download",
-        "close",
-      ],
-    },
-  });
 
   // PayPal Pop Up
   let PopUpButton = document.querySelector('a.button.order_popup');

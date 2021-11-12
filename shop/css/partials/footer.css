@@ -59,14 +59,17 @@ footer.sitefooter section.container {
 
 a.rounded_logo {
   overflow: hidden;
-  width: 176px;
-  height: 176px;
   position: absolute;
   right: 30px;
   bottom: -46px;
-  z-index: 9;
+  z-index: 1;
+}
+
+.rounded_logo .LogoInner {
   background-color: #fff;
-  border-radius: 50%;
+  border-radius: 50%;  
+  width: 176px;
+  height: 176px;
 }
 
 a.rounded_logo:after {
@@ -74,8 +77,8 @@ a.rounded_logo:after {
 }
 
 a.rounded_logo img.font {
-  width: calc(100% - 16px);
-  padding: 8px;
+  width: calc(100% - 18px);
+  padding: 10px;
   animation: circle 100s linear infinite;
 }
 
@@ -185,11 +188,7 @@ footer.sitefooter a:hover:after {
 
   footer.sitefooter nav.links:first-of-type {
     margin-left: auto;
-  }
-
-  a.rounded_logo {
-    right: -12px;
-  }
+  } 
 
 }
 
