@@ -54,10 +54,15 @@
                     <form class="pp_select" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                         <input type="hidden" name="cmd" value="_s-xclick">
                         <input type="hidden" name="hosted_button_id" value="5YU447Z6VSQEC">
-
+                        <input type="hidden" name="on0" value="Lieferung">
+                        <p>Lieferung</p> 
+                        <select name="os0">
+                            <option value="pickup - (+ 0€)">pickup - (+ 0€) €30,00 EUR</option>
+                            <option value="versand - (+ 5€)">versand - (+ 5€) €35,00 EUR</option>
+                        </select>
                         <input type="hidden" name="on1" value="Größe">
                         <p>Größe</p>
-                        <select class="size" name="os1">
+                        <select name="os1">
                             <option value="XS">XS </option>
                             <option value="S">S </option>
                             <option value="M">M </option>
@@ -65,20 +70,35 @@
                             <option value="XL">XL </option>
                             <option value="XXL">XXL </option>
                         </select>
-
-                        <input type="hidden" name="on0" value="Lieferung">
-                        <p>Lieferung</p>
-                        <select name="os0">
-                            <option value="pickup - (+ 0€)">pickup - (+ 0€) €30,00 EUR</option>
-                            <option value="versand - (+ 5€)">versand - (+ 5€) €35,00 EUR</option>
+                        <input type="hidden" name="on2" value="custom name">
+                        <p>custom name</p>
+                        <select name="os2" id="customNameSelect">
+                            <option customname="0" isred="1" value="ohne custom name">ohne custom name </option>
+                            <option customname="1" isred="2" value="mit custom name">mit custom name </option>
                         </select>
+                        <input type="hidden" name="on3" value="custom name">
+                        <section id="customNameText" style="display: none;">
+                            <p>custom name</p>
+                            <input type="text" name="os3" maxlength="200"></td></tr>
+                        </section>
                         <input type="hidden" name="currency_code" value="EUR">
-
-                        <input class="button pp_submit" type="image" src="/shop/images/icons/paypal.svg" border="0" name="submit" alt="via PayPal bezahlen">                        
-                        
-
+                        <input type="image" class="button pp_submit" src="/shop/images/icons/paypal.svg" border="0" name="submit" alt="via PayPal bezahlen">
                         <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+
+                        <script>
+                            let customNameSelect = document.getElementById('customNameSelect');
+
+                            function displayCustomNameText() {
+                                if(customNameSelect.options[customNameSelect.selectedIndex].getAttribute('customname') >= 1) {
+                                    document.getElementById('customNameText').style.display = "block";
+                                }else {
+                                    document.getElementById('customNameText').style.display = "none";
+                                }
+                            }
+                            customNameSelect.onchange = displayCustomNameText
+                        </script>
                     </form>
+                        
                     
                 </div>
             </section>

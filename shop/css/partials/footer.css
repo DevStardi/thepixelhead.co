@@ -178,9 +178,9 @@ footer.sitefooter a:hover:after {
 
 @media screen and (max-width: 1000px) {
 
-  footer.sitefooter {
+  /* footer.sitefooter {
     margin-top: 100px;
-  }
+  } */
 
   footer.sitefooter nav.links {
     margin-left: 50px;

@@ -47,7 +47,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
     let contentHeight = document.documentElement.clientHeight - header_height;
     let ButtonAndPriceHeight = document.querySelector('.ButtonAndPrice').clientHeight;
 
+    console.log(document.querySelector('.ButtonAndPrice'));
+    console.log(document.querySelector('.sitefooter'));
     console.log(ButtonAndPriceHeight);
+    console.log(footer_height);
+    console.log(getComputedStyle(sitefooter).marginBottom);
 
     
     // document.querySelector('.product_content').offsetWidth
