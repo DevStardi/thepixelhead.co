@@ -1,4 +1,4 @@
-@use 'colors.scss' as c;
+@use 'colors' as c;
 
 $base-font : 'Roboto', sans-serif;
 $link-font : 'Josefin Sans', sans-serif;
@@ -6,15 +6,19 @@ $link-font : 'Josefin Sans', sans-serif;
 html {
     font-family: $base-font;
     color: c.$dark;
+    line-height: 1.5;
 }
 
 
 h1,
 h2 {
     font-size: 42px;
+    font-weight: 700;
 }
 h3 {
     font-size: 26px;
+    font-weight: 500;
+    line-height: 30px;
     & a {
         font-family: $base-font;
         font-size: 26px;
@@ -24,10 +28,9 @@ h3 {
 }
 
 
-p,
+p,  
 p a {
     font-size: 20px;
-    line-height: 1.5;
     text-decoration: none;
 }
 
@@ -35,4 +38,20 @@ a {
     font-family: $link-font;
     font-size: 20px;
     text-decoration: none;
+}
+
+.banner {
+    font-size: 14px;
+    letter-spacing: .31px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
 }

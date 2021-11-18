@@ -1,0 +1,37 @@
+@use '../globals/colors' as c;
+
+.button {
+    &.circle {
+        display: block;
+        padding: 12px;
+        border-radius: 50%;
+        background-color: c.$bright;
+        box-shadow: c.$shadow;
+        cursor: pointer;
+        .btn_inner {
+            width: 26px;
+            height: 26px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        span {
+            display: block;
+            background-color: c.$dark;
+            height: 4px;
+            width: 26px;
+            border-radius: 2px;
+            &:last-of-type {
+                margin-top: 6px;
+            }
+        }
+        img {
+            width: 26px;
+            height: 26px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
