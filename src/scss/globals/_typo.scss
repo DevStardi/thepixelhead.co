@@ -1,0 +1,38 @@
+@use 'colors.scss' as c;
+
+$base-font : 'Roboto', sans-serif;
+$link-font : 'Josefin Sans', sans-serif;
+
+html {
+    font-family: $base-font;
+    color: c.$dark;
+}
+
+
+h1,
+h2 {
+    font-size: 42px;
+}
+h3 {
+    font-size: 26px;
+    & a {
+        font-family: $base-font;
+        font-size: 26px;
+        color: c.$dark;
+        text-transform: uppercase;
+    }
+}
+
+
+p,
+p a {
+    font-size: 20px;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+a {
+    font-family: $link-font;
+    font-size: 20px;
+    text-decoration: none;
+}
