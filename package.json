@@ -14,6 +14,8 @@
   "author": "DevStardi",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/ui": "^4.0.9",
+    "@splidejs/splide": "^3.5.8",
     "parcel-bundler": "^1.12.5",
     "sass": "^1.43.4"
   }

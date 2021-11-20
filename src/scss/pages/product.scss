@@ -1,0 +1,64 @@
+@use '../globals/colors' as c;
+@use '../abstracts/breakpoints' as *;
+@use '../../../node_modules/@splidejs/splide/dist/css/splide-core.min.css';
+@use '../../../node_modules/@fancyapps/ui/src/Fancybox/Fancybox.scss';
+
+body.product {
+    .ProductPreviewSplide {
+        position: relative;
+        z-index: 0;
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .splide__arrows {
+            position: absolute;
+            left:20px;
+            bottom: 20px;
+            // top: calc(100% - 20px);
+            z-index: 1;
+        }
+        .splide__arrow {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            padding: 0;
+            background: c.$bright;
+            margin-right: 8px;
+            background-image: url('../../img/icons/arrow.svg');
+            background-repeat: no-repeat;
+            background-position: 60% 50%;
+            background-size: 26px;
+            cursor: pointer;
+            &--prev {
+                transform: scaleX(-1);
+            }
+            svg {
+                display: none;
+            }
+            
+            @include mq(1100px) {
+                transform: rotate(90deg);
+                &--prev {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+    }
+
+    .ProcuctContent {
+        padding: 30px 40px;
+        h3 {
+            padding-bottom: 40px;
+        }
+        ul {
+            padding-top: 30px;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 // global variables
 let siteheader = document.querySelector('.siteheader');
-let sitenav = document.querySelector('.siteheader .sitenav');
+let SmallHeader = document.querySelector('.siteheader .SmallHeader');
 let banner = document.querySelector('.siteheader .banner');
 let hamburger = document.querySelector('.siteheader .hamburger');
 
@@ -28,11 +28,11 @@ document.addEventListener('scroll', ToggleStickyHeader, true);
 
 const UpdateAndSetCSSvars = function() {
     
-    let SitenavHeight = sitenav.offsetHeight;
-    let SiteheaderHeight = siteheader.offsetHeight;
+    let SmallHeaderHeight = SmallHeader.offsetHeight;
+    let SiteHeaderHeight = siteheader.offsetHeight;
     // set CSS vars
-    document.documentElement.style.setProperty( '--SitenavHeight', SitenavHeight + 'px' );
-    document.documentElement.style.setProperty( '--SitenavHeight', SitenavHeight + 'px' );
+    document.documentElement.style.setProperty( '--SiteHeaderHeight', SiteHeaderHeight + 'px' );
+    document.documentElement.style.setProperty( '--SmallHeaderHeight', SmallHeaderHeight + 'px' );
     document.documentElement.style.setProperty( '--BannerHeight', BannerHeight + 'px' );
 }
 // fire on load, scroll & resize
