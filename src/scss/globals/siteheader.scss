@@ -3,7 +3,21 @@
 @use '../abstracts/breakpoints' as *;
 
 .siteheader {
-    nav {
+    position: relative;
+    width: 100%;
+    &.fixed {
+        position: fixed;
+        .sitenav {
+            position: static;
+        }
+        .banner {
+            margin: 0;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+    }
+    .sitenav {
         width: 100%;
         box-sizing: border-box;
         padding: 16px;
@@ -21,6 +35,7 @@
         top: 100%;
         transform: translateY(-50%);
         right: 80px;
+        z-index: 2;
         &:last-of-type {
             right: 20px;
         }
@@ -30,17 +45,24 @@
     }
     .banner {
         width: 100%;
-        padding: 11px;
+        height: 38px;
         background-color: c.$dark;
         color: c.$bright;
-        margin-top: 62px;
+        margin-top: var(--SitenavHeight);
         position: relative;
         width: 100%;
         box-sizing: border-box;
         overflow: hidden;
         span {
+            position: absolute;
+            top: 10px;
             display: block;
-            width: 120%;
+            animation: marquee 26s linear infinite;
+            @include mq(660px) {
+                animation: none;
+                width: 100%;
+                text-align: center;
+            }
         }
         &::after {
             content: '';
@@ -53,4 +75,10 @@
             background-image: linear-gradient(90deg, rgba(34,34,34,0.00) 0%, #222222 21%, #222222 100%);
         }
     }
+}
+
+@keyframes marquee {
+    0%{transform: translateX(-100%);}
+    50%{transform: translateX(0);}
+    100%{transform: translateX(100%);}
 }
