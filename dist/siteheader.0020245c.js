@@ -118,26 +118,42 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"scss/globals/siteheader.js":[function(require,module,exports) {
-// general variables
+// global variables
 var siteheader = document.querySelector('.siteheader');
 var sitenav = document.querySelector('.siteheader .sitenav');
 var banner = document.querySelector('.siteheader .banner');
-document.addEventListener('scroll', function () {
-  // reposition the circle buttons after scrolled the banner    
-  if (window.scrollY >= banner.offsetHeight) {
-    siteheader.classList.add('fixed');
-  } else {
-    siteheader.classList.remove('fixed');
-  }
+var hamburger = document.querySelector('.siteheader .hamburger');
+var BannerHeight = document.querySelector('.siteheader .banner').offsetHeight; // toggle menu
+
+hamburger.addEventListener('click', function () {
+  document.body.classList.toggle('menu');
 });
 
+var ToggleStickyHeader = function ToggleStickyHeader() {
+  // reposition the circle buttons after scrolled the banner
+  if (window.scrollY >= BannerHeight) {
+    document.body.classList.add('sticky');
+  } else {
+    document.body.classList.remove('sticky');
+  }
+}; // fire on load & scroll
+
+
+ToggleStickyHeader();
+document.addEventListener('scroll', ToggleStickyHeader, true);
+
 var UpdateAndSetCSSvars = function UpdateAndSetCSSvars() {
-  var SitenavHeight = sitenav.offsetHeight; // set CSS vars
+  var SitenavHeight = sitenav.offsetHeight;
+  var SiteheaderHeight = siteheader.offsetHeight; // set CSS vars
 
   document.documentElement.style.setProperty('--SitenavHeight', SitenavHeight + 'px');
-};
+  document.documentElement.style.setProperty('--SitenavHeight', SitenavHeight + 'px');
+  document.documentElement.style.setProperty('--BannerHeight', BannerHeight + 'px');
+}; // fire on load, scroll & resize
+
 
 UpdateAndSetCSSvars();
+window.addEventListener('scroll', UpdateAndSetCSSvars, true);
 window.addEventListener('resize', UpdateAndSetCSSvars, true);
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

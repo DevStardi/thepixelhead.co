@@ -4,26 +4,15 @@
 
 .siteheader {
     position: relative;
+    top: 0;
     width: 100%;
-    &.fixed {
-        position: fixed;
-        .sitenav {
-            position: static;
-        }
-        .banner {
-            margin: 0;
-            position: absolute;
-            top: 0;
-            z-index: -1;
-        }
-    }
     .sitenav {
         width: 100%;
         box-sizing: border-box;
         padding: 16px;
         background: c.$bright;
         box-shadow: c.$shadow;
-        position: fixed;
+        position: sticky;
         top: 0;
         z-index: 1;
         @include mq(400px) {
@@ -48,7 +37,6 @@
         height: 38px;
         background-color: c.$dark;
         color: c.$bright;
-        margin-top: var(--SitenavHeight);
         position: relative;
         width: 100%;
         box-sizing: border-box;
@@ -77,6 +65,31 @@
     }
 }
 
+// siteheader scroll to sticky setup
+body.sticky {
+    .siteheader {
+        position: fixed;
+        .sitenav {
+            position: static;
+        }
+        .banner {
+            margin: 0;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+    }
+    .sitecontent {
+        // calc the size here because the update 
+        // of the vars makes the scroll not smooth
+        margin-top: calc(var(--SitenavHeight) + var(--BannerHeight));
+    }
+}
+.sitecontent {
+    margin-top: 0;
+}
+
+// animation for the banner
 @keyframes marquee {
     0%{transform: translateX(-100%);}
     50%{transform: translateX(0);}

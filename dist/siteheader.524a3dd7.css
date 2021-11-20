@@ -51,19 +51,8 @@ p {
 
 .siteheader {
   position: relative;
-  width: 100%;
-}
-.siteheader.fixed {
-  position: fixed;
-}
-.siteheader.fixed .sitenav {
-  position: static;
-}
-.siteheader.fixed .banner {
-  margin: 0;
-  position: absolute;
   top: 0;
-  z-index: -1;
+  width: 100%;
 }
 .siteheader .sitenav {
   width: 100%;
@@ -71,7 +60,7 @@ p {
   padding: 16px;
   background: #fff;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 1;
 }
@@ -98,7 +87,6 @@ p {
   height: 38px;
   background-color: #222222;
   color: #fff;
-  margin-top: var(--SitenavHeight);
   position: relative;
   width: 100%;
   box-sizing: border-box;
@@ -126,6 +114,26 @@ p {
   height: 100%;
   width: 170px;
   background-image: linear-gradient(90deg, rgba(34, 34, 34, 0) 0%, #222222 21%, #222222 100%);
+}
+
+body.sticky .siteheader {
+  position: fixed;
+}
+body.sticky .siteheader .sitenav {
+  position: static;
+}
+body.sticky .siteheader .banner {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+body.sticky .sitecontent {
+  margin-top: calc(var(--SitenavHeight) + var(--BannerHeight));
+}
+
+.sitecontent {
+  margin-top: 0;
 }
 
 @keyframes marquee {
