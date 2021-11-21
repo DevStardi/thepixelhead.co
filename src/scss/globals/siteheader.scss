@@ -32,7 +32,6 @@
         width: 100%;
         height: 38px;
         background-color: c.$dark;
-        color: c.$bright;
         position: relative;
         width: 100%;
         box-sizing: border-box;
@@ -119,7 +118,8 @@ body.sticky {
 
         .MetaNav {
             hr {
-                border: 1px solid c.$dark;
+                border: none;
+                border-top: 2px solid c.$dark;
                 margin: 10px 0;
             }
             .LegalNav {

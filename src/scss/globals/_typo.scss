@@ -9,13 +9,15 @@ html {
     line-height: 1.5;
 }
 
-
+// headline
 h1,
 h2 {
     font-size: 42px;
     font-weight: 700;
     line-height: 1.09;
 }
+
+// subheadline
 h3 {
     font-size: 26px;
     font-weight: 500;
@@ -29,7 +31,7 @@ h3 {
     }
 }
 
-
+// running text
 p,  
 p a,
 li {
@@ -37,6 +39,7 @@ li {
     font-size: 20px;
     text-decoration: none;
 }
+// list style (bold)
 .ProcuctContent {
     li {
         font-weight: 700;
@@ -44,15 +47,18 @@ li {
     }
 }
 
-
+// link style
 a {
     font-family: $link-font;
-    font-size: 20px;
+    font-size: 22px;
     text-decoration: none;
     color: c.$dark;
+    line-height: 1.1;
 }
 
+// banner style
 .banner {
+    color: c.$bright;
     font-size: 14px;
     letter-spacing: .31px;
 }
@@ -63,12 +69,18 @@ a {
         line-height: 1;
         font-weight: 600;
     }
-    .LegalNav {
-        a {
-            font-family: $base-font;
-            font-size: 12px;
-        }
-    }
+}
+
+// small text
+.sitenav .LegalNav a,
+.PriceAndShipping .shipping span {
+    font-family: $base-font;
+    font-size: 12px;
+    font-weight: 500;
+}
+.PriceAndShipping > span {
+    font-size: 32px;
+    font-weight: 500;
 }
 
 

@@ -1,0 +1,138 @@
+.button.circle {
+  display: block;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+.button.circle .btn_inner {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.button.circle span {
+  display: block;
+  background-color: #222222;
+  height: 4px;
+  width: 26px;
+  border-radius: 2px;
+}
+.button.circle span:last-of-type {
+  margin-top: 6px;
+}
+.button.circle img {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.button.text {
+  border-radius: 26px;
+  padding: 0 22px;
+  border: 2px solid #222222;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  color: #222222;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.09;
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 30px;
+  line-height: 1.15;
+}
+h3 a {
+  font-family: "Roboto", sans-serif;
+  font-size: 26px;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+p,
+p a,
+li {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.ProcuctContent li {
+  font-weight: 700;
+  list-style-position: inside;
+}
+
+a {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 22px;
+  text-decoration: none;
+  color: #222222;
+  line-height: 1.1;
+}
+
+.banner {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.31px;
+}
+
+.sitenav > ul a {
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.sitenav .LegalNav a,
+.PriceAndShipping .shipping span {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.PriceAndShipping > span {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=/main.77bb5cfd.css.map */

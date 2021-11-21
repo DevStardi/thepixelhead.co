@@ -9,6 +9,10 @@ let BannerHeight = document.querySelector('.siteheader .banner').offsetHeight;
 // toggle menu
 hamburger.addEventListener('click', function() {
     document.body.classList.toggle('menu');
+
+    if (window.scrollY <= BannerHeight) {
+        window.scrollTo(0,0)
+    }
 })
 
 
