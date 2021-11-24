@@ -36,11 +36,15 @@ body.product {
             background-position: 60% 50%;
             background-size: 26px;
             cursor: pointer;
+            transition: opacity .3s ease-out;
             &--prev {
                 transform: scaleX(-1);
             }
             svg {
                 display: none;
+            }
+            &[disabled] {
+                opacity: .4;
             }
             
             @include mq(1100px) {

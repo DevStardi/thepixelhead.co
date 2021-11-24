@@ -954,12 +954,16 @@ body.product .ProductPreviewSplide .splide__arrow {
   background-position: 60% 50%;
   background-size: 26px;
   cursor: pointer;
+  transition: opacity 0.3s ease-out;
 }
 body.product .ProductPreviewSplide .splide__arrow--prev {
   transform: scaleX(-1);
 }
 body.product .ProductPreviewSplide .splide__arrow svg {
   display: none;
+}
+body.product .ProductPreviewSplide .splide__arrow[disabled] {
+  opacity: 0.4;
 }
 @media (min-width: 1100px) {
   body.product .ProductPreviewSplide .splide__arrow {
