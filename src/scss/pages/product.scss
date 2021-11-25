@@ -68,6 +68,9 @@ body.product {
         .shipping {
             display: flex;
             align-items: center;
+            img {
+                animation: shake-jump 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+            }
             span {
                 display: inline-block;
                 max-width: 120px;
@@ -123,4 +126,12 @@ body.product {
         }
     }
     
+}
+
+@keyframes shake-jump {
+    20% {transform: translateY(0);}
+    24% {transform: translateY(-4px);}
+    28% {transform: translateY(0);}
+    32% {transform: translateY(-6px);}
+    36% {transform: translateY(0);}
 }
