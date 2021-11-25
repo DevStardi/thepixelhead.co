@@ -1,4 +1,6 @@
 @use '../globals/colors' as c;
+@use '../abstracts/breakpoints' as *;
+
 
 .button {
     &.circle {
@@ -26,46 +28,80 @@
             }
         }
         img {
+            display: block;
             width: 26px;
             height: 26px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
+        }
+        &.back {
+            img {
+                transform: scaleX(-1);
+            }
         }
     }
     &.text {
-        border: 2px solid c.$dark;
+        border: c.$border2px;
         color: c.$bright;
         padding: 0 22px;
-        height: 46px;
+        height: 50px;
         display: flex;
         align-items: center;
+        justify-content: center;
         width: fit-content;
         position: relative;
+        cursor: pointer;
         transition: color .3s cubic-bezier(.165,.84,.44,1);
             &::after {
             content: '';
             position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
+            width: calc(100% + 2px);
+            height: calc(100% + 2px);
             z-index: -1;
             background-color: c.$dark;
             transform: scaleX(1);
-            transform-origin: right;
+            transform-origin: left;
             transition: transform .5s cubic-bezier(.165,.84,.44,1);
         }
         &:hover {
             color: c.$dark;
             &::after {
                 transform: scaleX(0);
-                transform-origin: right;
             }
         }
         &.border {
             color: c.$dark;
+        }
+    }
+}
+
+// SPLIDE
+.splide__arrow {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    background: c.$bright;
+    margin-right: 8px;
+    background-image: url('../img/icons/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: 60% 50%;
+    background-size: 26px;
+    cursor: pointer;
+    transition: opacity .3s ease-out;
+    &--prev {
+        transform: scaleX(-1);
+    }
+    svg {
+        display: none;
+    }
+    &[disabled] {
+        opacity: .6;
+    }
+    
+    @include mq(1100px) {
+        transform: rotate(90deg);
+        &--prev {
+            transform: rotate(-90deg);
         }
     }
 }

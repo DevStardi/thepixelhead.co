@@ -79,21 +79,50 @@
                 <h1>Holo Shirt</h1>
                 <h3>white / blue</h3>
                 <p>Das Shirt besteht aus 100% Baumwolle und ist mit 185g/m² ziemlich dick und stabil. Das Stofflabel Label mit dem Pixelhead drauf besteht aus 50% Polyester und wurde in Handarbeit auf den Hoodie genäht, ebenso wie die Prints</p>
-                <ul>
-                    <li>Rundhalsschnitt</li>
-                    <li>Unisex</li>
-                    <li>Classic Fit</li>
-                    <li>100% Baumwolle</li>
-                </ul>
-                <section class="PriceAndShipping">
-                    <span>30,00 €</span>
+                <section class="AdditionalContentBox">
+                    <ul>
+                        <li><strong>Stoff</strong> 100% Baumwolle / 185 g/m²</li>
+                        <li><strong>Schnitt</strong> Rundhals / Unisex</li>
+                        <li><strong>Passform</strong> Classic Fit</li>
+                    </ul>
+                    <hr>
                     <div class="shipping">
                         <img src="/package.5a54ba08.svg" alt="Package Icon">
                         <span>Versandfertig nach max. 30 Tagen</span>
                     </div>
                 </section>
-                <a href="#" class="button text">jetzt vorbestellen</a>
+                <section class="price">
+                    <h2>30,00 €</h2>
+                    <span>zzgl. 5€ Versandkosten</span>
+                </section>
+                <select name="size" id="SizePreSelect">
+                    <span></span>
+                    <option value="XS">XS </option>
+                    <option value="S">S </option>
+                    <option value="M">M </option>
+                    <option value="L">L </option>
+                    <option value="XL">XL </option>
+                    <option value="XXL">XXL </option>
+                </select>
+                <a class="button text" onclick="GoToCart()">jetzt vorbestellen</a>
             </article>
+        </section>
+
+        <script>function GoToCart() {
+  document.body.classList.add('cart');
+}
+
+function CloseCart() {
+  document.body.classList.remove('cart');
+}</script>
+
+        <section class="AddToCart">
+            <header class="cartheader">
+                <a class="button circle back" onclick="CloseCart()">
+                    <img src="/arrow.703be1a8.svg" alt="">
+                </a>
+
+            </header>
         </section>
 
         <script src="/siteheader.0020245c.js"></script>

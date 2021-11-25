@@ -1,0 +1,12 @@
+@use '../globals/colors' as c;
+
+
+select {
+    appearance: none;
+    background-color: c.$bright;
+    border: c.$border2px;
+    padding: 11px 22px;
+    background-image: url('../img/icons/dropdown.svg');
+    background-position: calc(100% - 20px) 50%;
+    background-repeat: no-repeat;
+}

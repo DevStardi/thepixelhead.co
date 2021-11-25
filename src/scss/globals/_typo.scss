@@ -34,19 +34,12 @@ h3 {
 // running text
 p,  
 p a,
-li {
+li,
+select {
     font-family: $base-font;
     font-size: 20px;
     text-decoration: none;
 }
-// list style (bold)
-.ProcuctContent {
-    li {
-        font-weight: 700;
-        list-style-position: inside;
-    }
-}
-
 // link style
 a {
     font-family: $link-font;
@@ -73,16 +66,12 @@ a {
 
 // small text
 .sitenav .LegalNav a,
-.PriceAndShipping .shipping span {
+.ProcuctContent,
+.ProcuctContent li,
+.price > span {
     font-family: $base-font;
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 14px;
 }
-.PriceAndShipping > span {
-    font-size: 32px;
-    font-weight: 500;
-}
-
 
 h1,
 h2,

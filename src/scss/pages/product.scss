@@ -23,53 +23,46 @@ body.product {
             // top: calc(100% - 20px);
             z-index: 1;
         }
-        .splide__arrow {
-            width: 50px;
-            height: 50px;
-            border: none;
-            border-radius: 50%;
-            padding: 0;
-            background: c.$bright;
-            margin-right: 8px;
-            background-image: url('../../img/icons/arrow.svg');
-            background-repeat: no-repeat;
-            background-position: 60% 50%;
-            background-size: 26px;
-            cursor: pointer;
-            transition: opacity .3s ease-out;
-            &--prev {
-                transform: scaleX(-1);
-            }
-            svg {
-                display: none;
-            }
-            &[disabled] {
-                opacity: .4;
-            }
-            
-            @include mq(1100px) {
-                transform: rotate(90deg);
-                &--prev {
-                    transform: rotate(-90deg);
-                }
-            }
-        }
     }
 
     .ProcuctContent {
-        padding: 30px 40px;
+        padding: 30px 30px;
         h3 {
             padding-bottom: 40px;
         }
-        ul {
-            padding: 30px 0 70px;
-        }
-        .PriceAndShipping {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-            > span {
-                margin-right: 30px;
+        .AdditionalContentBox {
+            margin: 40px 0;
+            ul,
+            .shipping {
+                padding: 18px 24px;
+            }
+            border: c.$border2px;
+            li{
+                list-style-type: none;
+                padding-bottom: 10px;
+                strong {
+                    padding-right: 42px;
+                    position: relative;
+                    &::before {
+                        content: '';
+                        display: block;
+                        height: 2px;
+                        width: 16px;
+                        background-color: c.$dark;
+                        position: absolute;
+                        right: 4px;
+                        top: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+                &:last-of-type {
+                    padding: 0;
+                }
+            }
+            hr {
+                margin: 0;
+                border: none;
+                border-top: c.$border2px;
             }
         }
         .shipping {
@@ -77,10 +70,57 @@ body.product {
             align-items: center;
             span {
                 display: inline-block;
-                max-width: 110px;
-                margin-left: 10px;
+                max-width: 120px;
+                margin-left: 24px;
             }
+        }
+        .price {
+            display: flex;
+            margin-bottom: 40px;
+            span {
+                margin-left: 20px;
+                max-width: 100px;
+            }
+        }
+        #SizePreSelect {
+            width: 100%;
+             margin-bottom: 20px;
+        }
+        .button.text {
+            width: 100%;
+            box-sizing: border-box;
         }
     }
 
+    // PayPal Cart
+    .AddToCart {
+        position: fixed;
+        transform: translateX(100%);
+        transition: transform .4s ease-out;
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        background: c.$bright;
+        z-index: 2;
+        .cartheader {
+            width: 100%;
+            background-color: c.$dark;
+            height: 60px;
+            position: relative;
+            .button.circle {
+                position: absolute;
+                bottom: 0;
+                left: 20px;
+                transform: translateY(50%);
+            }
+        }
+    }
+    &.cart {
+        overflow: hidden;
+        .AddToCart {
+            transform: translateX(0);
+        }
+    }
+    
 }

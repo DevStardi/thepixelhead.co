@@ -1,5 +1,8 @@
 @use 'components/buttons';
+@use 'components/form';
 @use 'globals/typo';
+
+@use 'globals/fonts';
 
 html {
     scroll-behavior: smooth;
