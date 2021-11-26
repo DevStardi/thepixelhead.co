@@ -2,13 +2,15 @@
 import Splide from '../../../node_modules/@splidejs/splide';
 
 let ProductPreviewSplide = new Splide( '.ProductPreviewSplide',{
-    pagination:false,
-    heightRatio :'1.11111',
-    direction   : 'ttb',
-    breakpoints: {
+    pagination:   false,
+    heightRatio:  '1.11111',
+    direction:    'ttb',
+    height:       'calc(100vh - 100px)',
+    breakpoints:  {
       1099: {
-        direction   : 'ltr',
-		  },
+        direction:  'ltr',
+        height:     'auto'
+      }
     }
 });
 ProductPreviewSplide.mount();

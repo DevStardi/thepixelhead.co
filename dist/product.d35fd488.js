@@ -11372,9 +11372,11 @@ var ProductPreviewSplide = new _splide.default('.ProductPreviewSplide', {
   pagination: false,
   heightRatio: '1.11111',
   direction: 'ttb',
+  height: 'calc(100vh - 100px)',
   breakpoints: {
     1099: {
-      direction: 'ltr'
+      direction: 'ltr',
+      height: 'auto'
     }
   }
 });
@@ -11428,7 +11430,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54700" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54924" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

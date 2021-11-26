@@ -77,7 +77,7 @@ body.sticky .siteheader .banner {
   z-index: -1;
 }
 body.sticky .sitecontent {
-  margin-top: calc(var(--SmallHeaderHeight) + var(--BannerHeight));
+  padding-top: calc(var(--SmallHeaderHeight) + var(--BannerHeight));
 }
 
 .sitecontent {

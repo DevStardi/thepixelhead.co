@@ -216,6 +216,18 @@ button.button {
   font-size: 14px;
 }
 
+.sitemap a {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.corporate h3 {
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+
 h1,
 h2,
 h3,
@@ -366,6 +378,24 @@ p {
   src: local(""), url("/josefin-sans-v20-latin-700italic.0d079fb4.eot?#iefix") format("embedded-opentype"), url("/josefin-sans-v20-latin-700italic.e71d77d6.woff2") format("woff2"), url("/josefin-sans-v20-latin-700italic.1eccae0e.woff") format("woff"), url("/josefin-sans-v20-latin-700italic.e84a3b0f.ttf") format("truetype"), url("/josefin-sans-v20-latin-700italic.445bd8a6.svg#JosefinSans") format("svg");
   /* Legacy iOS */
 }
+.sitefooter {
+  background-color: #222222;
+  color: #fff;
+  padding: 60px 0 60px 30px;
+}
+.sitefooter .corporate p {
+  margin-top: 25px;
+}
+.sitefooter .sitemap {
+  margin-top: 60px;
+}
+.sitefooter .sitemap h3 {
+  padding-bottom: 30px;
+}
+.sitefooter li {
+  list-style-type: none;
+}
+
 html {
   scroll-behavior: smooth;
 }

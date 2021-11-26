@@ -80,7 +80,7 @@ body.sticky {
     .sitecontent {
         // calc the size here because the update 
         // of the vars makes the scroll not smooth
-        margin-top: calc(var(--SmallHeaderHeight) + var(--BannerHeight));
+        padding-top: calc(var(--SmallHeaderHeight) + var(--BannerHeight));
     }
 }
 .sitecontent {

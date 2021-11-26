@@ -941,29 +941,29 @@ body.product .ProductPreviewSplide .splide__arrows {
   bottom: 20px;
   z-index: 1;
 }
-body.product .ProcuctContent {
+body.product .ProductContent {
   padding: 30px 30px;
 }
-body.product .ProcuctContent h3 {
+body.product .ProductContent h3 {
   padding-bottom: 40px;
 }
-body.product .ProcuctContent .AdditionalContentBox {
+body.product .ProductContent .AdditionalContentBox {
   margin: 40px 0;
   border: 2px solid #222222;
 }
-body.product .ProcuctContent .AdditionalContentBox ul,
-body.product .ProcuctContent .AdditionalContentBox .shipping {
+body.product .ProductContent .AdditionalContentBox ul,
+body.product .ProductContent .AdditionalContentBox .shipping {
   padding: 18px 24px;
 }
-body.product .ProcuctContent .AdditionalContentBox li {
+body.product .ProductContent .AdditionalContentBox li {
   list-style-type: none;
   padding-bottom: 10px;
 }
-body.product .ProcuctContent .AdditionalContentBox li strong {
+body.product .ProductContent .AdditionalContentBox li strong {
   padding-right: 42px;
   position: relative;
 }
-body.product .ProcuctContent .AdditionalContentBox li strong::before {
+body.product .ProductContent .AdditionalContentBox li strong::before {
   content: "";
   display: block;
   height: 2px;
@@ -974,49 +974,57 @@ body.product .ProcuctContent .AdditionalContentBox li strong::before {
   top: 50%;
   transform: translateX(-50%);
 }
-body.product .ProcuctContent .AdditionalContentBox li:last-of-type {
+body.product .ProductContent .AdditionalContentBox li:last-of-type {
   padding: 0;
 }
-body.product .ProcuctContent .AdditionalContentBox hr {
+body.product .ProductContent .AdditionalContentBox hr {
   margin: 0;
   border: none;
   border-top: 2px solid #222222;
 }
-body.product .ProcuctContent .shipping {
+body.product .ProductContent .shipping {
   display: flex;
   align-items: center;
 }
-body.product .ProcuctContent .shipping img {
+body.product .ProductContent .shipping img {
   animation: shake-jump 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
 }
-body.product .ProcuctContent .shipping span {
+body.product .ProductContent .shipping span {
   display: inline-block;
   max-width: 120px;
   margin-left: 24px;
 }
-body.product .ProcuctContent .price {
+body.product .ProductContent .price {
   display: flex;
   margin-bottom: 40px;
 }
-body.product .ProcuctContent .price span {
+body.product .ProductContent .price span {
   margin-left: 20px;
   max-width: 100px;
 }
-body.product .ProcuctContent #SizePreSelect {
+body.product .ProductContent #SizePreSelect {
   width: 100%;
   margin-bottom: 20px;
 }
-body.product .ProcuctContent .button.text {
+body.product .ProductContent .button.text {
   width: 100%;
   box-sizing: border-box;
 }
 @media (min-width: 1100px) {
   body.product .sitecontent {
     display: flex;
+    align-items: flex-start;
+  }
+  body.product .sitecontent .ProductPreviewSplide {
+    height: calc(100vh - 100px);
+    position: sticky;
   }
   body.product .sitecontent .ProductPreviewSplide img {
-    height: calc(100vh - var(--SmallHeaderHeight));
+    height: calc(100vh - 100px);
     width: auto;
+  }
+  body.product .ProductContent {
+    max-width: 340px;
   }
 }
 body.product .CartHeader {
@@ -1047,7 +1055,7 @@ body.product .CartPopup {
   z-index: 2;
 }
 body.product .CartPopup .CartContent {
-  padding: 60px 30px 30px;
+  padding: 60px 30px;
 }
 body.product .CartPopup .TopSection {
   display: flex;

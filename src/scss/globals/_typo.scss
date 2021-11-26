@@ -79,6 +79,20 @@ button.button {
     font-size: 14px;
 }
 
+// footer stuff
+.sitemap a {
+    font-family: $base-font;
+    color: c.$bright;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.corporate {
+    h3 {
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+    }
+}
+
 h1,
 h2,
 h3,

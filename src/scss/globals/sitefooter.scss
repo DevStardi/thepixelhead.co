@@ -1,0 +1,22 @@
+@use 'colors' as c;
+@use '../abstracts/breakpoints' as *;
+
+.sitefooter {
+    background-color: c.$dark;
+    color: c.$bright;
+    padding: 60px 0 60px 30px;
+    .corporate {
+        p {
+            margin-top: 25px;
+        }
+    }
+    .sitemap {
+        margin-top: 60px;
+        h3 {
+            padding-bottom: 30px;
+        }
+    }
+    li {
+        list-style-type: none;
+    }
+}
