@@ -40,8 +40,11 @@ select,
 input[type="text"] {
     font-family: $base-font;
     font-size: 20px;
-    text-decoration: none;
 }
+p a {
+    text-decoration: underline;
+}
+
 // link style
 a,
 button.button {

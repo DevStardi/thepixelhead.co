@@ -6,9 +6,9 @@ let ProductPreviewSplide = new Splide( '.ProductPreviewSplide',{
     heightRatio :'1.11111',
     direction   : 'ttb',
     breakpoints: {
-        1099: {
-            direction   : 'ltr',
-		},
+      1099: {
+        direction   : 'ltr',
+		  },
     }
 });
 ProductPreviewSplide.mount();
@@ -35,6 +35,7 @@ document.getElementById('SizePreSelect').addEventListener('change', function() {
 const UpdateAndSetCSSvars = function() {
   // set CSS vars
   document.documentElement.style.setProperty( '--CustomNameHeight', document.getElementById('os1').offsetHeight + 12 + 'px' );
+  document.documentElement.style.setProperty( '--CartHeaderHeight', document.querySelector('.CartHeader').offsetHeight + 'px' );
 }
 // fire on load, scroll & resize
 UpdateAndSetCSSvars();

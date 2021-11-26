@@ -11393,6 +11393,7 @@ document.getElementById('SizePreSelect').addEventListener('change', function () 
 var UpdateAndSetCSSvars = function UpdateAndSetCSSvars() {
   // set CSS vars
   document.documentElement.style.setProperty('--CustomNameHeight', document.getElementById('os1').offsetHeight + 12 + 'px');
+  document.documentElement.style.setProperty('--CartHeaderHeight', document.querySelector('.CartHeader').offsetHeight + 'px');
 }; // fire on load, scroll & resize
 
 
@@ -11427,7 +11428,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49191" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54700" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -115,12 +115,12 @@
             
         </script>
 
-        <section class="AddToCart">
-            <header class="CartHeader">
-                <a class="button circle back" onclick="CloseCart()">
-                    <img src="/arrow.703be1a8.svg" alt="">
-                </a>
-            </header>
+        <header class="CartHeader">
+            <a class="button circle back" onclick="CloseCart()">
+                <img src="/arrow.703be1a8.svg" alt="">
+            </a>
+        </header>
+        <section class="CartPopup">
             <div class="CartContent">
                 <div class="TopSection">
                     <div class="headlines">
@@ -198,13 +198,11 @@ function CloseCart() {
 } // custom name
 
 
-var customNameSelect = document.getElementById('os1');
-customNameSelect.addEventListener('change', function () {
-  if (this.options[customNameSelect.selectedIndex].getAttribute('customname') >= 1) {
-    // document.getElementById('customNameText').style.display = "block";
+document.getElementById('os1').addEventListener('change', function () {
+  if (this.options[document.getElementById('os1').selectedIndex].getAttribute('customname') >= 1) {
     document.getElementById('customNameText').classList.add('show');
   } else {
-    document.getElementById('customNameText').classList.remove('show'); // document.getElementById('customNameText').style.display = "none";
+    document.getElementById('customNameText').classList.remove('show');
   }
 });</script>
 
