@@ -1021,23 +1021,81 @@ body.product .AddToCart {
   background: #fff;
   z-index: 2;
 }
-body.product .AddToCart .cartheader {
+body.product .AddToCart .CartHeader {
   width: 100%;
   background-color: #222222;
-  height: 60px;
+  height: 62px;
   position: relative;
 }
-body.product .AddToCart .cartheader .button.circle {
+body.product .AddToCart .CartHeader .button.circle {
   position: absolute;
   bottom: 0;
   left: 20px;
   transform: translateY(50%);
+}
+body.product .AddToCart .CartContent {
+  padding: 60px 30px 30px;
+}
+body.product .AddToCart .TopSection {
+  display: flex;
+  margin-bottom: 40px;
+}
+body.product .AddToCart .TopSection h2 {
+  padding-bottom: 6px;
+}
+body.product .AddToCart .TopSection img {
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  margin-left: auto;
+  object-fit: cover;
+}
+body.product .AddToCart hr {
+  margin: 20px 0 40px;
+  border: none;
+  border-top: 2px solid #222222;
+}
+body.product .AddToCart .SelectSize {
+  display: flex;
+  padding: 0;
+  border: none;
+  padding-top: 10px;
+}
+body.product .AddToCart .CustomName img {
+  border-radius: 6px;
+  width: 180px;
+  margin: 10px 0;
+}
+body.product .AddToCart .FormField + #customNameText {
+  margin-top: 20px;
+}
+body.product .AddToCart #customNameText {
+  height: 0;
+  opacity: 0;
+  transition: height 0.2s ease-out, opacity 0.1s ease-out;
+}
+body.product .AddToCart #customNameText.show {
+  height: var(--CustomNameHeight);
+  opacity: 1;
+}
+body.product .AddToCart .price {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+body.product .AddToCart .price span {
+  margin-left: auto;
+  margin-right: 6px;
+}
+body.product .AddToCart .button.text {
+  margin-left: auto;
 }
 body.product.cart {
   overflow: hidden;
 }
 body.product.cart .AddToCart {
   transform: translateX(0);
+  overflow-y: auto;
 }
 
 @keyframes shake-jump {

@@ -1,12 +1,45 @@
 @use '../globals/colors' as c;
 
-
-select {
+.FormField {
+    position: relative;
+    label {
+        position: absolute;
+        left: 14px;
+        top: 0;
+        padding: 0 2px;
+        background-color: c.$bright;
+    }
+    select,
+    input {
+        margin-top: 12px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+select,
+input[type="text"] {
     appearance: none;
     background-color: c.$bright;
     border: c.$border2px;
     padding: 11px 22px;
+}
+select {
     background-image: url('../img/icons/dropdown.svg');
     background-position: calc(100% - 20px) 50%;
     background-repeat: no-repeat;
+}
+
+label.radio {
+    border: c.$border2px;
+    padding: 0 10px;
+    border-radius: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+input[type="radio"] {
+    display: none;
+    &:checked + label {
+        background-color: c.$dark;
+        color: c.$bright;
+    }
 }

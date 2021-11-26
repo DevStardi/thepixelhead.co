@@ -11385,6 +11385,20 @@ _Fancybox.Fancybox.bind('[data-fancybox="ProductPreview"]', {
     display: ["zoom", "download", "close"]
   }
 });
+
+document.getElementById('SizePreSelect').addEventListener('change', function () {
+  document.getElementById(this.options[SizePreSelect.selectedIndex].value).checked = true;
+});
+
+var UpdateAndSetCSSvars = function UpdateAndSetCSSvars() {
+  // set CSS vars
+  document.documentElement.style.setProperty('--CustomNameHeight', document.getElementById('os1').offsetHeight + 12 + 'px');
+}; // fire on load, scroll & resize
+
+
+UpdateAndSetCSSvars();
+window.addEventListener('scroll', UpdateAndSetCSSvars, true);
+window.addEventListener('resize', UpdateAndSetCSSvars, true);
 },{"../../../node_modules/@splidejs/splide":"../node_modules/@splidejs/splide/dist/js/splide.esm.js","../../../node_modules/@fancyapps/ui/src/Fancybox/Fancybox.js":"../node_modules/@fancyapps/ui/src/Fancybox/Fancybox.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -11413,7 +11427,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59382" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49191" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

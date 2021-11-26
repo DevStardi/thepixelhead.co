@@ -34,6 +34,8 @@
 .button.text {
   border: 2px solid #222222;
   color: #fff;
+  appearance: none;
+  background: transparent;
   padding: 0 22px;
   height: 50px;
   display: flex;
@@ -98,14 +100,51 @@
   }
 }
 
-select {
+.FormField {
+  position: relative;
+}
+.FormField label {
+  position: absolute;
+  left: 14px;
+  top: 0;
+  padding: 0 2px;
+  background-color: #fff;
+}
+.FormField select,
+.FormField input {
+  margin-top: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+select,
+input[type=text] {
   appearance: none;
   background-color: #fff;
   border: 2px solid #222222;
   padding: 11px 22px;
+}
+
+select {
   background-image: url("/dropdown.77248ee9.svg");
   background-position: calc(100% - 20px) 50%;
   background-repeat: no-repeat;
+}
+
+label.radio {
+  border: 2px solid #222222;
+  padding: 0 10px;
+  border-radius: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+input[type=radio] {
+  display: none;
+}
+input[type=radio]:checked + label {
+  background-color: #222222;
+  color: #fff;
 }
 
 html {
@@ -137,13 +176,16 @@ h3 a {
 p,
 p a,
 li,
-select {
+label.radio,
+select,
+input[type=text] {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   text-decoration: none;
 }
 
-a {
+a,
+button.button {
   font-family: "Josefin Sans", sans-serif;
   font-size: 22px;
   text-decoration: none;

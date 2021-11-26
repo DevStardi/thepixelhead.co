@@ -41,6 +41,8 @@
     &.text {
         border: c.$border2px;
         color: c.$bright;
+        appearance: none;
+        background: transparent;
         padding: 0 22px;
         height: 50px;
         display: flex;

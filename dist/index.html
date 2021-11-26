@@ -95,35 +95,118 @@
                     <h2>30,00 €</h2>
                     <span>zzgl. 5€ Versandkosten</span>
                 </section>
-                <select name="size" id="SizePreSelect">
-                    <span></span>
-                    <option value="XS">XS </option>
-                    <option value="S">S </option>
-                    <option value="M">M </option>
-                    <option value="L">L </option>
-                    <option value="XL">XL </option>
-                    <option value="XXL">XXL </option>
-                </select>
+                <div class="FormField">
+                    <label for="SizePreSelect">Größe</label>
+                    <select name="size" id="SizePreSelect">
+                        <span></span>
+                        <option value="XS">XS </option>
+                        <option value="S">S </option>
+                        <option value="M">M </option>
+                        <option value="L">L </option>
+                        <option value="XL">XL </option>
+                        <option value="XXL">XXL </option>
+                    </select>
+                </div>
                 <a class="button text" onclick="GoToCart()">jetzt vorbestellen</a>
             </article>
         </section>
 
-        <script>function GoToCart() {
+        <script>
+            
+        </script>
+
+        <section class="AddToCart">
+            <header class="CartHeader">
+                <a class="button circle back" onclick="CloseCart()">
+                    <img src="/arrow.703be1a8.svg" alt="">
+                </a>
+            </header>
+            <div class="CartContent">
+                <div class="TopSection">
+                    <div class="headlines">
+                        <h2>Holo Shirt</h2>
+                        <h3>white / blue</h3>
+                    </div>
+                    <img src="/holo_blue_1.5e36f53f.jpg" alt="Holo Shirt Bild (1)">
+                </div>
+                <p>Wähle einfach deine Größe, sowie Versandoption aus und bestelle das Produkt vor du erhältst via mail Updates, wann dein Produkt auf dem Weg zu Dir ist!</p>
+                <hr>
+                <p><strong>Größe</strong></p>
+                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="9KCMCTAGRLTWC">
+                    <fieldset class="SelectSize">
+                        <input type="hidden" name="on0" value="Größe">
+
+
+                        <input type="radio" name="os0" value="XS" id="XS">
+                        <label class="radio" for="XS">XS</label>
+
+                        <input type="radio" name="os0" value="S" id="S">
+                        <label class="radio" for="S">S</label>
+
+                        <input type="radio" name="os0" value="M" id="M">
+                        <label class="radio" for="M">M</label>
+
+                        <input type="radio" name="os0" value="L" id="L">
+                        <label class="radio" for="L">L</label>
+
+                        <input type="radio" name="os0" value="XL" id="XL">
+                        <label class="radio" for="XL">XL</label>
+
+                        <input type="radio" name="os0" value="XXL" id="XXL">
+                        <label class="radio" for="XXL">XXL</label>
+                    </fieldset>
+                    <hr>
+                    <p><strong>custom name</strong></p>
+                    <article class="CustomName">
+                        <img src="/customname.1f91dc66.jpg" alt="">
+                        <p>Achtung, wenn du dich für ein custom name Tag entscheidest verfällt die Rückgabefrist! <br><a href="#">mehr dazu.</a></p>
+                    </article>
+                    <div class="FormField">
+                        <label for="os1">custom name:</label>
+                        <select name="os1" id="os1">
+                            <option customname="0" value="ohne custom name">ohne custom name </option>
+                            <option customname="1" value="mit custom name">mit custom name </option>
+                        </select>
+                    </div>
+                    <div class="FormField" id="customNameText">
+                        <input type="hidden" name="on2" value="custom name">
+                        <label for="os2">custom name</label>
+                        <input type="text" name="os2" maxlength="200" id="os2" placeholder="Dein Name">
+                    </div>
+                    <hr>
+                    <div class="price">
+                        <p><strong>Summe</strong></p>
+                        <span>EUR</span>
+                        <h3>30,00 €</h3>
+                    </div>
+                    <!-- <input type="submit" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal."> -->
+                    <button class="button text" type="submit">in den Warenkorb</button>
+
+                    
+            </form></div>
+        </section>
+
+        <script>// open & close cart
+function GoToCart() {
   document.body.classList.add('cart');
 }
 
 function CloseCart() {
   document.body.classList.remove('cart');
-}</script>
+} // custom name
 
-        <section class="AddToCart">
-            <header class="cartheader">
-                <a class="button circle back" onclick="CloseCart()">
-                    <img src="/arrow.703be1a8.svg" alt="">
-                </a>
 
-            </header>
-        </section>
+var customNameSelect = document.getElementById('os1');
+customNameSelect.addEventListener('change', function () {
+  if (this.options[customNameSelect.selectedIndex].getAttribute('customname') >= 1) {
+    // document.getElementById('customNameText').style.display = "block";
+    document.getElementById('customNameText').classList.add('show');
+  } else {
+    document.getElementById('customNameText').classList.remove('show'); // document.getElementById('customNameText').style.display = "none";
+  }
+});</script>
 
         <script src="/siteheader.0020245c.js"></script>
         <script src="/product.d35fd488.js"></script>

@@ -35,13 +35,16 @@ h3 {
 p,  
 p a,
 li,
-select {
+label.radio,
+select,
+input[type="text"] {
     font-family: $base-font;
     font-size: 20px;
     text-decoration: none;
 }
 // link style
-a {
+a,
+button.button {
     font-family: $link-font;
     font-size: 22px;
     text-decoration: none;

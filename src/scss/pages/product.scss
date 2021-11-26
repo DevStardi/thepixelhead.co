@@ -106,10 +106,10 @@ body.product {
         top: 0;
         background: c.$bright;
         z-index: 2;
-        .cartheader {
+        .CartHeader {
             width: 100%;
             background-color: c.$dark;
-            height: 60px;
+            height: 62px;
             position: relative;
             .button.circle {
                 position: absolute;
@@ -118,11 +118,71 @@ body.product {
                 transform: translateY(50%);
             }
         }
+        .CartContent {
+            padding: 60px 30px 30px;
+        }
+        .TopSection {
+            display: flex;
+            margin-bottom: 40px;
+            h2 {
+                padding-bottom: 6px;
+            }
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 6px;
+                margin-left: auto;
+                object-fit: cover;
+            }
+        }
+        hr {
+            margin: 20px 0 40px;
+            border: none;
+            border-top: c.$border2px;
+        }
+        .SelectSize {
+            display: flex;
+            padding: 0;
+            border: none;
+            padding-top: 10px;
+        }
+        .CustomName {
+            img {
+                border-radius: 6px;
+                width: 180px;
+                margin: 10px 0;
+            }
+        }
+        .FormField + #customNameText {
+            margin-top: 20px;
+        }
+        #customNameText {
+            height: 0;
+            opacity: 0;
+            transition: height .2s ease-out, opacity .1s ease-out;
+            &.show {
+                height: var(--CustomNameHeight);
+                opacity: 1;
+            }
+        }
+        .price {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 40px;
+            span {
+                margin-left: auto;
+                margin-right: 6px;
+            }
+        }
+        .button.text {
+            margin-left: auto;
+        }
     }
     &.cart {
         overflow: hidden;
         .AddToCart {
             transform: translateX(0);
+            overflow-y: auto;
         }
     }
     

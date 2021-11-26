@@ -24,3 +24,19 @@ Fancybox.bind('[data-fancybox="ProductPreview"]', {
       ],
     },
 });
+
+document.getElementById('SizePreSelect').addEventListener('change', function() {
+
+  document.getElementById(this.options[SizePreSelect.selectedIndex].value).checked = true;
+
+});
+
+
+const UpdateAndSetCSSvars = function() {
+  // set CSS vars
+  document.documentElement.style.setProperty( '--CustomNameHeight', document.getElementById('os1').offsetHeight + 12 + 'px' );
+}
+// fire on load, scroll & resize
+UpdateAndSetCSSvars();
+window.addEventListener('scroll', UpdateAndSetCSSvars, true);
+window.addEventListener('resize', UpdateAndSetCSSvars, true);
