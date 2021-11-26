@@ -11368,6 +11368,7 @@ var _Fancybox = require("../../../node_modules/@fancyapps/ui/src/Fancybox/Fancyb
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// SPLIDE
 var ProductPreviewSplide = new _splide.default('.ProductPreviewSplide', {
   pagination: false,
   heightRatio: '1.11111',
@@ -11380,16 +11381,23 @@ var ProductPreviewSplide = new _splide.default('.ProductPreviewSplide', {
     }
   }
 });
-ProductPreviewSplide.mount();
+ProductPreviewSplide.mount(); // FANCYBOX
 
 _Fancybox.Fancybox.bind('[data-fancybox="ProductPreview"]', {
   Toolbar: {
     display: ["zoom", "download", "close"]
   }
-});
+}); // update size selector
+
 
 document.getElementById('SizePreSelect').addEventListener('change', function () {
-  document.getElementById(this.options[SizePreSelect.selectedIndex].value).checked = true;
+  document.getElementById(this.options[SizePreSelect.selectedIndex].value).checked = true; // maybe I should also add a reverse sync
+}); // fire fancybox on Enter klick
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === "Enter") {
+    _Fancybox.Fancybox.show();
+  }
 });
 
 var UpdateAndSetCSSvars = function UpdateAndSetCSSvars() {

@@ -1,6 +1,8 @@
 
 import Splide from '../../../node_modules/@splidejs/splide';
+import { Fancybox } from "../../../node_modules/@fancyapps/ui/src/Fancybox/Fancybox.js";
 
+// SPLIDE
 let ProductPreviewSplide = new Splide( '.ProductPreviewSplide',{
     pagination:   false,
     heightRatio:  '1.11111',
@@ -15,8 +17,7 @@ let ProductPreviewSplide = new Splide( '.ProductPreviewSplide',{
 });
 ProductPreviewSplide.mount();
 
-import { Fancybox } from "../../../node_modules/@fancyapps/ui/src/Fancybox/Fancybox.js";
-
+// FANCYBOX
 Fancybox.bind('[data-fancybox="ProductPreview"]', {
     Toolbar: {
       display: [
@@ -27,9 +28,20 @@ Fancybox.bind('[data-fancybox="ProductPreview"]', {
     },
 });
 
+// update size selector
 document.getElementById('SizePreSelect').addEventListener('change', function() {
 
   document.getElementById(this.options[SizePreSelect.selectedIndex].value).checked = true;
+  // maybe I should also add a reverse sync
+});
+
+// fire fancybox on Enter klick
+document.addEventListener('keydown', function(e) {
+
+  if(e.key === "Enter") {
+
+    Fancybox.show();
+  }
 
 });
 

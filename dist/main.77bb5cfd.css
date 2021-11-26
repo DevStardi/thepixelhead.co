@@ -212,8 +212,8 @@ button.button {
 }
 
 .sitenav .LegalNav a,
-.ProcuctContent,
-.ProcuctContent li,
+.ProductContent li,
+.shipping > span,
 .price > span {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
