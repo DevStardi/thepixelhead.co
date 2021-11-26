@@ -207,6 +207,9 @@ button.button {
   line-height: 1;
   font-weight: 600;
 }
+.sitenav p a {
+  text-decoration: none;
+}
 
 .sitenav .LegalNav a,
 .ProcuctContent,
@@ -394,6 +397,19 @@ p {
 }
 .sitefooter li {
   list-style-type: none;
+}
+@media (min-width: 1100px) {
+  .sitefooter {
+    display: flex;
+    padding: 60px;
+  }
+  .sitefooter .sitemap {
+    margin: 0;
+    margin-left: auto;
+  }
+  .sitefooter .sitemap:last-of-type {
+    margin-left: 60px;
+  }
 }
 
 html {

@@ -1016,15 +1016,20 @@ body.product .ProductContent .button.text {
     align-items: flex-start;
   }
   body.product .sitecontent .ProductPreviewSplide {
-    height: calc(100vh - 100px);
     position: sticky;
+    top: var(--SmallHeaderHeight);
+    margin-top: calc(var(--BannerHeight) * -1);
   }
   body.product .sitecontent .ProductPreviewSplide img {
-    height: calc(100vh - 100px);
+    height: calc(100vh - var(--SmallHeaderHeight));
     width: auto;
   }
   body.product .ProductContent {
     max-width: 340px;
+    padding: 60px;
+  }
+  body.product.sticky .ProductPreviewSplide {
+    margin-top: 0;
   }
 }
 body.product .CartHeader {

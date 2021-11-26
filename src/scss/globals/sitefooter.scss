@@ -19,4 +19,17 @@
     li {
         list-style-type: none;
     }
+    @include mq(1100px) {
+        display: flex;
+        padding: 60px;
+        .sitemap {
+            margin: 0;
+            margin-left: auto;
+            &:last-of-type {
+                margin-left: 60px;
+            }
+
+        }
+    }
+
 }

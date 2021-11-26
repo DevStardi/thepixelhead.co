@@ -5,7 +5,7 @@ let ProductPreviewSplide = new Splide( '.ProductPreviewSplide',{
     pagination:   false,
     heightRatio:  '1.11111',
     direction:    'ttb',
-    height:       'calc(100vh - 100px)',
+    height:       'calc(100vh - 62px)',
     breakpoints:  {
       1099: {
         direction:  'ltr',

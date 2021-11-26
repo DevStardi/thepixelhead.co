@@ -11372,7 +11372,7 @@ var ProductPreviewSplide = new _splide.default('.ProductPreviewSplide', {
   pagination: false,
   heightRatio: '1.11111',
   direction: 'ttb',
-  height: 'calc(100vh - 100px)',
+  height: 'calc(100vh - 62px)',
   breakpoints: {
     1099: {
       direction: 'ltr',
@@ -11430,7 +11430,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54924" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54457" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

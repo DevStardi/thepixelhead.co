@@ -98,19 +98,24 @@ body.product {
         .sitecontent {
             display: flex;
             align-items: flex-start;
-            // margin-top: calc(var(--BannerHeight) * -1);
             .ProductPreviewSplide {
-                // height: calc(100vh - var(--SmallHeaderHeight));
-                height: calc(100vh - 100px);
                 position: sticky;
+                top: var(--SmallHeaderHeight);
                 img {
-                    height: calc(100vh - 100px);
+                    height: calc(100vh - var(--SmallHeaderHeight));
                     width: auto;
                 }
+                margin-top: calc(var(--BannerHeight) * -1);
             }
         }
         .ProductContent {
             max-width: 340px;
+            padding: 60px;
+        }
+        &.sticky {
+            .ProductPreviewSplide {
+                margin-top: 0;
+            }
         }
     }
 
