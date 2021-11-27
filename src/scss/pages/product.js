@@ -28,6 +28,7 @@ Fancybox.bind('[data-fancybox="ProductPreview"]', {
     },
 });
 
+
 // update size selector
 document.getElementById('SizePreSelect').addEventListener('change', function() {
 

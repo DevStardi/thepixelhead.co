@@ -1,9 +1,11 @@
 @use 'components/buttons';
 @use 'components/form';
 @use 'globals/typo';
+@use 'globals/colors' as c;
 
 @use 'globals/fonts';
 @use 'globals/sitefooter';
+
 
 html {
     scroll-behavior: smooth;
@@ -14,4 +16,9 @@ body {
 ul {
     margin: 0;
     padding: 0;
+}
+
+.sitecontent {
+    background-color: c.$bright;
+    margin-bottom: var(--SiteFooterHeight);
 }

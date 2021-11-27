@@ -385,6 +385,11 @@ p {
   background-color: #222222;
   color: #fff;
   padding: 60px 0 60px 30px;
+  position: fixed;
+  top: var(--SmallHeaderHeight);
+  z-index: -1;
+  width: 100%;
+  box-sizing: border-box;
 }
 .sitefooter .corporate p {
   margin-top: 25px;
@@ -402,6 +407,10 @@ p {
   .sitefooter {
     display: flex;
     padding: 60px;
+    position: fixed;
+    top: inherit;
+    bottom: 0;
+    z-index: -1;
   }
   .sitefooter .sitemap {
     margin: 0;
@@ -410,6 +419,13 @@ p {
   .sitefooter .sitemap:last-of-type {
     margin-left: 60px;
   }
+}
+
+body.footer .sitefooter {
+  position: static;
+}
+body.footer .sitecontent {
+  margin-bottom: 0;
 }
 
 html {
@@ -423,6 +439,11 @@ body {
 ul {
   margin: 0;
   padding: 0;
+}
+
+.sitecontent {
+  background-color: #fff;
+  margin-bottom: var(--SiteFooterHeight);
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

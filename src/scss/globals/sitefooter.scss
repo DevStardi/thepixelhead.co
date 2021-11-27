@@ -5,6 +5,11 @@
     background-color: c.$dark;
     color: c.$bright;
     padding: 60px 0 60px 30px;
+    position: fixed;
+    top: var(--SmallHeaderHeight);
+    z-index: -1;
+    width: 100%;
+    box-sizing: border-box;
     .corporate {
         p {
             margin-top: 25px;
@@ -22,6 +27,10 @@
     @include mq(1100px) {
         display: flex;
         padding: 60px;
+        position: fixed;
+        top: inherit;
+        bottom: 0;
+        z-index: -1;
         .sitemap {
             margin: 0;
             margin-left: auto;
@@ -32,4 +41,13 @@
         }
     }
 
+}
+
+body.footer {
+    .sitefooter {
+        position: static;
+    }
+    .sitecontent {
+        margin-bottom: 0;
+    }
 }
