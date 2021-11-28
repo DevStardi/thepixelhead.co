@@ -33,7 +33,7 @@ body.product {
             margin: 40px 0;
             ul,
             .shipping {
-                padding: 18px 24px;
+                padding: 20px 22px;
             }
             border: c.$border2px;
             li{
@@ -91,6 +91,7 @@ body.product {
         .button.text {
             width: 100%;
             box-sizing: border-box;
+            z-index: 1;
         }
     }
 
@@ -215,6 +216,31 @@ body.product {
         }
         .button.text {
             margin-left: auto;
+        }
+        @include mq(1100px) {
+            .CartContent {
+                padding: 60px;
+                display: flex;
+                align-items: flex-start;
+            }
+            .TopSection {
+                display: block;
+                margin: 0;
+                padding-right: 60px;
+                position: sticky;
+                top: 60px;
+                max-height: calc(100vh - var(--CartHeaderHeight) - 120px);
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 0;
+                    margin-top: 20px;
+                }
+            }
+            form {
+                max-width: 420px;
+            }
         }
     }
     &.cart {

@@ -8,9 +8,11 @@
         top: 0;
         padding: 0 2px;
         background-color: c.$bright;
+        cursor: pointer;
     }
     select,
     input {
+        cursor: pointer;
         margin-top: 12px;
         width: 100%;
         box-sizing: border-box;

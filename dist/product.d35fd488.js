@@ -11391,12 +11391,21 @@ _Fancybox.Fancybox.bind('[data-fancybox="ProductPreview"]', {
 
 
 document.getElementById('SizePreSelect').addEventListener('change', function () {
-  document.getElementById(this.options[SizePreSelect.selectedIndex].value).checked = true; // maybe I should also add a reverse sync
-}); // fire fancybox on Enter klick
+  document.getElementById(this.options[SizePreSelect.selectedIndex].value).checked = true; // maybe add a reverse sync too
+}); // close cart on esc key
 
 document.addEventListener('keydown', function (e) {
-  if (e.key === "Enter") {
-    _Fancybox.Fancybox.show();
+  // close when esc key pressed
+  if (e.key === "Escape") {
+    document.body.classList.remove('cart');
+  }
+}); // custom name
+
+document.getElementById('os1').addEventListener('change', function () {
+  if (this.options[document.getElementById('os1').selectedIndex].getAttribute('customname') >= 1) {
+    document.getElementById('customNameText').classList.add('show');
+  } else {
+    document.getElementById('customNameText').classList.remove('show');
   }
 });
 
