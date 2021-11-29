@@ -9,7 +9,7 @@ let ProductPreviewSplide = new Splide( '.ProductPreviewSplide',{
     direction:    'ttb',
     height:       'calc(100vh - 62px)',
     breakpoints:  {
-      1099: {
+      999: {
         direction:  'ltr',
         height:     'auto'
       }
@@ -27,8 +27,6 @@ Fancybox.bind('[data-fancybox="ProductPreview"]', {
       ],
     },
 });
-
-
 
 // update size selector
 document.getElementById('SizePreSelect').addEventListener('change', function() {

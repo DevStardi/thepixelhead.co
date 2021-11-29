@@ -44,6 +44,7 @@
   top: 10px;
   display: block;
   animation: marquee 26s linear infinite;
+  white-space: nowrap;
 }
 @media (min-width: 660px) {
   .siteheader .banner span {
@@ -152,14 +153,12 @@ body.menu .siteheader .sitenav {
 
 @keyframes marquee {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
   50% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(-100%);
   }
 }
-
-/*# sourceMappingURL=/siteheader.524a3dd7.css.map */

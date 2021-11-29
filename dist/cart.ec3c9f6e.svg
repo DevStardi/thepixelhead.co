@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>buttons / circle button / cart</title>
-    <g id="buttons-/-circle-button-/-cart" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polyline id="Path-2" stroke="#222222" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="2.48403915 2 6.39910067 2 7.39910067 18.0792426 21.6957511 18.0792426 23.6623552 7.83384338 7.39910067 7.83384338"></polyline>
-        <circle id="Oval" fill="#222222" cx="8.5" cy="23.5" r="2.5"></circle>
-        <circle id="Oval" fill="#222222" cx="19.5" cy="23.5" r="2.5"></circle>
-    </g>
-</svg>

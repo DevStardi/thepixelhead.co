@@ -27,12 +27,11 @@ body.product {
     .ProductContent {
         padding: 30px 30px;
         h3 {
-            padding-bottom: 40px;
+            margin-bottom: 40px;
         }
         .AdditionalContentBox {
             margin: 40px 0;
-            ul,
-            .shipping {
+            .ContentBox {
                 padding: 20px 22px;
             }
             border: c.$border2px;
@@ -95,7 +94,7 @@ body.product {
         }
     }
 
-    @include mq(1100px) {
+    @include mq(1000px) {
         .sitecontent {
             display: flex;
             align-items: flex-start;

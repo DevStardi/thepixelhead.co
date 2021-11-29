@@ -945,14 +945,13 @@ body.product .ProductContent {
   padding: 30px 30px;
 }
 body.product .ProductContent h3 {
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 body.product .ProductContent .AdditionalContentBox {
   margin: 40px 0;
   border: 2px solid #222222;
 }
-body.product .ProductContent .AdditionalContentBox ul,
-body.product .ProductContent .AdditionalContentBox .shipping {
+body.product .ProductContent .AdditionalContentBox .ContentBox {
   padding: 20px 22px;
 }
 body.product .ProductContent .AdditionalContentBox li {
@@ -1011,7 +1010,7 @@ body.product .ProductContent .button.text {
   box-sizing: border-box;
   z-index: 1;
 }
-@media (min-width: 1100px) {
+@media (min-width: 1000px) {
   body.product .sitecontent {
     display: flex;
     align-items: flex-start;
@@ -1186,5 +1185,3 @@ body.product.cart .CartHeader {
     transform: translateY(0);
   }
 }
-
-/*# sourceMappingURL=/product.a09ed4b3.css.map */

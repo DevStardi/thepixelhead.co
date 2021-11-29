@@ -16,6 +16,9 @@
   "devDependencies": {
     "@fancyapps/ui": "^4.0.9",
     "@splidejs/splide": "^3.5.8",
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
     "parcel-bundler": "^1.12.5",
     "sass": "^1.43.4"
   }
