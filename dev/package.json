@@ -24,6 +24,8 @@
     "sass": "^1.43.4"
   },
   "dependencies": {
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^2.3.0"
   }
 }
