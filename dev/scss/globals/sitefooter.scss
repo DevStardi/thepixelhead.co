@@ -1,9 +1,9 @@
 @use 'colors' as c;
+@use 'settings' as s;
 @use '../abstracts/breakpoints' as *;
 
 .sitefooter {
     background-color: c.$dark;
-    color: c.$bright;
     padding: 60px 0 60px 30px;
     position: fixed;
     top: var(--SmallHeaderHeight);
@@ -24,6 +24,22 @@
     li {
         list-style-type: none;
     }
+    a {
+        position: relative;
+        &:after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 0;
+            position: absolute;
+            bottom: 0;
+            background-color: c.$bright;
+            transition: width .3s s.$hover-transition;
+        }
+        &:hover:after {
+            width: 100%;
+        }
+    }
     @include mq(1100px) {
         display: flex;
         padding: 60px;
@@ -34,6 +50,7 @@
         .sitemap {
             margin: 0;
             margin-left: auto;
+            padding-top: 46px;
             &:last-of-type {
                 margin-left: 60px;
             }
