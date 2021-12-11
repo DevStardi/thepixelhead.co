@@ -3,8 +3,15 @@ const sass = require('gulp-sass')(require('sass'));
 const minify = require('gulp-clean-css');
 const terser = require('gulp-terser');
 const prefix = require('gulp-autoprefixer');
+const browserify = require('browserify');
 const browserSync = require('browser-sync').create();
+const del = require('del');
 
+
+// clear tmp folder
+function ResetTmp() {
+    return del('tmp/**/*');
+}
 
 // SCSS Stuff
 function CSS() {
@@ -13,7 +20,7 @@ function CSS() {
 }
 function CSSstream() {
     return(CSS())
-    .pipe(dest('./tmp'))
+    .pipe(dest('./tmp/styles/'))
     .pipe(browserSync.stream());
 }
 function CSSbuild() {
@@ -24,40 +31,111 @@ function CSSbuild() {
 }
 
 // JS stuff
-function jsmin(){
+function JSmin(){
     return src('./scss/**/*.js')
-    .pipe(terser());
 }
 function JSstream(){
-    return (jsmin())
-    .pipe(dest('./tmp'))
+    return (JSmin())
+    .pipe(dest('./tmp/scripts/'))
     .pipe(browserSync.stream());
 }
 function JSbuild(){
-    return (jsmin())
+    return (JSmin())
+    .pipe(terser())
     .pipe(dest('../web/scripts'));
 }
 
+// JS browserify
+
+// function JSbrowserify(){
+//     return browserify({
+// 		entries: config.paths.root + 'scripts/main.js',
+//     })
+//     .pipe(dest('../web/scripts'));
+// }
+// exports.JSbrowserify = JSbrowserify;
+
+// IMG stuff
+function IMG(){
+    return src('./img/**/*');
+}
+function IMGstream() {
+    return(IMG())
+    .pipe(dest('./tmp/img'))
+    .pipe(browserSync.stream());
+}
+function IMGbuild() {
+    return(IMG())
+    .pipe(dest('../web/img'));
+}
+
+// FONT stuff
+function FONTS(){
+    return src('./fonts/**/*');
+}
+function FONTSstream() {
+    return(FONTS())
+    .pipe(dest('./tmp/fonts'))
+    .pipe(browserSync.stream());
+}
+function FONTSbuild() {
+    return(FONTS())
+    .pipe(dest('../web/fonts'));
+}
+
+// HTML stuff
+function HTML(){
+    return src('./*.html');
+}
+function HTMLstream() {
+    return(HTML())
+    .pipe(dest('./tmp/'))
+    .pipe(browserSync.stream());
+}
+function HTMLbuild() {
+    return(HTML())
+    .pipe(dest('../web/'));
+}
+
 // Browser Sync stuff
-function sync() {
+function BrowserWatch() {
     browserSync.init({
         server: {
-            baseDir: './'
+            baseDir: './tmp/'
         }
     });
     watch('./scss/**/*.scss', CSSstream);
     watch('./scss/**/*.js', JSstream);
-    watch('./**/*.html').on('change', browserSync.reload);
+    watch('./**/*.html', HTMLstream).on('change', browserSync.reload);
+}
+
+// reset Web folder
+function ResetWeb() {
+	return del([
+        '../web/styles/**/*',
+        '../web/scripts/**/*',
+        '../web/img/**/*',
+        '../web/fonts/**/*'],
+        {force:true}
+    );
 }
 
 const dev = series(
+    ResetTmp,
+    HTMLstream,
     CSSstream,
     JSstream,
-    sync
+    IMGstream,
+    FONTSstream,
+    BrowserWatch
 )
 const build = series(
+    ResetWeb,
+    HTMLbuild,
     CSSbuild,
-    JSbuild
+    JSbuild,
+    IMGbuild,
+    FONTSbuild
 )
 
 exports.dev = dev;
