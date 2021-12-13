@@ -29,52 +29,6 @@ body.product {
         h3 {
             margin-bottom: 40px;
         }
-        .AdditionalContentBox {
-            margin: 40px 0;
-            .ContentBox {
-                padding: 20px 22px;
-            }
-            border: c.$border2px;
-            li{
-                list-style-type: none;
-                padding-bottom: 10px;
-                strong {
-                    padding-right: 42px;
-                    position: relative;
-                    &::before {
-                        content: '';
-                        display: block;
-                        height: 2px;
-                        width: 16px;
-                        background-color: c.$dark;
-                        position: absolute;
-                        right: 4px;
-                        top: 50%;
-                        transform: translateX(-50%);
-                    }
-                }
-                &:last-of-type {
-                    padding: 0;
-                }
-            }
-            hr {
-                margin: 0;
-                border: none;
-                border-top: c.$border2px;
-            }
-        }
-        .shipping {
-            display: flex;
-            align-items: center;
-            img {
-                animation: shake-jump 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
-            }
-            span {
-                display: inline-block;
-                max-width: 120px;
-                margin-left: 24px;
-            }
-        }
         .price {
             display: flex;
             margin-bottom: 40px;
@@ -90,7 +44,6 @@ body.product {
         .button.text {
             width: 100%;
             box-sizing: border-box;
-            z-index: 1;
         }
     }
 

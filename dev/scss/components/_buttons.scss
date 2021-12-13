@@ -51,6 +51,7 @@
         justify-content: center;
         width: fit-content;
         position: relative;
+        z-index: 1;
         cursor: pointer;
         transition: color .3s s.$hover-transition;
             &::after {
@@ -70,8 +71,20 @@
                 transform: scaleX(0);
             }
         }
-        &.border {
+        &.rounded {
+            border-radius: 30px;
+            overflow: hidden;
+            height: 32px;
             color: c.$dark;
+            &::after {
+                transform: scaleX(0);
+            }
+            &:hover {
+                color: c.$bright;
+                &::after {
+                    transform: scaleX(1);
+                }
+            }
         }
     }
 }

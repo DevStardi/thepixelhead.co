@@ -54,6 +54,9 @@ button.button {
     color: c.$dark;
     line-height: 1.1;
 }
+.button.rounded {
+    font-family: $base-font;
+}
 
 // banner style
 .banner {

@@ -88,7 +88,7 @@ body.sticky {
     margin-top: 0;
 }
 
-// mobile menu
+// hamburger flyout menu
 .siteheader {
     .sitenav {
         display: flex;
@@ -138,6 +138,20 @@ body.sticky {
         }
     }
 }
+.hamburger {
+    span {
+        transition: transform .275s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        
+    }
+    &:hover {
+        span {
+            transform: translateY(-20%);
+            &:last-of-type {
+                transform: translateY(20%);
+            }
+        }
+    }
+}
 body.menu {
     overflow: hidden;
     .hamburger {
@@ -155,20 +169,7 @@ body.menu {
         }
     }
 }
-.hamburger {
-    span {
-        transition: transform .2s ease-out;
-        
-    }
-    &:hover {
-        span {
-            transform: translateY(-20%);
-            &:last-of-type {
-                transform: translateY(20%);
-            }
-        }
-    }
-}
+
 
 // animation for the banner
 @keyframes marquee {

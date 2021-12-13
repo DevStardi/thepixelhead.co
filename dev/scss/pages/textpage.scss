@@ -1,10 +1,73 @@
+@use '../globals/colors' as c;
+@use '../abstracts/breakpoints' as *;
+
 .text {
-    img {
+    img.teaser {
         width: 100%;
         height: auto;
     }
     .textwrapper {
         max-width: 1100px;
         padding: 60px;
+        > img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.BtnGroup {
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    .button {
+        margin: 0 10px 10px 0;
+    }
+}
+
+.AdditionalContentBox {
+    margin: 40px 0;
+    .ContentBox {
+        padding: 20px 22px;
+    }
+    border: c.$border2px;
+    li{
+        list-style-type: none;
+        padding-bottom: 10px;
+        strong {
+            padding-right: 42px;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                height: 2px;
+                width: 16px;
+                background-color: c.$dark;
+                position: absolute;
+                right: 4px;
+                top: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &:last-of-type {
+            padding: 0;
+        }
+    }
+    hr {
+        margin: 0;
+        border: none;
+        border-top: c.$border2px;
+    }
+    .ImgText {
+        display: flex;
+        align-items: center;
+        img {
+            animation: shake-jump 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+        }
+        span {
+            display: inline-block;
+            margin-left: 24px;
+        }
     }
 }
