@@ -1,19 +1,30 @@
 @use '../globals/colors' as c;
 @use '../abstracts/breakpoints' as *;
 
-.text {
-    img.teaser {
+
+img.teaser {
+    width: 100%;
+    height: auto;
+}
+.RunningText {
+    max-width: 1100px;
+    padding: 30px;
+    @include mq(600px) {
+        padding: 60px;
+    }
+    > img {
+        display: block;
         width: 100%;
         height: auto;
     }
-    .textwrapper {
-        max-width: 1100px;
+}
+
+.CenteredText {
+    max-width: 780px;
+    padding: 30px;
+    margin: 0 auto;
+    @include mq(600px) {
         padding: 60px;
-        > img {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
     }
 }
 
@@ -23,6 +34,30 @@
     flex-wrap: wrap;
     .button {
         margin: 0 10px 10px 0;
+    }
+}
+
+.ImgText {
+    >img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    @include mq(880px) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        h3 {
+            width: 100%;
+        }
+        > img,
+        .AdditionalContentBox {
+            width: calc(50% - 20px);
+        }
+        .AdditionalContentBox {
+            margin: 0;
+        }
     }
 }
 
@@ -59,7 +94,7 @@
         border: none;
         border-top: c.$border2px;
     }
-    .ImgText {
+    .IconText {
         display: flex;
         align-items: center;
         img {
@@ -68,6 +103,7 @@
         span {
             display: inline-block;
             margin-left: 24px;
+            max-width: 260px;
         }
     }
 }

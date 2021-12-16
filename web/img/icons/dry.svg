@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="26px" viewBox="0 0 37 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icons / dry</title>
+    <g id="subsites" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="wash-desktop" transform="translate(-751.000000, -736.000000)" stroke="#222222" stroke-width="2">
+            <g id="sitecontent" transform="translate(310.000000, 160.000000)">
+                <g id="content" transform="translate(420.000000, 338.000000)">
+                    <g id="Group" transform="translate(22.000000, 234.000000)">
+                        <g id="icon" transform="translate(0.000000, 5.000000)">
+                            <line x1="0" y1="20.1518356" x2="35" y2="3.84816441" id="Stroke-9"></line>
+                            <line x1="0" y1="3.84816441" x2="35" y2="20.1518356" id="Stroke-10"></line>
+                            <polygon id="Stroke-11" points="5.11603343 24 29.8842952 24 29.8842952 0 5.11603343 0"></polygon>
+                            <path d="M17.5,2.92966791 C22.6664215,2.92966791 26.8606816,6.99393666 26.8606816,12 C26.8606816,17.0060633 22.6664215,21.0703321 17.5,21.0703321 C12.3335785,21.0703321 8.13931835,17.0060633 8.13931835,12 C8.13931835,6.99393666 12.3335785,2.92966791 17.5,2.92966791 Z" id="Stroke-12"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

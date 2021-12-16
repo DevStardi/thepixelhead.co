@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="26px" viewBox="0 0 34 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icons / iron</title>
+    <g id="subsites" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="wash-desktop" transform="translate(-752.000000, -660.000000)">
+            <g id="sitecontent" transform="translate(310.000000, 160.000000)">
+                <g id="content" transform="translate(420.000000, 338.000000)">
+                    <g id="Group" transform="translate(22.000000, 158.000000)">
+                        <g id="icon" transform="translate(1.000000, 5.000000)">
+                            <path d="M5.23515529,0 L24.8804305,0 L32,24 L0,24 C0,24 1.44276409,10.9961303 12.5649769,10.9961303 L27.8867932,10.9961303" id="Stroke-1" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M15.4791727,15.591243 C16.386616,15.591243 17.1233977,16.3162433 17.1233977,17.2092772 C17.1233977,18.102266 16.386616,18.8272663 15.4791727,18.8272663 C14.5717293,18.8272663 13.8349476,18.102266 13.8349476,17.2092772 C13.8349476,16.3162433 14.5717293,15.591243 15.4791727,15.591243 Z" id="Fill-2" fill="#222222"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

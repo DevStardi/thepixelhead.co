@@ -3,6 +3,18 @@
 $base-font : 'Roboto', sans-serif;
 $link-font : 'Josefin Sans', sans-serif;
 
+
+// resize the headlines
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
 html {
     font-family: $base-font;
     color: c.$dark;
@@ -15,6 +27,7 @@ h2 {
     font-size: 42px;
     font-weight: 700;
     line-height: 1.09;
+    padding-bottom: 20px;
 }
 
 // subheadline
@@ -23,11 +36,25 @@ h3 {
     font-weight: 500;
     line-height: 30px;
     line-height: 1.15;
+    padding: 40px 0 30px;
     & a {
         font-family: $base-font;
         font-size: 26px;
         color: c.$dark;
         text-transform: uppercase;
+    }
+}
+
+// remove the added paddings in special cases
+.siteheader,
+.product {
+    h1,h2,h3 {
+        padding: 0;
+    }
+}
+.ProductContent {
+    h3 {
+        padding-bottom: 40px;
     }
 }
 
@@ -78,7 +105,8 @@ button.button {
 
 // small text
 .sitenav .LegalNav a,
-.ProductContent li,
+.AdditionalContentBox li,
+.AdditionalContentBox span,
 .shipping > span,
 .price > span {
     font-family: $base-font;
@@ -101,24 +129,4 @@ button.button {
         text-transform: uppercase;
         letter-spacing: 1.4px;
     }
-}
-
-// default text styles, margins paddings etc
-.textwrapper {
-    h1,h2 {
-        padding-bottom: 20px;
-    }
-    h3 {
-        padding: 40px 0 30px;
-    }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    margin: 0;
 }

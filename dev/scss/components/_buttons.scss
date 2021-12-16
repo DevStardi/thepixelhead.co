@@ -76,6 +76,7 @@
             overflow: hidden;
             height: 32px;
             color: c.$dark;
+            z-index: 0;
             &::after {
                 transform: scaleX(0);
             }
@@ -120,4 +121,9 @@
             transform: rotate(-90deg);
         }
     }
+}
+
+.anchor {
+    padding-top: var(--SmallHeaderHeight);
+    margin-top: calc(var(--SmallHeaderHeight) * -1);
 }
