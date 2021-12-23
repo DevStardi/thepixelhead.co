@@ -3,7 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const minify = require('gulp-clean-css');
 const terser = require('gulp-terser');
 const prefix = require('gulp-autoprefixer');
-const browserify = require('browserify');
+const useref = require('gulp-useref');
 const browserSync = require('browser-sync').create();
 const del = require('del');
 
@@ -45,16 +45,6 @@ function JSbuild(){
     .pipe(dest('../web/scripts'));
 }
 
-// JS browserify
-
-// function JSbrowserify(){
-//     return browserify({
-// 		entries: config.paths.root + 'scripts/main.js',
-//     })
-//     .pipe(dest('../web/scripts'));
-// }
-// exports.JSbrowserify = JSbrowserify;
-
 // IMG stuff
 function IMG(){
     return src('./img/**/*');
@@ -85,7 +75,8 @@ function FONTSbuild() {
 
 // HTML stuff
 function HTML(){
-    return src('./*.html');
+    return src('./*.html')
+    .pipe(useref());
 }
 function HTMLstream() {
     return(HTML())
@@ -96,6 +87,14 @@ function HTMLbuild() {
     return(HTML())
     .pipe(dest('../web/'));
 }
+
+// Vendor Stuff 
+function VendorStuff(){
+    return(HTML())
+    .pipe(useref())
+    .pipe(dest('./tmp/scripts/v'));
+}
+exports.VendorStuff = VendorStuff;
 
 // Browser Sync stuff
 function BrowserWatch() {

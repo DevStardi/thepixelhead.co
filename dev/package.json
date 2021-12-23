@@ -23,10 +23,10 @@
     "sass": "^1.43.4"
   },
   "dependencies": {
-    "browserify": "^17.0.0",
     "del": "^6.0.0",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
-    "gulp-cli": "^2.3.0"
+    "gulp-cli": "^2.3.0",
+    "gulp-useref": "^5.0.0"
   }
 }

@@ -7,7 +7,6 @@
 
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/globals/siteheader.css">
-        <link rel="stylesheet" href="styles/pages/textpage.css">
         <link rel="stylesheet" href="styles/pages/product.css">
     </head>
     <body class="product">
@@ -222,9 +221,13 @@
 
         </script>
 
-        <!-- vendor JS -->
-        <script type="module" src="node_stuff/fancyapps/fancybox.esm.js"></script>
-        <script type="module" src="node_stuff/splide/splide.min.js"></script>
+        <!-- build:css /scripts/v/splide.js -->
+        <link rel="stylesheet" href="/node_modules/@splidejs/splide/dist/js/splide.esm.js">
+        <!-- endbuild -->
+
+        <!-- build:css /scripts/v/fancybox.js -->
+        <link rel="stylesheet" href="/node_modules/@fancyapps/ui/dist/fancybox.esm.js">
+        <!-- endbuild -->
 
         <!-- global / custom JS -->
         <script type="module" src="scripts/globals/siteheader.js"></script>

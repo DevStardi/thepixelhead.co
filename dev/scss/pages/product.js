@@ -1,6 +1,5 @@
-
-// import Splide from '../@splidejs/splide';
-// import { Fancybox } from "../../node_modules/@fancyapps/ui/src/Fancybox/Fancybox.js";
+import { Splide } from '../v/splide.js';
+import { Fancybox } from "../v/fancybox.js";
 
 // SPLIDE
 let ProductPreviewSplide = new Splide( '.ProductPreviewSplide',{
