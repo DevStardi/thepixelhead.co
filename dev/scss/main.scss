@@ -24,3 +24,8 @@ ul {
     background-color: c.$bright;
     margin-bottom: var(--SiteFooterHeight);
 }
+
+::selection {
+    color: c.$bright;
+    background: #575757;
+}

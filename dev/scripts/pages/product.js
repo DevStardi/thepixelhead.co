@@ -6,11 +6,15 @@ let ProductPreviewSplide = new Splide( '.ProductPreviewSplide',{
     pagination:   false,
     heightRatio:  '1.11111',
     direction:    'ttb',
+    // wheel       : true,
+    // releaseWheel: true,
     height:       'calc(100vh - 62px)',
     breakpoints:  {
       999: {
         direction:  'ltr',
-        height:     'auto'
+        height:     'auto',
+        // wheel       : false,
+        // releaseWheel: false,
       }
     }
 });

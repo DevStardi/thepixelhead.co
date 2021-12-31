@@ -1,7 +1,5 @@
 @use '../globals/colors' as c;
 @use '../abstracts/breakpoints' as *;
-@use '../../node_modules/@splidejs/splide/dist/css/splide-core.min.css';
-@use '../../node_modules/@fancyapps/ui/src/Fancybox/Fancybox.scss';
 
 body.product {
     .ProductPreviewSplide {

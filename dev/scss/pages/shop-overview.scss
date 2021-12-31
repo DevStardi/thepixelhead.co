@@ -1,0 +1,62 @@
+@use '../globals/colors' as c;
+@use '../abstracts/breakpoints' as *;
+
+.sitecontent.overview {
+    padding: 30px;
+    h3 {
+        padding: 40px 0 20px;
+    }
+}
+
+.ProductSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 880px;
+    margin: 0 -10px;
+}
+
+.ProductArticle {
+    display: block;
+    width: calc(50% - 20px);
+    margin: 0 10px 10px;
+    box-shadow: c.$shadow;
+    .preview {
+        position: relative;        
+        .back {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 100%;
+            object-fit: cover;
+            transition: width .4s ease-out;
+        }
+        
+        &:hover {
+            .back {
+                width: 100%;
+                z-index: 1;
+            }
+        }
+    }
+    .text {
+        padding: 8px 10px 10px;
+    }
+    img {
+        display: block;
+        width: 100%;
+    }
+    span {
+        display: block;
+    }
+    .description {
+        margin: -2px 0 8px;
+    }
+    @include mq(550px) {
+        width: calc(100% / 3 - 20px);
+    }
+    @include mq(900px) {
+        width: calc(25% - 20px);
+    }
+}

@@ -1,11 +1,43 @@
 const { src, dest, watch, series } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const minify = require('gulp-clean-css');
+const postcss = require('gulp-postcss');
+const cssnano = require('cssnano');
 const terser = require('gulp-terser');
-const prefix = require('gulp-autoprefixer');
+const autoprefixer = require('autoprefixer');
 const useref = require('gulp-useref');
 const browserSync = require('browser-sync').create();
 const del = require('del');
+
+const cssnanoOptions = {
+	calc: true,
+	colormin: true,
+	convertValues: false,
+	discardDuplicates: true,
+	mergeLonghand: true,
+	mergeRules: true,
+	normalizeWhitespace: true,
+	orderedValues: true,
+	svgo: {
+		plugins: [{
+			removeDoctype: true
+		}, {
+			removeComments: true
+		}, {
+			cleanupNumericValues: {
+				floatPrecision: 2
+			}
+		}, {
+			convertColors: {
+				names2hex: true,
+				rgb2hex: true
+			}
+		}]
+	},
+	discardComments: {
+		removeAll: true,
+	}
+};
 
 
 // clear tmp folder
@@ -24,23 +56,32 @@ function CSSstream() {
     .pipe(browserSync.stream());
 }
 function CSSbuild() {
+    let plugins = [
+        autoprefixer(),
+        cssnano({
+            preset: ['default', cssnanoOptions]
+        })
+    ];
+
     return(CSS())
-    .pipe(prefix('last 2 versions'))
+    .pipe(postcss(plugins))
+    // .pipe(prefix('last 2 versions'))
     .pipe(minify())
     .pipe(dest('../web/styles'));
 }
 
 // JS stuff
-function JSmin(){
-    return src('./scss/**/*.js')
+function JS(){
+    // return src('./scripts/**/*.js')
+    return src(['./scripts/**/*.js', '!./scripts/globals/**/*.js'])
 }
 function JSstream(){
-    return (JSmin())
+    return (JS())
     .pipe(dest('./tmp/scripts/'))
     .pipe(browserSync.stream());
 }
 function JSbuild(){
-    return (JSmin())
+    return (JS())
     .pipe(terser())
     .pipe(dest('../web/scripts'));
 }
@@ -73,9 +114,10 @@ function FONTSbuild() {
     .pipe(dest('../web/fonts'));
 }
 
-// HTML stuff
+// HTML & vendor stuff
 function HTML(){
     return src('./*.html')
+    // claims the linked vendor files & exports them
     .pipe(useref());
 }
 function HTMLstream() {
@@ -85,7 +127,7 @@ function HTMLstream() {
 }
 function HTMLbuild() {
     return(HTML())
-    .pipe(dest('../web/'));
+    .pipe(dest('../web/'))
 }
 
 // Vendor Stuff 
@@ -99,6 +141,7 @@ exports.VendorStuff = VendorStuff;
 // Browser Sync stuff
 function BrowserWatch() {
     browserSync.init({
+		// notify: false,
         server: {
             baseDir: './tmp/'
         }
@@ -120,6 +163,13 @@ function ResetWeb() {
     );
 }
 
+function removeBundlerWeb() {
+    return del(
+        '../web/bundler.html',
+        {force:true}
+    );
+}
+
 const dev = series(
     ResetTmp,
     HTMLstream,
@@ -127,7 +177,7 @@ const dev = series(
     JSstream,
     IMGstream,
     FONTSstream,
-    BrowserWatch
+    BrowserWatch,
 )
 const build = series(
     ResetWeb,
@@ -135,7 +185,8 @@ const build = series(
     CSSbuild,
     JSbuild,
     IMGbuild,
-    FONTSbuild
+    FONTSbuild,
+    removeBundlerWeb
 )
 
 exports.dev = dev;

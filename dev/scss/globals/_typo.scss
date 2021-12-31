@@ -61,15 +61,20 @@ h3 {
 // running text
 p,  
 p a,
+a p,
 li,
 label.radio,
 select,
 input[type="text"] {
     font-family: $base-font;
     font-size: 20px;
+    line-height: 1.5;
 }
 p a {
     text-decoration: underline;
+}
+.ProductArticle p {
+    font-weight: 700;
 }
 
 // link style
@@ -108,7 +113,8 @@ button.button {
 .AdditionalContentBox li,
 .AdditionalContentBox span,
 .shipping > span,
-.price > span {
+.price > span,
+.ProductArticle span {
     font-family: $base-font;
     font-size: 14px;
 }

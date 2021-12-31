@@ -21,6 +21,10 @@
             padding-bottom: 30px;
         }
     }
+    h2,
+    h3 {
+        padding: 0;
+    }
     li {
         list-style-type: none;
     }
@@ -40,9 +44,9 @@
             width: 100%;
         }
     }
-    @include mq(1100px) {
+    @include mq(810px) {
         display: flex;
-        padding: 60px;
+        padding: 30px;
         position: fixed;
         top: inherit;
         bottom: 0;
@@ -56,6 +60,9 @@
             }
 
         }
+    }
+    @include mq(910px) {
+        padding: 60px;
     }
 
 }
