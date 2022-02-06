@@ -147,7 +147,7 @@ function BrowserWatch() {
         }
     });
     watch('./scss/**/*.scss', CSSstream);
-    watch('./scss/**/*.js', JSstream);
+    watch('./scripts/**/*.js', JSstream);
     watch('./img/**/*', IMGstream);
     watch('./**/*.html', HTMLstream).on('change', browserSync.reload);
 }

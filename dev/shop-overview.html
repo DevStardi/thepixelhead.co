@@ -60,10 +60,14 @@
             <h1>Shop</h1>
             <h3>Shirts</h3>
             <section class="ProductSection">
-                <a href="product.html" class="ProductArticle">
+                <a href="#" class="ProductArticle">
                     <div class="preview">
-                        <img src="/img/products/ProductArticle.jpg" alt="">
-                        <img class="back" src="/img/products/ProductArticle2.jpg" alt="">
+                        <div class="DotGroup">
+                            <button data-img="1"></button>
+                            <button data-img="2"></button>
+                        </div>
+                        <img data-img="1" class="first" src="/img/products/ProductArticle.jpg" alt="">
+                        <img data-img="2" class="back" src="/img/products/ProductArticle2.jpg" alt="">
                     </div>
                     <div class="text">
                         <p>Holo Shirt</p>
@@ -181,6 +185,7 @@
         </footer>
 
         <script type="module" src="scripts/main.js"></script>
+        <script type="module" src="scripts/pages/shop-overview.js"></script>
 
     </body>
 </html>

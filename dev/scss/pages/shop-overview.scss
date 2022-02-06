@@ -32,16 +32,45 @@
             object-fit: cover;
             transition: width .4s ease-out;
         }
+        button {
+            display: none;
+        }
         
         &:hover {
+            .first {
+                position: relative;
+            }
             .back {
                 width: 100%;
                 z-index: 1;
             }
+            .show {
+                z-index: 2;
+            }
+            .DotGroup {
+                display: flex;
+                padding: 0;
+                position: absolute;
+                z-index: 3;
+                bottom: 10px;
+                left: 50%;transform: translateX(-50%);
+            }
+            button {
+                box-sizing: border-box;
+                background-color: transparent;
+                display: block;
+                width: 10px;
+                height: 10px;
+                padding: 0;
+                border-radius: 50%;
+                border: 2px solid c.$bright;
+                margin: 2px;
+                cursor: pointer;
+            }
         }
     }
     .text {
-        padding: 8px 10px 10px;
+        padding: 14px;
     }
     img {
         display: block;

@@ -100,7 +100,7 @@ body.sticky {
         top: var(--SiteHeaderHeight);
         width: 100%;
         height: calc(100vh - var(--SiteHeaderHeight));
-        transition: transform .3s ease-out;
+        transition: transform .56s cubic-bezier(0.52, 0.16, 0.24, 1);
         background: c.$bright;
         box-shadow: c.$shadow;
         z-index: 1;
@@ -140,7 +140,7 @@ body.sticky {
 }
 .hamburger {
     span {
-        transition: transform .275s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        transition: transform .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
         
     }
     &:hover {
