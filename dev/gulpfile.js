@@ -1,5 +1,6 @@
 const { src, dest, watch, series } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
+const sourcemaps = require('gulp-sourcemaps');
 const minify = require('gulp-clean-css');
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
@@ -8,6 +9,7 @@ const autoprefixer = require('autoprefixer');
 const useref = require('gulp-useref');
 const browserSync = require('browser-sync').create();
 const del = require('del');
+const { notify } = require('browser-sync');
 
 const cssnanoOptions = {
 	calc: true,
@@ -48,10 +50,12 @@ function ResetTmp() {
 // SCSS Stuff
 function CSS() {
     return src('./scss/**/*.scss') 
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
 }
 function CSSstream() {
     return(CSS())
+    .pipe(sourcemaps.write('.'))
     .pipe(dest('./tmp/styles/'))
     .pipe(browserSync.stream());
 }
@@ -65,14 +69,12 @@ function CSSbuild() {
 
     return(CSS())
     .pipe(postcss(plugins))
-    // .pipe(prefix('last 2 versions'))
     .pipe(minify())
     .pipe(dest('../web/styles'));
 }
 
 // JS stuff
 function JS(){
-    // return src('./scripts/**/*.js')
     return src(['./scripts/**/*.js', '!./scripts/globals/**/*.js'])
 }
 function JSstream(){
@@ -141,9 +143,9 @@ exports.VendorStuff = VendorStuff;
 // Browser Sync stuff
 function BrowserWatch() {
     browserSync.init({
-		// notify: false,
+		notify: false,
         server: {
-            baseDir: './tmp/'
+            baseDir: './tmp/',
         }
     });
     watch('./scss/**/*.scss', CSSstream);

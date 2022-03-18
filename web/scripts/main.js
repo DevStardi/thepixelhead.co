@@ -43,6 +43,7 @@ const UpdateAndSetCSSvars = function() {
 UpdateAndSetCSSvars();
 window.addEventListener('scroll', UpdateAndSetCSSvars, true);
 window.addEventListener('resize', UpdateAndSetCSSvars, true);
+
 document.addEventListener('scroll', function() {
     // console.log(window.scrollY);
     // scrollHeight();

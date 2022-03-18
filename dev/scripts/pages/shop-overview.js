@@ -1,9 +1,3 @@
-// document.querySelector('.ProductSection .preview button').addEventListener('click', function() {
-//     if (this.dataset.img = '1') {
-//         document.querySelector('.ProductSection .preview img').classList.remove('show')
-//         document.querySelector('.ProductSection .preview img[data-img="1"]').classList.add('show')
-//     }
-// })
 
 const Buttons = document.querySelectorAll('.ProductSection .preview button');
 for (let i = 0; i < Buttons.length; i++) {

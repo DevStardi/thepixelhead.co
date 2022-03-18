@@ -47,26 +47,24 @@
             .show {
                 z-index: 2;
             }
-            .DotGroup {
-                display: flex;
-                padding: 0;
-                position: absolute;
-                z-index: 3;
-                bottom: 10px;
-                left: 50%;transform: translateX(-50%);
-            }
-            button {
-                box-sizing: border-box;
-                background-color: transparent;
-                display: block;
-                width: 10px;
-                height: 10px;
-                padding: 0;
-                border-radius: 50%;
-                border: 2px solid c.$bright;
-                margin: 2px;
-                cursor: pointer;
-            }
+        }
+        .DotGroup {
+            display: flex;
+            padding: 0;
+            position: absolute;
+            z-index: 3;
+            bottom: 10px;
+            left: 50%;transform: translateX(-50%);
+        }
+        .splide__arrows {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .splide__arrow {
+            display: block;
         }
     }
     .text {

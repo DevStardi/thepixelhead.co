@@ -6,15 +6,11 @@ let ProductPreviewSplide = new Splide( '.ProductPreviewSplide',{
     pagination:   false,
     heightRatio:  '1.11111',
     direction:    'ttb',
-    // wheel       : true,
-    // releaseWheel: true,
     height:       'calc(100vh - 62px)',
     breakpoints:  {
       999: {
         direction:  'ltr',
         height:     'auto',
-        // wheel       : false,
-        // releaseWheel: false,
       }
     }
 });
@@ -32,11 +28,28 @@ Fancybox.bind('[data-fancybox="ProductPreview"]', {
 });
 
 // update size selector
-document.getElementById('SizePreSelect').addEventListener('change', function() {
+let sizeSelector = document.querySelector('.select-selected');
 
-  document.getElementById(this.options[SizePreSelect.selectedIndex].value).checked = true;
-  // maybe add a reverse sync too
+document.querySelector('.select-selected').addEventListener('click', function() {
+  
+  console.log(sizeSelector.innerHTML);
+
+  if(document.getElementById(sizeSelector.innerHTML)) {
+    document.getElementById(sizeSelector.innerHTML).checked = true;
+  }
 });
+
+let selectSize = document.querySelectorAll('.SelectSize input');
+for (let i = 0; i < selectSize.length; i++) {
+  selectSize[i].addEventListener('click', function() {
+
+    console.log(document.querySelector('input[name="os0"]:checked').value);
+    
+    document.getElementById('SizePreSelect'). value = document.querySelector('input[name="os0"]:checked').value;
+    document.querySelector('.select-selected').innerHTML = document.querySelector('input[name="os0"]:checked').value;
+  });
+
+}
 
 // close cart on esc key
 document.addEventListener('keydown', function(e) {
