@@ -103,8 +103,12 @@
     background-repeat: no-repeat;
     background-position: 60% 50%;
     background-size: 26px;
+    box-shadow: c.$shadow;
     cursor: pointer;
-    transition: opacity .3s ease-out;
+    transition: opacity .3s ease-out, background-position .2s ease-out;
+    &:hover {
+        background-position: 70% 50%;
+    }
     &--prev {
         transform: scaleX(-1);
     }
@@ -112,15 +116,19 @@
         display: none;
     }
     &[disabled] {
-        opacity: .6;
+        opacity: .75;
     }
     
-    @include mq(1100px) {
-        transform: rotate(90deg);
-        &--prev {
-            transform: rotate(-90deg);
+}
+.ProductPreviewSplide {
+    .splide__arrow {
+        @include mq(1000px) {
+            transform: rotate(90deg);
+            &--prev {
+                transform: rotate(-90deg);
+            }
         }
-    }
+    }    
 }
 
 .anchor {

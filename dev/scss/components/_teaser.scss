@@ -1,0 +1,27 @@
+
+.teaser {
+    position: relative;
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    svg {
+        width: 28px;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        bottom: 40px;
+        transform: translateX(-50%);
+        .scroll {
+            animation: scroll  2s infinite;
+        }
+    }
+}
+
+@keyframes scroll {
+    0% { transform: translateY(0)}
+    20% { transform: translateY(20%) scale(1,.439)}
+    50% { transform: translateY(50%) scale(1,.439)}
+    70% { transform: translateY(0)}
+}

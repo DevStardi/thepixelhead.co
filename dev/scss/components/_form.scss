@@ -1,4 +1,5 @@
 @use '../globals/colors' as c;
+@use '../globals/settings' as s;
 
 .FormField {
     position: relative;
@@ -48,23 +49,18 @@ input[type="radio"] {
     }
 }
 
+// CUSTOM SELECT MENU //
 
-
-/* The container must be positioned relative: */
 .CustomSelect {
-    position: relative;
+  position: relative;
+  select {
+      display: none;
+
   }
-  
-  .CustomSelect select {
-    display: none; /*hide original SELECT element: */
-  }
-  
-  .select-selected {
-    background-color: c.$bright;
-  }
-  
-  /* Style the arrow inside the select element: */
-  .select-selected:after {
+}
+.select-selected {
+  background-color: c.$bright;
+  &:after {
     content: '';
     position: absolute;
     top: 14px;
@@ -72,49 +68,68 @@ input[type="radio"] {
     width: 0;
     height: 0;
   }
-  
-  /* Point the arrow upwards when the select box is open (active): */
-  .select-selected.select-arrow-active {
+  &.select-arrow-active {
     border-bottom-color: transparent;
+    &::after {
+        border-bottom: none;
+        top: 7px;
+    }
   }
-  .select-selected.select-arrow-active:after {
-    border-bottom: none;
-    top: 7px;
-  }
-  
-  /* style the items (options), including the selected item: */
-  .select-items div,.select-selected {
-    color: c.$dark;
-    padding: 8px 16px;
-    cursor: pointer;
-  }
-  
-  /* Style items (options): */
-  .select-items {
+}
+.select-items {
     position: absolute;
     background-color: c.$bright;
     transition: background-color .2s ease-out, opacity .2s ease-out;
     top: calc(100% - 2px);
     left: 0;
     right: 0;
-    z-index: 99;
+    z-index: 2;
     border: c.$border2px;
     border-top: none;
-  }
-  /* Hide the items when the select box is closed: */
-  .select-hide {
-    height: 0;
-    opacity: 0;
-    z-index: -1;
-  }  
-  .select-items div {
-    color: c.$dark;
-    background-color: c.$bright;
-    transition: background-color .3s ease-out, color .1s ease-out;
-  }
-  .select-items div:hover, 
-  .select-items .same-as-selected {
-    color: c.$bright;
-    background-color: c.$dark;
-    transition: background-color .2s ease-out;
-  }
+    opacity: 1;
+    height: auto;
+    &.select-hide {
+        height: 0;
+        opacity: 0;
+        div {
+            height: 0;
+            padding: 0;
+        }
+    }
+    div {
+        box-sizing: border-box;
+        position: relative;
+        color: c.$dark;
+        background-color: c.$bright;
+        z-index: 1;
+        height: auto;
+        color: c.$dark;
+        padding: 8px 16px;
+        cursor: pointer;
+        transition: color .6s s.$hover-transition;
+        transition: height .3s ease-out, padding .3s ease-out;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            background-color: c.$dark;
+            transition: width .4s s.$hover-transition;
+        }
+        &:hover {
+            &:after {
+                width: 100%;
+            }
+            color: c.$bright;
+        }
+        &.same-as-selected {
+            color: c.$bright;
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}

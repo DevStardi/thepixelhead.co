@@ -2,6 +2,15 @@
 
 $hover-transition: cubic-bezier(.165,.84,.44,1);
 
+.sitewrapper {
+    padding: 30px;
+}
+
+#skip {
+    margin-top: calc(var(--SiteHeaderHeight) * -1);
+    padding-top: var(--SiteHeaderHeight);
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 }

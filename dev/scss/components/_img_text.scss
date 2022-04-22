@@ -1,0 +1,24 @@
+@use '../abstracts/breakpoints' as *;
+
+.imgText {
+    padding: 60px 0 0;
+    img {
+        width: 100%;
+    }
+    .text {
+        padding: 20px 0;
+        h3 {
+            padding-top: 0;
+        }
+    }
+    @include mq(700px) {
+        display: flex;
+        padding: 60px 0 40px;
+        img {
+            width: 50%;
+        }
+        .text {
+            padding: 0 40px;
+        }
+    }
+}

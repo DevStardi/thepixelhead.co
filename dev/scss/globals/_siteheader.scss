@@ -18,6 +18,12 @@
         @include mq(400px) {
             padding: 16px 26px;
         }
+        h3 a {
+            transition: letter-spacing .2s ease-out;
+            &:hover {
+                letter-spacing: .5px;
+            }
+        }
     }
     .button.circle {
         position: absolute;
@@ -116,6 +122,10 @@ body.sticky {
             display: inline-block;
             padding: 10px 0;
             margin-bottom: 20px;
+            transition: padding .15s ease-out;
+            &:hover {
+                padding-left: 6px;
+            }
         }
 
         .MetaNav {

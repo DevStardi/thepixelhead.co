@@ -32,8 +32,6 @@ let sizeSelector = document.querySelector('.select-selected');
 
 document.querySelector('.select-selected').addEventListener('click', function() {
   
-  console.log(sizeSelector.innerHTML);
-
   if(document.getElementById(sizeSelector.innerHTML)) {
     document.getElementById(sizeSelector.innerHTML).checked = true;
   }

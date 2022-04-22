@@ -75,7 +75,7 @@ function CSSbuild() {
 
 // JS stuff
 function JS(){
-    return src(['./scripts/**/*.js', '!./scripts/globals/**/*.js'])
+    return src('./scripts/**/*.js')
 }
 function JSstream(){
     return (JS())
@@ -146,6 +146,7 @@ function BrowserWatch() {
 		notify: false,
         server: {
             baseDir: './tmp/',
+            directory: true,
         }
     });
     watch('./scss/**/*.scss', CSSstream);
