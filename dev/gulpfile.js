@@ -184,6 +184,14 @@ const dev = series(
 )
 const build = series(
     ResetWeb,
+    CSSbuild,
+    JSbuild,
+    IMGbuild,
+    FONTSbuild,
+    removeBundlerWeb
+)
+const buildStatic = series(
+    ResetWeb,
     HTMLbuild,
     CSSbuild,
     JSbuild,
@@ -194,3 +202,4 @@ const build = series(
 
 exports.dev = dev;
 exports.build = build;
+exports.buildStatic = buildStatic;

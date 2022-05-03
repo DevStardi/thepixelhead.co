@@ -19,7 +19,6 @@ $hover-transition: cubic-bezier(.165,.84,.44,1);
 }
 ::-webkit-scrollbar-thumb {
     background-color: #ababab;
-    border-radius: 4px;
     transition: background-color .2s ease-out;
 }
 ::-webkit-scrollbar-thumb:hover {

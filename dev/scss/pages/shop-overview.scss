@@ -1,8 +1,7 @@
 @use '../globals/colors' as c;
 @use '../abstracts/breakpoints' as *;
 
-.sitecontent.overview {
-    padding: 30px;
+.overview {
     h3 {
         padding: 40px 0 20px;
     }

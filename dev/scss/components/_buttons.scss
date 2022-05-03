@@ -106,9 +106,6 @@
     box-shadow: c.$shadow;
     cursor: pointer;
     transition: opacity .3s ease-out, background-position .2s ease-out;
-    &:hover {
-        background-position: 70% 50%;
-    }
     &--prev {
         transform: scaleX(-1);
     }

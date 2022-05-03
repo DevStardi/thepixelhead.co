@@ -7,11 +7,7 @@ img.teaser {
     height: auto;
 }
 .RunningText {
-    max-width: 1100px;
-    padding: 30px;
-    @include mq(600px) {
-        padding: 60px;
-    }
+    padding: 30px 0;
     > img {
         display: block;
         width: 100%;

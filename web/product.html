@@ -86,25 +86,25 @@
                         <li><strong>Passform</strong> Classic Fit</li>
                     </ul>
                     <hr>
-                    <div class="ContentBox IconText">
+                    <a href="" target="_blank" class="ContentBox IconText">
                         <img src="img/icons/package.svg" alt="Package Icon">
                         <span>Versandfertig nach max. 30 Tagen</span>
-                    </div>
+                    </a>
                 </section>
                 <section class="price">
                     <h2>30,00 €</h2>
                     <span>zzgl. 5€ Versandkosten</span>
                 </section>
-                <div class="FormField">
+                <div class="FormField CustomSelect">
                     <label for="SizePreSelect">Größe</label>
                     <select name="size" id="SizePreSelect">
-                        <span></span>
-                        <option value="XS">XS </option>
-                        <option value="S">S </option>
-                        <option value="M">M </option>
-                        <option value="L">L </option>
-                        <option value="XL">XL </option>
-                        <option value="XXL">XXL </option>
+                        <option value="">Bitte wählen</option>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
                     </select>
                 </div>
                 <a class="button text" onclick="GoToCart()">jetzt vorbestellen</a>
@@ -215,10 +215,10 @@
         <script>
             // open & close cart
             function GoToCart() {
-            document.body.classList.add('cart');
+                document.body.classList.add('cart');
             }
             function CloseCart() {
-            document.body.classList.remove('cart');
+                document.body.classList.remove('cart');
             }
 
         </script>

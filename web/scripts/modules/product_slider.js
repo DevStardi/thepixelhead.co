@@ -1,0 +1,1 @@
+import{Splide}from"/scripts/v/splide.js";let productSliderSplide=new Splide(".productSlider",{pagination:!1,perPage:4,perMove:1,gap:"1rem",breakpoints:{1e3:{perPage:3},600:{perPage:2}}});productSliderSplide.mount();

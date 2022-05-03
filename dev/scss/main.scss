@@ -28,6 +28,11 @@ ul {
     background-color: c.$bright;
     margin-bottom: var(--SiteFooterHeight);
 }
+.sitewrapper {
+    padding: 30px;
+    max-width: 980px;
+    margin: 0 auto;
+}
 
 ::selection {
     color: c.$bright;
