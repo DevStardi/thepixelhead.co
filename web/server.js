@@ -1,14 +1,11 @@
-const { log } = require('console');
-const http = require('http');
-const static = require('node-static');
+const express = require('express')
+const app = express()
+const port = 3000
 
-let port = 9000
-let file = new static.Server('./public');
+app.use(express.static('public', {
+    extensions: ['html', 'htm'],
+}));
 
-http.createServer(function (request, response) {
-    request.addListener('end', function () {
-        file.serve(request, response);
-    }).resume();
-}).listen(port, function(){
-    console.log('server running at port: ' + port);
+app.listen(port, () => {
+  console.log('server running at:  http://localhost:' + port);
 });

@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "server": "cd web && node server",
+    "devServer": "cd web && nodemon server.js",
     "dev": "gulp dev --cwd dev",
-    "start": "gulp dev --cwd dev",
     "build": "gulp build --cwd dev",
     "buildStatic": "gulp buildStatic --cwd dev"
   },
@@ -19,22 +19,24 @@
   "devDependencies": {
     "@fancyapps/ui": "^4.0.9",
     "@splidejs/splide": "^3.5.8",
-    "browser-sync": "^2.27.7",
-    "gulp": "^4.0.2",
-    "gulp-sass": "^5.0.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-terser": "^2.1.0",
-    "sass": "^1.43.4",
     "autoprefixer": "^10.4.0",
+    "browser-sync": "^2.27.7",
     "cssnano": "^5.0.14",
     "del": "^6.0.0",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^2.3.0",
     "gulp-postcss": "^9.0.1",
-    "gulp-useref": "^5.0.0"
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-useref": "^5.0.0",
+    "nodemon": "^2.0.16",
+    "sass": "^1.43.4"
   },
   "dependencies": {
+    "express": "^4.18.1",
     "node-static": "^0.7.11"
   },
   "browserslist": [
