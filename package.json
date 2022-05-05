@@ -1,0 +1,45 @@
+{
+  "name": "thepixelheadco",
+  "version": "1.0.0",
+  "description": "website scss setup and node server",
+  "main": "server.js",
+  "scripts": {
+    "server": "cd web && node server",
+    "dev": "gulp dev --cwd dev",
+    "start": "gulp dev --cwd dev",
+    "build": "gulp build --cwd dev",
+    "buildStatic": "gulp buildStatic --cwd dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.glxy.one/stardi/thepixelheadco.git"
+  },
+  "author": "DevStardi",
+  "license": "private",
+  "devDependencies": {
+    "@fancyapps/ui": "^4.0.9",
+    "@splidejs/splide": "^3.5.8",
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.43.4",
+    "autoprefixer": "^10.4.0",
+    "cssnano": "^5.0.14",
+    "del": "^6.0.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-useref": "^5.0.0"
+  },
+  "dependencies": {
+    "node-static": "^0.7.11"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ]
+}

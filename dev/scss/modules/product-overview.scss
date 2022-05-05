@@ -1,18 +1,35 @@
 @use '../globals/colors' as c;
 @use '../abstracts/breakpoints' as *;
 
+
 .overview {
     h3 {
         padding: 40px 0 20px;
     }
+    .ProductOverview {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin: 0 -10px;
+    }
 }
 
-.ProductSection {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    max-width: 880px;
-    margin: 0 -10px;
+.ProductOverview.productSlider {
+    margin: 40px 0 30px; // bottom margin only 30px because 10px on element (box shadow)
+    position: relative;
+    .ProductArticle {
+        width: 100%;
+        margin: 0 0 10px;
+    }
+    .splide__arrows {
+        position: absolute;
+        top: 0;
+        transform: translate(-25px,-50%);
+        z-index: 1;    
+    }
+}
+p + .productSlider.ProductOverview {
+    margin-top: 60px;
 }
 
 .ProductArticle {

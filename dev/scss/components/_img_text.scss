@@ -10,6 +10,9 @@
         h3 {
             padding-top: 0;
         }
+        .button {
+            margin-top: 30px;
+        }
     }
     @include mq(700px) {
         display: flex;

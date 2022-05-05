@@ -70,7 +70,7 @@ function CSSbuild() {
     return(CSS())
     .pipe(postcss(plugins))
     .pipe(minify())
-    .pipe(dest('../web/styles'));
+    .pipe(dest('../web/public/styles'));
 }
 
 // JS stuff
@@ -85,7 +85,7 @@ function JSstream(){
 function JSbuild(){
     return (JS())
     .pipe(terser())
-    .pipe(dest('../web/scripts'));
+    .pipe(dest('../web/public/scripts'));
 }
 
 // IMG stuff
@@ -99,7 +99,7 @@ function IMGstream() {
 }
 function IMGbuild() {
     return(IMG())
-    .pipe(dest('../web/img'));
+    .pipe(dest('../web/public/img'));
 }
 
 // FONT stuff
@@ -113,7 +113,7 @@ function FONTSstream() {
 }
 function FONTSbuild() {
     return(FONTS())
-    .pipe(dest('../web/fonts'));
+    .pipe(dest('../web/public/fonts'));
 }
 
 // HTML & vendor stuff
@@ -129,7 +129,7 @@ function HTMLstream() {
 }
 function HTMLbuild() {
     return(HTML())
-    .pipe(dest('../web/'))
+    .pipe(dest('../web/public/'))
 }
 
 // Vendor Stuff 
@@ -158,17 +158,17 @@ function BrowserWatch() {
 // reset Web folder
 function ResetWeb() {
 	return del([
-        '../web/styles/**/*',
-        '../web/scripts/**/*',
-        '../web/img/**/*',
-        '../web/fonts/**/*'],
+        '../web/public/styles/**/*',
+        '../web/public/scripts/**/*',
+        '../web/public/img/**/*',
+        '../web/public/fonts/**/*'],
         {force:true}
     );
 }
 
 function removeBundlerWeb() {
     return del(
-        '../web/bundler.html',
+        '../web/public/bundler.html',
         {force:true}
     );
 }

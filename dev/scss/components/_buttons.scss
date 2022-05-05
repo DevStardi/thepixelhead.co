@@ -113,6 +113,7 @@
         display: none;
     }
     &[disabled] {
+        cursor: default;
         opacity: .75;
     }
     
